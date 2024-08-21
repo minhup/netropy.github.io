@@ -75,3 +75,60 @@ footer {
     padding: 10px 0;
     font-size: 14px;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+    main {
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .logo-container img {
+        width: 35%;
+    }
+    .image-container {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+    main {
+        padding: 20px;
+    }
+    .logo-container img {
+        width: 30%;
+    }
+    .slogan {
+        font-size: 12px;
+    }
+    nav a {
+        margin-left: 10px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .image-container {
+        max-width: 300px;
+    }
+}
