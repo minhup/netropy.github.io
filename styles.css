@@ -4,53 +4,118 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f4f8;
-}
-header {
+  }
+  
+  /* Header Styles */
+  header {
     background-color: white;
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.logo-container {
+  }
+  
+  .logo-container {
     display: flex;
     flex-direction: column;
-}
-.logo {
+  }
+  
+  .logo {
     font-size: 24px;
     font-weight: normal;
     font-family: Arial, Helvetica, sans-serif;
-}
-.logo-container img {
+  }
+  
+  .logo-container img {
     width: 45%;
     height: auto;
     display: block;
-}
-.slogan {
+  }
+  
+  .slogan {
     font-size: 14px;
     color: #121212;
     margin-top: 5px;
-}
-nav a {
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .nav-icon {
+    width: 30px;
+    height: 24px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .nav-icon span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #333;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+  
+  .nav-icon span:nth-child(1) {
+    top: 0px;
+  }
+  
+  .nav-icon span:nth-child(2),
+  .nav-icon span:nth-child(3) {
+    top: 10px;
+  }
+  
+  .nav-icon span:nth-child(4) {
+    top: 20px;
+  }
+  
+  .nav-menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-menu li {
     margin-left: 20px;
+  }
+  
+  .nav-menu li a {
     text-decoration: none;
     color: #333;
-}
-main {
+  }
+  
+  /* Main Content Styles */
+  main {
     padding: 50px;
     display: flex;
     justify-content: space-between;
-}
-h1 {
+  }
+  
+  h1 {
     font-size: 48px;
     margin-bottom: 20px;
-}
-p {
+  }
+  
+  p {
     font-size: 18px;
     line-height: 1.6;
     max-width: 600px;
-}
-.cta-button {
+  }
+  
+  .cta-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff;
@@ -58,77 +123,110 @@ p {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
-}
-.image-container {
-    width: 40%;
-    max-width: 500px;
-}
-.image-container img {
+  }
+  
+  .image-container {
+    width: 100%;
+    /* max-width: 1500px; */
+  }
+  
+  .image-container img {
     width: 100%;
     height: auto;
     display: block;
-}
-footer {
+  }
+  
+  /* Footer Styles */
+  footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
     header {
-        padding: 20px;
+      padding: 20px;
     }
+  
     main {
-        padding: 30px;
-        flex-direction: column;
-        align-items: center;
+      padding: 30px;
+      flex-direction: column;
+      align-items: center;
     }
+  
     h1 {
-        font-size: 36px;
+      font-size: 36px;
     }
+  
     p {
-        font-size: 16px;
+      font-size: 16px;
     }
+  
     .logo-container img {
-        width: 35%;
+      width: 35%;
     }
+  
     .image-container {
-        width: 100%;
-        max-width: 400px;
-        margin-top: 30px;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 30px;
     }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 15px;
+  
+    .nav-toggle {
+      display: block;
     }
-    main {
-        padding: 20px;
+  
+    .nav-menu {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      flex-direction: column;
+      padding: 20px 0;
+      display: none;
     }
-    .logo-container img {
-        width: 30%;
+  
+    .nav-menu li {
+      margin-left: 0;
+      margin-bottom: 10px;
     }
+  
     .slogan {
-        font-size: 12px;
+      display: none;
     }
-    nav a {
-        margin-left: 10px;
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 15px;
     }
+  
+    main {
+      padding: 20px;
+    }
+  
+    .logo-container img {
+      width: 50%;
+    }
+  
     h1 {
-        font-size: 30px;
+      font-size: 30px;
     }
+  
     p {
-        font-size: 14px;
+      font-size: 14px;
     }
+  
     .cta-button {
-        font-size: 14px;
-        padding: 8px 16px;
+      font-size: 14px;
+      padding: 8px 16px;
     }
+  
     .image-container {
-        max-width: 300px;
+      max-width: 300px;
     }
-}
+  }
