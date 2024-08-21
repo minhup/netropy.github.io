@@ -1,0 +1,77 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+}
+header {
+    background-color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    font-size: 24px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.logo-container img {
+    width: 45%;
+    height: auto;
+    display: block;
+}
+.slogan {
+    font-size: 14px;
+    color: #121212;
+    margin-top: 5px;
+}
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+main {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.image-container {
+    width: 40%;
+    max-width: 500px;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
