@@ -338,6 +338,17 @@ span {
   font-size: 0.9rem;
 }
 
+#join-us-wrap {
+  background: var(--primary-color);
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Center the section */
+}
+
 /* Footer Styles */
 footer {
   background-color: var(--secondary-color);
