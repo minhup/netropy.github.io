@@ -1,6 +1,9 @@
 :root {
-  --primary-color: #ffcdd2;
-  /* #00a8ff; */
+  --button_color: #ffcc80;
+  --logo-color: #ffcdd2;
+  /* --primary-color: linear-gradient(45deg, #ffcdd2, #fd9b92); */
+  /* --primary-color: linear-gradient(135deg, #ffcdd2, #ffe4e1, #ffebee); */
+  --primary-color: linear-gradient(45deg, var(--logo-color), #ffab91, var(--button_color));
   --secondary-color: #192a56;
   --accent-color: #ffa502;
   --background-color: #f1f2f6;
@@ -36,25 +39,42 @@ header {
 
 .logo-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* Stack the slogan above the logo */
+  align-items: left;
 }
 
 .logo {
-  font-size: 20px;
-  /* Reduced from 24px */
-  font-weight: bold;
+  width: 130px;
+  /* Adjust the width as needed */
+  height: auto;
+  /* This maintains the aspect ratio */
   color: var(--primary-color);
+  margin-bottom: 0.3rem;
+  /* Add space between the logo and the slogan */
 }
 
 .slogan {
-  font-size: 12px;
-  /* Reduced from 14px */
+  font-size: 16px;
+  /* Increase the font size */
+  font-weight: 600;
+  /* Make the text bold */
   color: var(--secondary-color);
-  margin-left: 0.5rem;
+  /* Keep the color */
+  margin-left: 0;
+  /* Remove left margin */
+  letter-spacing: 1.2px;
+  /* Add spacing between letters */
+  line-height: 1.4;
+  /* Improve readability with line height */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  font-family: 'Poppins', sans-serif;
+  /* Use a more modern font */
 }
 
 .join-us-button {
-  background-color: var(--primary-color);
+  background-color: var(--button_color);
   color: var(--text-color);
   /* white; */
   padding: 8px 16px;
@@ -63,12 +83,12 @@ header {
   font-size: 14px;
   font-weight: bold;
   transition: all 0.3s ease;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--button_color);
 }
 
 .join-us-button:hover {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--logo-color);
 }
 
 /* Main Content Styles */
@@ -110,6 +130,17 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-size: 1.6rem;
+}
+
+p,
+li,
+span {
+  font-size: 1.2rem;
+}
+
+
 /* Hero Section */
 #hero {
   text-align: center;
@@ -139,21 +170,16 @@ h2 {
   z-index: 2;
 }
 
-/* #hero h1 {
-  color: var(--dark-text-color);
-  font-size: 3rem;
-  margin-bottom: 1rem;
-} */
 
 #hero p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   max-width: 800px;
   margin: 0 auto;
 }
 
 /* Technology Section */
 #technology {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   padding: 4rem 2rem;
   border-radius: 10px;
   position: relative;
@@ -196,20 +222,9 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tech-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.tech-item i {
-  font-size: 3rem;
-  color: var(--secondary-color);
-  margin-bottom: 1rem;
-}
-
 /* Advantage Section */
 #advantage {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color: var(--dark-text-color);
   padding: 4rem 2rem;
   border-radius: 10px;
@@ -261,7 +276,7 @@ h2 {
 }
 
 .video-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
@@ -276,7 +291,7 @@ h2 {
 
 /* Technology Section */
 #join-us {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   padding: 4rem 2rem;
   border-radius: 10px;
   position: relative;
@@ -335,13 +350,17 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: flex-start;
     padding: 1rem;
   }
 
   .logo-container {
     margin-bottom: 1rem;
+  }
+
+  .slogan {
+    font-size: 13px;
   }
 
   .join-us-button {
@@ -364,10 +383,22 @@ footer {
     font-size: 1.8rem;
   }
 
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p,
+  li,
+  span {
+    font-size: 1.0rem;
+  }
+
   #hero p {
     font-size: 1.05rem;
     margin: 0 auto;
   }
+
+
 
 }
 
@@ -400,10 +431,15 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tech-item:hover,
+
+.tech-item:hover {
+  transform: scale(1.03) translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
 .job-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Smooth Scrolling */
@@ -454,7 +490,7 @@ html {
 }
 
 .tech-item:hover::after {
-  opacity: 0.7;
+  opacity: 0.15;
 }
 
 /* Particle effect */
