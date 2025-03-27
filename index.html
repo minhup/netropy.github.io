@@ -19,6 +19,7 @@
         </div>
         <nav class="navbar">
             <a href="join-us.html" class="join-us-button" style="position: relative;">Join Us</a>
+            <a href="#contact" class="join-us-button" style="position: relative;">Contact Us</a>
         </nav>
     </header>
 
@@ -51,6 +52,12 @@
 
         <section id="advantage">
             <h2>The Netropy Advantage</h2>
+            <p>For embodied AI advancements like autonomous driving, training and validation in virtual environments is essential.
+                 Instead of scaling fleets of cars, we aim to make testing more accessible, efficient, and scalable. 
+            Our platform generates realistic synthetic data - RGB color, depth, occupancy grid, and semantic information - directly from 
+            videos and images, with no need for additional sensors (like LiDAR or GPS), modeling, asset stores, or game engines.</p>
+            <p>This novel workflow redefines simulation, eliminating traditional, time-consuming processes.
+                 It's a glimpse into the future of AI development, where virtual environments become dynamic testing grounds for real-world applications.</p>
             <ul class="benefits-list">
                 <li> Accelerate learning with our vast, AI-generated datasets and scenarios.</li>
                 <li> Rigorously test your algorithms across countless virtual situations.</li>
@@ -63,9 +70,20 @@
 
         <section id="video-demo">
             <h2>See Our Technology in Action</h2>
-            <div class="video-container">
+            <div class="video-container" style="width: 50%; margin: 0 auto;">
                 <video controls autoplay muted loop>
                     <source src="resources/demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+
+        <section id="video-workflow">
+            <h2>Workflow</h2>
+            <div class="video-container" style="width: 50%; margin: 0 auto;">
+                <video controls autoplay muted loop>
+                    <source src="resources/demo_2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -82,18 +100,58 @@
                         <span class="job-location">Seoul, South Korea</span>
                     </a>
                 </div>
-                <div class="job-item">
+                <!-- <div class="job-item">
                     <a href="https://ddv6dme7.ninehire.site/job_posting/Q8BcTGRp" target="_blank">
                         <span class="job-title">Full-Stack Software Engineer - AI System</span>
                         <span class="job-location">Seoul, South Korea</span>
                     </a>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
 
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p style="text-align: center; font-size: 1.2rem;">Have questions about our technology or interested in working with us? We'd love to hear from you.</p>
+        <div class="contact-cards">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Email</h3>
+                    <a href="mailto:hello@netropy.ai">hello@netropy.ai</a>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Address</h3>
+                    <a href="https://map.naver.com/p/search/서울특별시 서초구 서초중앙로2길 35" target="_blank">
+                        Seocho Jungang-ro 2-gil 35, Seocho-gu, Seoul, South Korea
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Netropy. All rights reserved.</p>
+        <div class="footer-compact">
+            <div class="footer-left">
+                <div class="footer-links">
+                    <a href="#technology">Technology</a>
+                    <a href="#advantage">Advantages</a>
+                    <a href="join-us.html">Join Us</a>
+                    <a href="mailto:hello@netropy.ai">Contact</a>
+                </div>
+                <p class="copyright">&copy; 2024 Netropy Inc. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="footer-logo" style="width: 120px;">
+            </div>
+        </div>
     </footer>
     <div id="particles-js"></div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
