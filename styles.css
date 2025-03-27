@@ -84,6 +84,7 @@ header {
   font-weight: bold;
   transition: all 0.3s ease;
   border: 2px solid var(--button_color);
+  white-space: nowrap; /* Prevent button text from wrapping */
 }
 
 .join-us-button:hover {
@@ -277,6 +278,8 @@ span {
 
 .video-container {
   max-width: 1200px;
+  width: 50%;  /* Default for larger screens */
+  min-width: 700px;  /* Minimum width in pixels */
   margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
@@ -425,59 +428,60 @@ footer {
   }
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  header {
-    /* flex-direction: column; */
-    align-items: flex-start;
-    padding: 1rem;
-  }
+/* Basic navbar styles */
+.navbar {
+  display: flex;
+  gap: 10px;
+}
 
+/* Mobile-specific adjustments - stack buttons */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 1rem;
+  }
+  
   .logo-container {
     margin-bottom: 1rem;
+    align-items: center; /* Center logo and slogan */
   }
-
-  .slogan {
-    font-size: 13px;
+  
+  /* Stack navbar buttons vertically */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
-
+  
   .join-us-button {
-    align-self: flex-start;
+    width: 100px; /* Smaller fixed width */
+    text-align: center;
+    padding: 6px 10px; /* Reduced padding */
+    font-size: 12px; /* Smaller font size */
   }
-
+  
+  /* Adjust main content to account for taller header */
   main {
-    padding-top: 7rem;
+    padding-top: 9rem;
   }
-
+  
+  /* Retain other mobile styles */
+  .video-container {
+    width: 100%;
+    min-width: unset;
+  }
+  
   .tech-grid {
     grid-template-columns: 1fr;
   }
-
-  h1 {
-    font-size: 2.1rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  p,
-  li,
-  span {
-    font-size: 1.0rem;
-  }
-
-  #hero p {
-    font-size: 1.05rem;
-    margin: 0 auto;
-  }
-
-
-
+  
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.3rem; }
+  p, li, span { font-size: 1.0rem; }
+  #hero p { font-size: 1.05rem; }
 }
 
 /* Dynamic Background */
@@ -617,29 +621,69 @@ html {
 
 .contact-details {
   flex: 1;
+  padding: 0 10px; /* Add internal padding */
 }
 
 .contact-details h3 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem; /* Slightly smaller heading */
   color: var(--dark-text-color);
 }
 
 .contact-details a {
   color: var(--secondary-color);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem; /* Smaller link text */
   transition: color 0.3s ease;
   display: inline-block;
+  word-break: break-word; /* Prevent overflow on small screens */
 }
 
 .contact-details a:hover {
   color: var(--accent-color);
 }
 
-/* Responsive adjustments */
+/* More aggressive mobile adjustments for contact cards */
 @media (max-width: 768px) {
+  /* Contact section main heading */
+  #contact h2 {
+    font-size: 1.7rem;
+    margin-bottom: 2rem; /* Increased margin */
+  }
+  
+  /* Contact section intro paragraph */
+  #contact > p {
+    font-size: 0.9rem !important;
+    margin-bottom: 2rem; /* Increased margin */
+    padding: 0 1rem; /* Added horizontal padding */
+  }
+  
   .contact-cards {
-    grid-template-columns: 1fr;
+    gap: 1.8rem; /* Increased spacing between cards */
+  }
+  
+  .contact-card {
+    padding: 1.8rem; /* Significantly increased padding */
+    margin: 0 1rem; /* Increased horizontal margin */
+  }
+  
+  .contact-icon {
+    font-size: 1.7rem;
+    margin-right: 1.2rem; /* Increased spacing */
+    width: 32px;
+  }
+  
+  .contact-details {
+    padding: 0 8px 0 0; /* Increased padding */
+  }
+  
+  .contact-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem; /* Increased spacing after heading */
+  }
+  
+  .contact-details a {
+    font-size: 0.85rem;
+    padding: 5px 0; /* Increased vertical padding */
   }
 }
