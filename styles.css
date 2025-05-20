@@ -634,3 +634,168 @@ main > .content-section:last-of-type {
     .final-cta-section p { font-size: 1em; }
     .final-cta-section .cta-button { padding: 12px 24px; font-size: 1em; }
 }
+
+/* Careers Page Specific Styles */
+.careers-hero {
+    background-color: #f4f7f6; /* Light background for hero, adjust as needed */
+    color: #333;
+    text-align: center;
+    padding: 80px 20px; /* Adjusted padding */
+}
+
+/* Updated for the new H2 element used in careers.html hero section */
+.careers-hero h2 {
+    font-size: 2.8em; /* Adjusted from 3em for H1 */
+    color: #2c3e50; /* Darker color for text */
+    margin-bottom: 20px; /* Space before the paragraph */
+    /* Inherits text-align: center from .careers-hero */
+}
+
+/* Updated for the new P element used in careers.html hero section */
+.careers-hero p {
+    font-size: 1.15em; /* Readable size for the paragraph */
+    line-height: 1.7;
+    color: #555;       /* Consistent text color */
+    margin-bottom: 20px; /* Retain bottom margin */
+    text-align: left;  /* Left-align text within the block */
+}
+
+/* Old styles for .careers-hero .main-headline and .careers-hero .sub-headline are replaced by the above. */
+/* Note: .careers-intro-section styles below are for a section that was removed from careers.html. */
+.careers-intro-section h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 2em;
+    color: #333;
+}
+
+.careers-intro-section p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Open Positions Table */
+.job-listings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.job-listings-table th,
+.job-listings-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.job-listings-table th {
+    background-color: #f9f9f9;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.job-listings-table td a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.job-listings-table td a:hover {
+    text-decoration: underline;
+}
+
+/* How We Work Section */
+.how-we-work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.work-item {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e0e0e0;
+}
+
+.work-item h4 {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.work-item p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Benefits List */
+.benefits-list {
+    list-style: disc; /* Use standard disc bullets */
+    padding-left: 20px; /* Add default padding for list items */
+    margin-top: 20px;
+}
+
+.benefits-list li {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px; /* Adjusted margin */
+}
+
+/* Hiring Process List */
+.hiring-process-list {
+    list-style: decimal; /* Use standard decimal numbering */
+    padding-left: 20px; /* Add default padding for list items */
+    margin-top: 20px;
+}
+
+.hiring-process-list li {
+    margin-bottom: 8px; /* Reduced spacing between items */
+}
+
+.hiring-process-list h4 {
+    display: inline; /* Make h4 flow inline */
+    font-size: 1.1em; /* Adjusted font size for better inline flow */
+    color: #333;
+    font-weight: 700; /* Keep title bold */
+    margin-right: 0.5em; /* Space between h4 and p, using em for scalability */
+}
+
+.hiring-process-list p {
+    display: inline; /* Make p flow inline */
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Ensure content sections have consistent spacing */
+.content-section {
+    padding: 60px 0; /* Default padding from index.html */
+}
+
+.content-section h2 { /* General h2 styling for careers page sections */
+    text-align: center;
+    font-size: 2.4em;
+    color: #2c3e50; /* Consistent heading color */
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.content-section#tech-stack p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Adjust footer link for careers page, or ensure .active styles it correctly */
+.site-navbar .nav-links .nav-link.active {
+    font-weight: 700; /* Example: make active link bold */
+    color: var(--primary-color); /* Example: highlight with primary color */
+}
