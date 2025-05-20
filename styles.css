@@ -178,6 +178,105 @@ span {
   margin: 0 auto;
 }
 
+/* use-cases section */
+#use-cases {
+  /* === Apply styles similar to #technology section === */
+  background: var(--primary-color);
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  position: relative; /* For the ::before pseudo-element */
+  overflow: hidden;  /* For the ::before pseudo-element */
+  /* === End of styles similar to #technology section === */
+
+  text-align: center;
+  /* margin-bottom: 4rem; */ /* Already part of default section styling if you keep it */
+}
+
+/* Add the same ::before pseudo-element for the gradient overlay */
+#use-cases::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 100%); /* Same as #technology::before */
+  z-index: 1;
+}
+
+/* Ensure direct children are above the pseudo-element */
+#use-cases > * {
+  position: relative;
+  z-index: 2;
+}
+
+#use-cases h2 {
+  color: var(--dark-text-color); /* Consistent with #technology h2 */
+  margin-bottom: 2.5rem;
+}
+
+/* Styles for the grid and items within the use-cases section */
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.use-case-item {
+  background-color: rgba(255, 255, 255, 0.9); /* Brighter background for items to stand out */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* No z-index needed here as they are children of #use-cases > * (which is the .use-cases-grid div) */
+}
+
+.use-case-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.use-case-icon {
+  font-size: 2.5rem;
+  color: var(--secondary-color); /* Or your preferred accent color */
+  margin-bottom: 1rem;
+}
+
+.use-case-item h3 {
+  font-size: 1.5rem;
+  color: var(--dark-text-color);
+  margin-bottom: 0.75rem;
+}
+
+.use-case-item p {
+  font-size: 1.0rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--text-color); /* Standard text color for paragraph content inside items */
+}
+
+.use-case-item .cta-button {
+  background-color: var(--button_color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid var(--button_color);
+  display: inline-block;
+}
+
+.use-case-item .cta-button:hover {
+  background-color: transparent;
+  color: var(--logo-color); /* Or var(--button_color) */
+  border-color: var(--logo-color); /* Match text color on hover */
+}
+
+
 /* Technology Section */
 #technology {
   background: var(--primary-color);
