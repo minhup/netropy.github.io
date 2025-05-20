@@ -15,11 +15,16 @@
     <link rel="stylesheet" href="careers.css">
 </head>
 <body>
-    <nav class="careers-nav">
-        <div class="container">
-            <a href="index.html">
-                <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo">
+    <nav class="new-navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo-link">
+                <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="nav-logo">
             </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="#contact-form-or-email" class="nav-link nav-cta-button">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -109,8 +114,8 @@
             <div class="footer-content">
                 <div class="footer-left">
                     <div class="footer-links">
-                        <a href="mailto:hello@netropy.ai">Contact</a>
-                        <a href="https://www.linkedin.com/company/netropyai">LinkedIn</a>
+                        <a href="https://www.linkedin.com/company/netropyai" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/@netropyai" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         <a href="https://ddv6dme7.ninehire.site/">Careers</a>
                     </div>
                     <div class="copyright">
@@ -124,7 +129,6 @@
         </div>
     </footer>
 
-    <div id="particles-js"></div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         particlesJS.load('particles-js', 'path/to/particles.json', function () {

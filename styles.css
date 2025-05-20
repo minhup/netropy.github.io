@@ -23,11 +23,86 @@
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 0;
+  padding-top: calc(40px + 1.5rem); /* Navbar height: 40px logo + 1.5rem padding */
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
   background-color: #ffffff;
   color: var(--text-primary);
   line-height: 1.7;
 }
+
+/* New Navbar Styles */
+.new-navbar {
+  background-color: var(--header-bg-color, #ffffff);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 5%; /* Maintain side padding, adjust vertical padding */
+  box-sizing: border-box;
+  position: fixed; /* Changed from sticky to fixed */
+  top: 0;
+  left: 0; /* Added for fixed positioning */
+  right: 0; /* Added for fixed positioning */
+  z-index: 1000;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Or your preferred max-width for content */
+  margin: 0 auto; /* Center the container */
+}
+
+.nav-logo-link {
+  display: flex;
+  align-items: center; /* Vertically center logo if it has text next to it or for consistency */
+}
+
+.nav-logo {
+  height: 40px; /* Adjust as needed */
+  width: auto;
+  display: block; /* Remove extra space below img */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-left: 20px; /* Space between links */
+  font-size: 1rem; /* Adjust as needed */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active /* Add .active class styling if needed for current page */
+{
+  color: var(--key-color-primary);
+}
+
+/* Style for the CTA button in the navbar */
+.nav-cta-button {
+  background-color: var(--key-color-primary);
+  color: #fff; /* White text for better contrast on colored background */
+  padding: 8px 16px;
+  border-radius: 5px; /* Rounded corners for button appearance */
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-cta-button:hover {
+  background-color: var(--key-color-primary-dark);
+  color: #fff; /* Ensure text color remains white on hover */
+  transform: translateY(-1px); /* Slight lift effect on hover */
+}
+
+/* End New Navbar Styles */
 
 /* Header Styles */
 header {
