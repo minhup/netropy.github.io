@@ -1,0 +1,134 @@
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+.hero-bg {
+    /* background-image: url('https://placehold.co/1920x1080/2d3748/e2e8f0?text=Futuristic+Background'); */
+    background-size: cover;
+    background-position: center;
+}
+.section-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center;
+}
+.section-subtitle {
+    @apply text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto;
+}
+.card {
+    @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
+}
+.btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-colors duration-300;
+}
+.btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+.btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+/* Add animation delays for staggered effect if desired */
+.fade-in-delay-1 { animation-delay: 0.2s; }
+.fade-in-delay-2 { animation-delay: 0.4s; }
+.fade-in-delay-3 { animation-delay: 0.6s; }
+
+/* Custom animation for elements appearing on scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.logo {
+    height: 40px; /* Adjusted logo height */
+    width: auto;  /* Maintain aspect ratio */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Added for Semantic Class Refactor */
+
+/* Header */
+.header-logo-link {
+    @apply text-2xl font-bold text-blue-600;
+}
+.nav-link { /* For desktop nav items */
+    @apply text-gray-600 hover:text-blue-600 transition-colors;
+}
+.mobile-nav-link { /* For mobile nav items */
+    @apply block px-6 py-3 text-gray-600 hover:bg-gray-100 hover:text-blue-600;
+}
+
+/* Hero Section */
+.hero-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900; /* Margins/animations to be applied in HTML */
+}
+.hero-subtitle {
+    @apply text-lg md:text-xl text-gray-700; /* Margins/animations to be applied in HTML */
+}
+
+/* Buttons (.btn, .btn-primary, .btn-secondary already exist) */
+.btn-light { /* New button variant for light backgrounds */
+    @apply bg-white text-blue-600 hover:bg-gray-100; /* To be used with .btn for base padding/font */
+}
+
+/* Cards (general components, .card itself is already defined) */
+.card-title {
+    @apply text-xl font-semibold text-gray-800; /* Margins to be applied in HTML for flexibility */
+}
+.card-text {
+    @apply text-gray-600; /* Base text style for card content */
+}
+.card-image-top { /* For images placed at the top of a card */
+    @apply rounded-t-xl w-full h-48 object-cover; /* Margins to be applied in HTML */
+}
+.card-action-link { /* For links like "Learn More" within cards */
+    @apply font-medium hover:underline; /* Text color to be applied in HTML */
+}
+
+/* Features Section (specific components) */
+.feature-icon-wrapper { /* Wrapper for icons in the features section */
+    @apply flex items-center justify-center w-16 h-16 rounded-full; /* Background color and margin to be applied in HTML */
+}
+
+/* Platform Section (specific components) */
+.platform-content-title { /* Title for content blocks in platform section */
+    @apply text-2xl font-semibold text-gray-800; /* Margins to be applied in HTML */
+}
+.list-item-check-icon { /* Styling for check icons in lists */
+    @apply w-5 h-5 mr-2 mt-1 shrink-0; /* Icon color (e.g., text-green-500) to be applied in HTML */
+}
+
+/* Footer */
+.footer-heading {
+    @apply text-lg font-semibold text-white; /* Margins to be applied in HTML. text-xl for main footer heading via utility class */
+}
+.footer-link { /* For links within the footer */
+    @apply hover:text-blue-400 transition-colors; /* Assumes base color is inherited or set on parent */
+}
+.footer-social-link { /* For social media icon links in the footer */
+    @apply text-gray-400 hover:text-white;
+}
+
+/* Solution Video Thumbnails */
+.thumbnail.active {
+    @apply border-blue-500 shadow-lg;
+}
+
+.thumbnail {
+    @apply border-transparent transition-all duration-200 ease-in-out;
+}
+
+.thumbnail:hover {
+    @apply border-blue-300;
+} 

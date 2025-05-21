@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netropy Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@0.395.0/dist/umd/lucide.min.js"></script> 
+    <link rel="stylesheet" href="styles_test.css">
+</head>
+<body class="bg-gray-50 text-gray-700">
+
+    <header id="header" class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="header-logo-link"><img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo"></a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#platform" class="nav-link">Platform</a>
+                <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#hero" class="mobile-nav-link">Home</a>
+            <a href="#features" class="mobile-nav-link">Features</a>
+            <a href="#platform" class="mobile-nav-link">Platform</a>
+            <a href="#solutions" class="mobile-nav-link">Solutions</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <a href="#" class="block btn btn-primary mx-4 my-2 text-center">Get Started</a>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-bg relative h-[75vh] flex items-center pt-20 md:pt-0">
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover -z-10 opacity-25">
+            <source src="resources/depth_inferred.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container mx-auto px-6 text-center md:text-left relative z-10">
+            <div class="md:w-2/3 lg:w-1/2">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 fade-in">Transforming Images and Videos into Actionable 3D Intelligence</h1>
+                <p class="hero-subtitle mb-8 fade-in fade-in-delay-1">Leverage cutting-edge AI to extract critical 3D insights directly from ordinary video footage, revolutionizing autonomous driving, robotics, and dynamic environment monitoring.</p>
+                <div class="space-y-4 md:space-y-0 md:space-x-4 fade-in fade-in-delay-2">
+                    <a href="#contact" class="btn btn-primary text-lg">Request a Demo</a>
+                    <a href="#platform" class="btn btn-light text-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="unlock-potential" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-12 md:mb-16 text-center animate-on-scroll">Unlock the Potential of Your Video Footage</h2>
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+                <a href="#solution-understanding" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline">
+                    <div class="mb-5">
+                        <i data-lucide="brain" class="w-10 h-10 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Understand Scenes in 3D</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed max-w-xs">Overcome the limitations of flat 2D video. Our technology transforms standard footage into rich 3D spatial understanding, revealing object locations, camera motion, and environmental depth.</p>
+                </a>
+                <a href="#solution-digital-twin" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline" style="transition-delay: 0.1s;">
+                     <div class="mb-5">
+                        <i data-lucide="layers" class="w-10 h-10 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Create Digital Twin</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed max-w-xs">Bypass the complexity of traditional 3D sensors. We generate highly realistic, interactive digital twins of real-world assets and environments using only standard 2D video.</p>
+                </a>
+                <a href="#solution-simulation" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline" style="transition-delay: 0.2s;">
+                     <div class="mb-5">
+                        <i data-lucide="sparkles" class="w-10 h-10 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Simulate & Generate Synthetic Data</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed max-w-xs">Utilize cutting-edge visual generative AI to create simulations and photo-realistic synthetic data without traditional physics engines. This fast, customizable approach generates diverse scenarios.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title animate-on-scroll">Our Solutions</h2>
+            <p class="section-subtitle animate-on-scroll">Delving deep into how our technology transforms video into actionable 3D intelligence.</p>
+
+            <!-- Solution 1: Deep Scene Understanding -->
+            <div class="bg-slate-50 rounded-xl shadow-lg p-8 md:p-10 my-10 md:my-16 animate-on-scroll" id="solution-understanding">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <div class="md:w-5/12 text-center md:text-left">
+                        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Deep Scene Understanding</h3>
+                        <p class="text-lg text-gray-700 mb-6">Gain unparalleled insights into dynamic environments. Our AI meticulously analyzes video to estimate camera motion, reconstruct scenes in 3D, and identify objects with precision.</p>
+                        <div>
+                            <h4 class="text-md font-semibold text-gray-800 mb-2">Key Capabilities:</h4>
+                            <ul class="space-y-1 text-gray-600 text-sm list-disc list-inside">
+                                <li>Dynamic Camera Pose & Trajectory Estimation</li>
+                                <li>3D Object Detection, Classification & Tracking</li>
+                                <li>Environmental Perception (e.g., Lane Identification)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-7/12">
+                        <div class="rounded-xl shadow-lg overflow-hidden aspect-video bg-gray-800">
+                            <video id="main-video-understanding" class="w-full h-full object-cover" loop muted playsinline controls>
+                                <source src="resources/ramp_entrance_reconstructed.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="flex justify-center gap-2 md:gap-3 mt-3" id="thumbnails-understanding">
+                            <div class="thumbnail active w-1/3 border-2 border-blue-500 rounded-md overflow-hidden aspect-video cursor-pointer hover:opacity-80" data-video-src="resources/ramp_entrance_reconstructed.mp4">
+                                <video preload="metadata" muted loop playsinline class="w-full h-full object-cover bg-gray-700">
+                                    <source src="resources/ramp_entrance_reconstructed.mp4#t=0.5" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="thumbnail w-1/3 border-2 border-transparent rounded-md overflow-hidden aspect-video cursor-pointer hover:opacity-80" data-video-src="resources/intersection_reconstructed.mp4">
+                                <video preload="metadata" muted loop playsinline class="w-full h-full object-cover bg-gray-700">
+                                    <source src="resources/intersection_reconstructed.mp4#t=0.5" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="thumbnail w-1/3 border-2 border-transparent rounded-md overflow-hidden aspect-video cursor-pointer hover:opacity-80" data-video-src="resources/night_reconstructed.mp4">
+                                <video preload="metadata" muted loop playsinline class="w-full h-full object-cover bg-gray-700">
+                                    <source src="resources/night_reconstructed.mp4#t=0.5" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 2: Digital Twin Generation -->
+            <div class="bg-slate-50 rounded-xl shadow-lg p-8 md:p-10 my-10 md:my-16 animate-on-scroll" id="solution-digital-twin">
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
+                    <div class="md:w-5/12 text-center md:text-left">
+                        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Digital Twin Generation</h3>
+                        <p class="text-lg text-gray-700 mb-6">Transform real-world spaces into interactive 3D models using only standard video. Create high-fidelity digital twins for simulation, analysis, and virtual exploration without specialized hardware.</p>
+                        <div>
+                            <h4 class="text-md font-semibold text-gray-800 mb-2">Key Capabilities:</h4>
+                            <ul class="space-y-1 text-gray-600 text-sm list-disc list-inside">
+                                <li>High-Fidelity, Volumetric Replicas</li>
+                                <li>Fully Interactive & Navigable Environments</li>
+                                <li>Rapid Creation from Standard Video Footage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-7/12">
+                        <div class="rounded-xl shadow-lg overflow-hidden aspect-video bg-gray-800">
+                            <video class="w-full h-full object-cover" autoplay loop muted playsinline controls>
+                                <source src="resources/digital_twin.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 3: Simulation & Data Generation -->
+            <div class="bg-slate-50 rounded-xl shadow-lg p-8 md:p-10 my-10 md:my-16 animate-on-scroll" id="solution-simulation">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <div class="md:w-5/12 text-center md:text-left">
+                        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Simulation & Data Generation</h3>
+                        <p class="text-lg text-gray-700 mb-6">Leverage advanced visual generative AI to produce photo-realistic synthetic data and dynamic simulations. Customize scenarios and sensor outputs to train and test AI models efficiently.</p>
+                        <div>
+                            <h4 class="text-md font-semibold text-gray-800 mb-2">Key Capabilities:</h4>
+                            <ul class="space-y-1 text-gray-600 text-sm list-disc list-inside">
+                                <li>Customizable Actor & Scenario Scripting</li>
+                                <li>Flexible Parameter Control (Environment & Sensors)</li>
+                                <li>Photo-realistic Synthetic Camera View Generation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-7/12">
+                        <div class="rounded-xl shadow-lg overflow-hidden aspect-video bg-gray-800">
+                             <video class="w-full h-full object-cover" autoplay loop muted playsinline controls>
+                                <source src="resources/synthetic_data_generation.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-purple-700 text-white">
+        <div class="container mx-auto px-6">
+            <div class="md:flex md:items-center md:gap-12 lg:gap-16">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 animate-on-scroll">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-5">Transform Your <span style="color: rgb(250, 200, 190);">2D</span> 
+                        Data into Actionable <span style="color: rgb(250, 200, 190);">3D</span> Intelligence</h2>
+                    <p class="text-lg text-purple-200 mb-8 leading-relaxed">
+                        Let's discuss how Netropy AI can elevate your projects.
+                    </p>
+                </div>
+                <div class="md:w-1/2 animate-on-scroll flex flex-col items-center" style="transition-delay: 0.1s;">
+                    <div class="bg-white/10 p-8 rounded-xl shadow-xl w-full max-w-md">
+                        <h3 class="text-2xl font-semibold text-white mb-6 text-center">Ready to take the next step?</h3>
+                        <p class="text-purple-200 mb-6 text-center text-sm">
+                            Let's discuss your specific needs and how our cutting-edge technology can elevate your projects.
+                        </p>
+                        <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" 
+                           class="block w-full text-center font-semibold px-8 py-4 rounded-lg shadow-md 
+                                  text-lg transition-all duration-300 ease-in-out 
+                                  hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-purple-700"
+                           style="background-color: white; color: rgb(245, 78, 66);">
+                            Discuss Your Use Case <i data-lucide="arrow-right" class="inline-block ml-2 w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="footer-heading text-xl mb-4">Netropy</h4>
+                    <p class="text-sm">Pioneering the future of AI-driven simulation and analytics for a smarter world.</p>
+                </div>
+                <div>
+                    <h5 class="footer-heading mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#hero" class="footer-link">Home</a></li>
+                        <li><a href="#features" class="footer-link">Features</a></li>
+                        <li><a href="#platform" class="footer-link">Platform</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="footer-heading mb-4">Connect With Us</h5>
+                    <p class="mb-2">123 Tech Park Avenue,<br>Innovation City, TX 75001</p>
+                    <p class="mb-2">Email: <a href="mailto:hello@netropy.ai" class="footer-link">hello@netropy.ai</a></p>
+                    <p>Phone: <a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="footer-social-link"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                        <a href="#" class="footer-social-link"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                        <a href="#" class="footer-social-link"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p>&copy; <span id="currentYear"></span> Netropy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script_test.js"></script>
+</body>
+</html>
+
