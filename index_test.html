@@ -4,30 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netropy Homepage</title>
+
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@0.395.0/dist/umd/lucide.min.js"></script> 
+
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@0.395.0/dist/umd/lucide.min.js"></script>
+
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="styles_test.css">
 </head>
-<body class="text-gray-700 bg-[url('resources/white_curve_bg.jpg')] bg-cover bg-center bg-fixed">
+<body class="text-gray-700 bg-cover bg-center bg-fixed" style="background-image: url('resources/white_curve_bg.jpg');">
 
+    <!-- ======================================================================= -->
+    <!-- HEADER NAVIGATION -->
+    <!-- ======================================================================= -->
     <header id="header" class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300 py-3">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="header-logo-link"><img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo"></a>
+            <!-- Logo -->
+            <a href="#" class="header-logo-link">
+                <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo">
+            </a>
+
+            <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-6 items-center">
                 <a href="#hero" class="nav-link">Home</a>
                 <a href="#solutions" class="nav-link">Solutions</a>
                 <a href="careers.html" class="nav-link">Careers</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
+
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none" aria-label="Open mobile menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
             <a href="#hero" class="mobile-nav-link">Home</a>
+            <!-- Example of other potential links -->
             <!-- <a href="#features" class="mobile-nav-link">Features</a> -->
             <!-- <a href="#platform" class="mobile-nav-link">Platform</a> -->
             <a href="#solutions" class="mobile-nav-link">Solutions</a>
@@ -36,22 +57,35 @@
         </div>
     </header>
 
+    <!-- ======================================================================= -->
+    <!-- HERO SECTION -->
+    <!-- ======================================================================= -->
     <section id="hero" class="hero-bg relative h-[75vh] flex items-center pt-20 md:pt-0">
+        <!-- Background Video -->
         <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-10">
             <source src="resources/depth_inferred.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
+        <!-- Transparent Overlay for Video -->
         <div class="absolute inset-0 bg-black/40 z-20"></div>
+
+        <!-- Hero Content -->
         <div class="container mx-auto px-6 text-center md:text-left relative z-30">
             <div class="w-full md:w-2/3 lg:w-1/2">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 fade-in" style="text-shadow: 3px 3px 10px rgba(0,0,0,0.8);">Transforming Images and Videos into Actionable 3D Intelligence</h1>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 fade-in" 
+                    style="text-shadow: 3px 3px 10px rgba(0,0,0,0.8);">
+                    Transforming Images and Videos into Actionable 3D Intelligence
+                </h1>
                 <p class="text-base sm:text-lg md:text-xl text-gray-100 mb-8 fade-in fade-in-delay-1">
+                    <!-- Highlighted background for paragraph text for better readability on video -->
                     <span style="background-color: rgba(0,0,0,0.25); padding: 0.2rem 0.5rem; border-radius: 0.25rem; box-decoration-break: clone; -webkit-box-decoration-break: clone;">
                         Leverage cutting-edge AI to extract critical 3D insights directly from ordinary video footage, revolutionizing autonomous driving, robotics, and dynamic environment monitoring.
                     </span>
                 </p>
+                <!-- Call to Action Button -->
                 <div class="space-y-4 md:space-y-0 md:space-x-4 fade-in fade-in-delay-2">
                     <a href="#contact" 
-                       class="inline-flex items-center justify-center text-white font-bold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-sm sm:text-base shadow-md hover:shadow-lg transition-all duration-300 ease-in-out group"
+                       class="inline-flex items-center justify-center font-bold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-sm sm:text-base shadow-md hover:shadow-lg transition-all duration-300 ease-in-out group"
                        style="background-color: var(--brand-accent-color);">
                        <span class="bg-white group-hover:bg-gray-100 p-1.5 sm:p-2 rounded-full mr-2 sm:mr-3 transition-colors">
                            <i data-lucide="arrow-right" class="w-2.5 h-2.5 sm:w-3 sm:h-3" style="color: var(--emphasized-text-color);"></i>
@@ -63,10 +97,19 @@
         </div>
     </section>
 
-    <section id="unlock-potential" class="py-16 md:py-24 bg-cover bg-center" style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('resources/white_curve_bg.jpg');">
+    <!-- ======================================================================= -->
+    <!-- UNLOCK POTENTIAL SECTION -->
+    <!-- ======================================================================= -->
+    <section id="unlock-potential" class="py-16 md:py-24 bg-cover bg-center" 
+             style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('resources/white_curve_bg.jpg');">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-12 md:mb-16 text-center animate-on-scroll" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Unlock the Potential of Your Video Footage</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-12 md:mb-16 text-center animate-on-scroll" 
+                style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                Unlock the Potential of Your Video Footage
+            </h2>
+            <!-- Feature Grid -->
             <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Feature 1: Understand Scenes -->
                 <a href="#solution-understanding" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline">
                     <div class="mb-5 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
                         <i data-lucide="brain" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
@@ -74,6 +117,7 @@
                     <h3 class="text-2xl font-bold text-gray-800 mb-3">Understand Scenes in 3D</h3>
                     <p class="text-gray-600 text-sm leading-relaxed max-w-xs">Overcome the limitations of flat 2D video. Our technology transforms standard footage into rich 3D spatial understanding, revealing object locations, camera motion, and environmental depth.</p>
                 </a>
+                <!-- Feature 2: Create Digital Twin -->
                 <a href="#solution-digital-twin" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline" style="transition-delay: 0.1s;">
                      <div class="mb-5 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
                         <i data-lucide="layers" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
@@ -81,6 +125,7 @@
                     <h3 class="text-2xl font-bold text-gray-800 mb-3">Create Digital Twin</h3>
                     <p class="text-gray-600 text-sm leading-relaxed max-w-xs">Bypass the complexity of traditional 3D sensors. We generate highly realistic, interactive digital twins of real-world assets and environments using only standard 2D video.</p>
                 </a>
+                <!-- Feature 3: Simulate & Generate Data -->
                 <a href="#solution-simulation" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline" style="transition-delay: 0.2s;">
                      <div class="mb-5 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
                         <i data-lucide="sparkles" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
@@ -92,11 +137,20 @@
         </div>
     </section>
 
-    <section id="solutions" class="py-16 md:py-24 bg-cover bg-center" style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('resources/white_curve_bg.jpg');">
+    <!-- ======================================================================= -->
+    <!-- SOLUTIONS SECTION -->
+    <!-- ======================================================================= -->
+    <section id="solutions" class="py-16 md:py-24 bg-cover bg-center" 
+             style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('resources/white_curve_bg.jpg');">
         <div class="container mx-auto px-6">
+            <!-- Section Header -->
             <div class="md:w-3/4 lg:w-2/3 xl:w-1/2 text-center md:text-left mx-auto md:mx-0 mb-12 md:mb-16 animate-on-scroll">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Our Solutions</h2>
-                <p class="text-lg text-gray-700 leading-relaxed" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" 
+                    style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                    Our Solutions
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed" 
+                   style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
                     Delving deep into how our technology transforms video into actionable 3D intelligence.
                 </p>
             </div>
@@ -104,6 +158,7 @@
             <!-- Solution 1: Deep Scene Understanding -->
             <div class="bg-slate-50 rounded-xl shadow-lg p-8 md:p-10 my-10 md:my-16 animate-on-scroll" id="solution-understanding">
                 <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <!-- Text Content -->
                     <div class="md:w-5/12 text-center md:text-left">
                         <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Deep Scene Understanding</h3>
                         <p class="text-lg text-gray-700 mb-6">Gain unparalleled insights into dynamic environments. Our AI meticulously analyzes video to estimate camera motion, reconstruct scenes in 3D, and identify objects with precision.</p>
@@ -116,6 +171,7 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- Video Content with Thumbnails -->
                     <div class="md:w-7/12">
                         <div class="rounded-xl shadow-lg overflow-hidden aspect-video bg-gray-800">
                             <video id="main-video-understanding" class="w-full h-full object-cover" loop muted playsinline controls>
@@ -123,6 +179,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
+                        <!-- Video Thumbnails -->
                         <div class="flex justify-center gap-2 md:gap-3 mt-3" id="thumbnails-understanding">
                             <div class="thumbnail active w-1/3 border-2 rounded-md overflow-hidden aspect-video cursor-pointer hover:opacity-80" data-video-src="resources/ramp_entrance_reconstructed.mp4">
                                 <video preload="metadata" muted loop playsinline class="w-full h-full object-cover bg-gray-700">
@@ -147,6 +204,7 @@
             <!-- Solution 2: Digital Twin Generation -->
             <div class="bg-slate-50 rounded-xl shadow-lg p-8 md:p-10 my-10 md:my-16 animate-on-scroll" id="solution-digital-twin">
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
+                    <!-- Text Content -->
                     <div class="md:w-5/12 text-center md:text-left">
                         <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Digital Twin Generation</h3>
                         <p class="text-lg text-gray-700 mb-6">Transform real-world spaces into interactive 3D models using only standard video. Create high-fidelity digital twins for simulation, analysis, and virtual exploration without specialized hardware.</p>
@@ -159,6 +217,7 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- Video Content -->
                     <div class="md:w-7/12">
                         <div class="rounded-xl shadow-lg overflow-hidden aspect-video bg-gray-800">
                             <video class="w-full h-full object-cover" autoplay loop muted playsinline controls>
@@ -173,6 +232,7 @@
             <!-- Solution 3: Simulation & Data Generation -->
             <div class="bg-slate-50 rounded-xl shadow-lg p-8 md:p-10 my-10 md:my-16 animate-on-scroll" id="solution-simulation">
                 <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <!-- Text Content -->
                     <div class="md:w-5/12 text-center md:text-left">
                         <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Simulation & Data Generation</h3>
                         <p class="text-lg text-gray-700 mb-6">Leverage advanced visual generative AI to produce photo-realistic synthetic data and dynamic simulations. Customize scenarios and sensor outputs to train and test AI models efficiently.</p>
@@ -185,6 +245,7 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- Video Content -->
                     <div class="md:w-7/12">
                         <div class="rounded-xl shadow-lg overflow-hidden aspect-video bg-gray-800">
                              <video class="w-full h-full object-cover" autoplay loop muted playsinline controls>
@@ -198,29 +259,37 @@
         </div>
     </section>
 
+    <!-- ======================================================================= -->
+    <!-- CONTACT SECTION -->
+    <!-- ======================================================================= -->
     <section id="contact" class="py-16 md:py-24 text-white" style="background-color: var(--brand-accent-color-darker);">
         <div class="container mx-auto px-6">
             <div class="md:flex md:items-center md:gap-12 lg:gap-16">
+                <!-- Contact Intro Text -->
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 animate-on-scroll">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-5" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Transform Your <span style="color: var(--emphasized-text-color); text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">2D</span> 
-                        Data into Actionable <span style="color: var(--emphasized-text-color); text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">3D</span> Intelligence</h2>
-                    <p class="text-lg text-white opacity-90 mb-8 leading-relaxed" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-5" 
+                        style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                        Transform Your <span style="color: var(--emphasized-text-color); text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">2D</span> Data into Actionable <span style="color: var(--emphasized-text-color); text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">3D</span> Intelligence
+                    </h2>
+                    <p class="text-lg text-white opacity-90 mb-8 leading-relaxed" 
+                       style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
                         Let's discuss how Netropy AI can elevate your projects.
                     </p>
                 </div>
+                <!-- Contact Form / CTA -->
                 <div class="md:w-1/2 animate-on-scroll flex flex-col items-center" style="transition-delay: 0.1s;">
                     <div class="bg-black/10 p-8 rounded-xl shadow-xl w-full max-w-md">
-                        <h3 class="text-2xl font-semibold text-white mb-6 text-center" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Ready to take the next step?</h3>
-                        <p class="text-white opacity-90 mb-6 text-center text-sm" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                        <h3 class="text-2xl font-semibold text-white mb-6 text-center" 
+                            style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                            Ready to take the next step?
+                        </h3>
+                        <p class="text-white opacity-90 mb-6 text-center text-sm" 
+                           style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
                             Let's discuss your specific needs and how our cutting-edge technology can elevate your projects.
                         </p>
                         <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" 
-                           class="block w-full text-center font-semibold px-8 py-4 rounded-lg shadow-md 
-                                  text-lg transition-all duration-300 ease-in-out 
-                                  hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
-                           style="background-color: white; color: var(--emphasized-text-color); /* Button text will be brand color */ 
-                                  border: 2px solid white; /* Added white border for pop */
-                                  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 0 0 3px var(--brand-accent-color);">
+                           class="block w-full text-center font-semibold px-8 py-4 rounded-lg shadow-md text-lg transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                           style="background-color: white; color: var(--emphasized-text-color); border: 2px solid white; box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 0 0 3px var(--brand-accent-color);">
                             Discuss Your Use Case <i data-lucide="arrow-right" class="inline-block ml-2 w-5 h-5" style="color: var(--emphasized-text-color);"></i>
                         </a>
                     </div>
@@ -229,15 +298,21 @@
         </div>
     </section>
 
-    <footer class="py-12 bg-cover bg-center" style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('resources/white_curve_bg.jpg');">
+    <!-- ======================================================================= -->
+    <!-- FOOTER -->
+    <!-- ======================================================================= -->
+    <footer class="py-12 bg-cover bg-center" 
+            style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('resources/white_curve_bg.jpg');">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Footer Column 1: Logo and Tagline -->
                 <div>
                     <div class="mb-4">
                         <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo">
                     </div>
                     <p class="text-sm text-gray-600">Pioneering the future of spatial intelligence for a smarter world.</p>
                 </div>
+                <!-- Footer Column 2: Quick Links -->
                 <div>
                     <h5 class="footer-heading mb-4 text-gray-800">Quick Links</h5>
                     <ul class="space-y-2">
@@ -247,24 +322,32 @@
                         <li><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
+                <!-- Footer Column 3: Connect With Us -->
                 <div>
                     <h5 class="footer-heading mb-4 text-gray-800">Connect With Us</h5>
-                    <p class="mb-2 text-gray-600"><a href="https://map.naver.com/p/search/서울특별시 서초구 서초중앙로2길 35" target="_blank">
-                        Seocho Jungang-ro 2-gil 35, Seocho-gu </br> Seoul, South Korea
+                    <p class="mb-2 text-gray-600"><a href="https://map.naver.com/p/search/서울특별시 서초구 서초중앙로2길 35" target="_blank" class="footer-link">
+                        Seocho Jungang-ro 2-gil 35, Seocho-gu <br> Seoul, South Korea
                     </a></p>
                     <p class="mb-2 text-gray-600">Email: <a href="mailto:hello@netropy.ai" class="footer-link">hello@netropy.ai</a></p>
+                    <!-- Social Media Links -->
                     <div class="flex space-x-4 mt-4">
-                        <a href="https://www.linkedin.com/company/netropyai" class="footer-social-link"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-                        <a href="https://www.youtube.com/@netropyai" class="footer-social-link"><i data-lucide="youtube" class="w-6 h-6"></i></a>
+                        <a href="https://www.linkedin.com/company/netropyai" target="_blank" class="footer-social-link" aria-label="LinkedIn Profile">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@netropyai" target="_blank" class="footer-social-link" aria-label="YouTube Channel">
+                            <i data-lucide="youtube" class="w-6 h-6"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+            <!-- Copyright Information -->
             <div class="border-t border-gray-300 pt-8 text-center text-sm text-gray-600">
                 <p>&copy; <span id="currentYear"></span> Netropy. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Custom JavaScript -->
     <script src="script_test.js"></script>
 </body>
 </html>
