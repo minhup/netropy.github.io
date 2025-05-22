@@ -2,6 +2,7 @@
     --brand-accent-color: rgb(245, 140, 132);
     --brand-accent-color-darker: rgb(205, 100, 92); /* Moderately darker shade */
     --brand-accent-color-lighter-tint: rgb(252, 225, 220); /* Very pale tint of brand accent */
+    --emphasized-text-color: #115e59; /* Changed to deep teal for better harmony */
 }
 
 body {
@@ -135,7 +136,8 @@ body {
 
 /* Solution Video Thumbnails */
 .thumbnail.active {
-    @apply border-blue-500 shadow-lg;
+    border-color: var(--brand-accent-color-darker);
+    @apply shadow-lg;
 }
 
 .thumbnail {
@@ -148,12 +150,12 @@ body {
 
 /* Subtle background pattern for Unlock Potential section */
 #unlock-potential {
-    background-color: #f3f4f6; /* Equivalent to bg-gray-100 */
-    background-image: repeating-linear-gradient(
+    /* background-color: #f3f4f6; */ /* Equivalent to bg-gray-100 */
+    /* background-image: repeating-linear-gradient(
         45deg,
         transparent,
         transparent 15px,
         rgba(0, 0, 0, 0.015) 15px, 
         rgba(0, 0, 0, 0.015) 16px
-    );
+    ); */
 } 

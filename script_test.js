@@ -32,20 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentYearElement.textContent = new Date().getFullYear();
     }
 
-    // Shrink header on scroll
-    const header = document.getElementById('header');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('py-3');
-                header.classList.remove('py-4');
-            } else {
-                header.classList.add('py-4');
-                header.classList.remove('py-3');
-            }
-        });
-    }
-
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -103,6 +89,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial check in case elements are already in view on load
     handleScrollAnimation();
 
+    // Adjust Hero Video Speed
+    const heroVideo = document.querySelector('#hero video');
+    if (heroVideo) {
+        heroVideo.playbackRate = 0.8; // Reduce speed by 20%
+    }
+
     // Solution video thumbnail changer
     const mainVideoUnderstanding = document.getElementById('main-video-understanding');
     const thumbnailsUnderstandingContainer = document.getElementById('thumbnails-understanding');
@@ -149,12 +141,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Update active thumbnail state
                     thumbnails.forEach(t => {
                         t.classList.remove('active');
-                        t.classList.remove('border-blue-500');
-                        t.classList.add('border-transparent');
+                        // t.classList.remove('border-blue-500'); // No longer needed, CSS handles active border
+                        // t.classList.add('border-transparent'); // No longer needed, CSS handles default border
                     });
                     this.classList.add('active');
-                    this.classList.add('border-blue-500');
-                    this.classList.remove('border-transparent');
+                    // this.classList.add('border-blue-500'); // No longer needed
+                    // this.classList.remove('border-transparent'); // No longer needed
                 } else if (mainVideoUnderstanding.paused) {
                      mainVideoUnderstanding.play().catch(e => console.warn("Error resuming paused video:", e));
                 }
