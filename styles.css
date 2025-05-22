@@ -1,689 +1,250 @@
+/*
+================================================================================
+GLOBAL STYLES & CSS VARIABLES
+================================================================================
+*/
+
 :root {
-  --button_color: #ffcc80;
-  --logo-color: #ffcdd2;
-  /* --primary-color: linear-gradient(45deg, #ffcdd2, #fd9b92); */
-  /* --primary-color: linear-gradient(135deg, #ffcdd2, #ffe4e1, #ffebee); */
-  --primary-color: linear-gradient(45deg, var(--logo-color), #ffab91, var(--button_color));
-  --secondary-color: #192a56;
-  --accent-color: #ffa502;
-  --background-color: #f1f2f6;
-  --text-color: #2f3542;
-  --dark-text-color: #1e272e;
-  --header-bg-color: rgba(255, 255, 255, 0.9);
+    /* Primary brand color, a salmon/coral pink. Used for accents and CTAs. */
+    --brand-accent-color: rgb(245, 140, 132);
+    /* Darker shade of the brand accent, for hover states or alternative accents. */
+    --brand-accent-color-darker: rgb(205, 100, 92);
+    /* Very pale tint of the brand accent, often used for subtle backgrounds or highlights. */
+    --brand-accent-color-lighter-tint: rgb(252, 225, 220);
+    /* Emphasized text color, a deep teal, chosen for good contrast and harmony. */
+    --emphasized-text-color: #115e59;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.6;
+    font-family: 'Inter', sans-serif; /* Modern, readable sans-serif font. */
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links. */
+    /* text-gray-700 is applied via Tailwind class in HTML */
 }
 
-/* Header Styles */
-header {
-  background-color: var(--header-bg-color);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 5%;
-  box-sizing: border-box;
-  position: relative;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/*
+================================================================================
+UTILITY & ANIMATION CLASSES
+================================================================================
+*/
+
+/* General utility for hero background sections, if not using inline video/image. */
+.hero-bg {
+    /* Example usage: background-image: url(...); */
+    background-size: cover;   /* Ensures the background covers the area. */
+    background-position: center; /* Centers the background image. */
 }
 
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  /* Stack the slogan above the logo */
-  align-items: left;
+/* Base styling for generic section titles. */
+.section-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center;
 }
 
-.logo {
-  width: 130px;
-  /* Adjust the width as needed */
-  height: auto;
-  /* This maintains the aspect ratio */
-  color: var(--primary-color);
-  margin-bottom: 0.3rem;
-  /* Add space between the logo and the slogan */
+/* Base styling for generic section subtitles. */
+.section-subtitle {
+    @apply text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto;
 }
 
-.slogan {
-  font-size: 16px;
-  /* Increase the font size */
-  font-weight: 600;
-  /* Make the text bold */
-  color: var(--secondary-color);
-  /* Keep the color */
-  margin-left: 0;
-  /* Remove left margin */
-  letter-spacing: 1.2px;
-  /* Add spacing between letters */
-  line-height: 1.4;
-  /* Improve readability with line height */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow for depth */
-  font-family: 'Poppins', sans-serif;
-  /* Use a more modern font */
+/* General card styling. Can be extended or used directly. */
+.card {
+    @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
 }
 
-.join-us-button {
-  background-color: var(--button_color);
-  color: var(--text-color);
-  /* white; */
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 25px;
-  font-size: 14px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  border: 2px solid var(--button_color);
-  white-space: nowrap; /* Prevent button text from wrapping */
+/* Base button styling. Extend with .btn-primary, .btn-secondary, etc. */
+.btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-colors duration-300;
 }
 
-.join-us-button:hover {
-  background-color: transparent;
-  color: var(--logo-color);
+.btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
 }
 
-/* Main Content Styles */
-main {
-  padding: 5rem 5% 3rem;
+.btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
 }
 
-section {
-  margin-bottom: 4rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards;
+/* Fade-in animation definition. */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0; /* Start transparent, animation brings to opaque. */
 }
 
-@keyframes fadeInUp {
-  to {
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Optional delay classes for staggered fade-in effects. */
+.fade-in-delay-1 { animation-delay: 0.2s; }
+.fade-in-delay-2 { animation-delay: 0.4s; }
+.fade-in-delay-3 { animation-delay: 0.6s; }
+
+/* Scroll animation: elements appear by sliding up and fading in. */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
-  }
 }
 
-h1,
-h2,
-h3 {
-  color: var(--dark-text-color);
-}
-
-h1 {
-  font-size: 3.0rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  margin-top: -0.5rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2.5rem;
-  margin-top: -0.5rem;
-  text-align: center;
-}
-
-h3 {
-  font-size: 1.6rem;
-}
-
-p,
-li,
-span {
-  font-size: 1.2rem;
-}
-
-
-/* Hero Section */
-#hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  border-radius: 10px;
-  background: var(--primary-color);
-  color: var(--dark-text-color);
-  border-radius: 10px;
-  margin-top: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-#hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 100%);
-  z-index: 1;
-}
-
-#hero>* {
-  position: relative;
-  z-index: 2;
-}
-
-
-#hero p {
-  font-size: 1.3rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Technology Section */
-#technology {
-  background: var(--primary-color);
-  padding: 4rem 2rem;
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-#technology::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 100%);
-  z-index: 1;
-}
-
-#technology>* {
-  position: relative;
-  z-index: 2;
-}
-
-#technology h2,
-#technology p {
-  color: var(--dark-text-color);
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.tech-item {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(185, 44, 44, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Advantage Section */
-#advantage {
-  background: var(--primary-color);
-  color: var(--dark-text-color);
-  padding: 4rem 2rem;
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-#advantage::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 100%);
-  z-index: 1;
-}
-
-#advantage>* {
-  position: relative;
-  z-index: 2;
-}
-
-#advantage h2 {
-  color: var(--dark-text-color);
-}
-
-#advantage ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#advantage li {
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-}
-
-#advantage li:before {
-  content: '✓';
-  color: var(--secondary-color);
-  font-size: 1.5rem;
-  margin-right: 1rem;
-}
-
-/* Video Demo Section */
-#video-demo {
-  text-align: center;
-}
-
-.video-container {
-  max-width: 1200px;
-  width: 50%;  /* Default for larger screens */
-  min-width: 700px;  /* Minimum width in pixels */
-  margin: 0 auto;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Technology Section */
-#join-us {
-  background: var(--primary-color);
-  padding: 4rem 2rem;
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Job Listing */
-.job-listing {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.job-item {
-  padding: 1.5rem;
-  border-bottom: 1px solid #e0e0e0;
-  transition: background-color 0.3s ease;
-}
-
-.job-item:last-child {
-  border-bottom: none;
-}
-
-.job-item:hover {
-  background-color: #f8f9fa;
-}
-
-.job-item a {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+/*
+================================================================================
+COMPONENT-SPECIFIC STYLES
+================================================================================
+*/
 
-.job-title {
-  font-weight: bold;
-  color: var(--text-color);
+/* General Logo Styling */
+.logo {
+    height: 40px; /* Standard logo height. */
+    width: auto;  /* Maintain aspect ratio. */
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.job-location {
-  color: #666;
-  font-size: 0.9rem;
+/* ----- Header ----- */
+.header-logo-link {
+    /* Styles for the logo link in the header, if specific styling beyond .logo is needed. */
+    /* Example: @apply text-2xl font-bold text-blue-600; (Currently unused if logo is just an image) */
 }
 
-#join-us-wrap {
-  background: var(--primary-color);
-  padding: 4rem 2rem;
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  max-width: 1200px;
-  margin: 0 auto;
-  /* Center the section */
+.nav-link { /* For desktop navigation items. */
+    @apply text-gray-600 hover:text-blue-600 transition-colors;
 }
 
-/* Clean Footer Styles */
-footer {
-  background-color: var(--header-bg-color);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem 5%;
-  margin-top: 4rem;
+.mobile-nav-link { /* For mobile navigation items in the dropdown. */
+    @apply block px-6 py-3 text-gray-600 hover:bg-gray-100 hover:text-blue-600;
 }
 
-.footer-compact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ----- Hero Section (Semantic classes, if needed beyond Tailwind) ----- */
+.hero-title {
+    /* Example for semantic hero title styling: */
+    /* @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900; */
+    /* Margins/animations are typically applied directly in HTML for hero content. */
 }
 
-.footer-left {
-  text-align: left;
+.hero-subtitle {
+    /* Example for semantic hero subtitle styling: */
+    /* @apply text-lg md:text-xl text-gray-700; */
 }
 
-.footer-links {
-  margin-bottom: 0.5rem;
+/* ----- Buttons (Additional Variants) ----- */
+.btn-light { /* Button variant for light backgrounds. */
+    /* To be used with .btn for base padding/font. */
+    @apply bg-white text-blue-600 hover:bg-gray-100;
 }
 
-.footer-links a {
-  color: var(--text-color);
-  text-decoration: none;
-  margin-right: 1.5rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
+/* ----- Cards (Semantic classes for card sub-elements) ----- */
+.card-title {
+    /* Margins to be applied in HTML for layout flexibility. */
+    @apply text-xl font-semibold text-gray-800;
 }
 
-.footer-links a:hover {
-  color: var(--secondary-color);
+.card-text {
+    /* Base text style for card content. */
+    @apply text-gray-600;
 }
 
-.copyright {
-  color: var(--text-color);
-  font-size: 0.85rem;
-  opacity: 0.8;
-  margin: 0;
+.card-image-top { /* For images placed at the top of a card. */
+    /* Margins to be applied in HTML. */
+    @apply rounded-t-xl w-full h-48 object-cover;
 }
 
-.footer-right {
-  display: flex;
-  align-items: center;
+.card-action-link { /* For links like "Learn More" within cards. */
+    /* Text color to be applied in HTML (e.g., using var(--emphasized-text-color)). */
+    @apply font-medium hover:underline;
 }
 
-.footer-logo {
-  width: 80px;
-  height: auto;
+/* ----- Unlock Potential / Features Section ----- */
+.feature-icon-wrapper { /* Wrapper for icons in the features/unlock potential section. */
+    /* Background color and margin are applied directly in HTML. */
+    @apply flex items-center justify-center w-16 h-16 rounded-full;
 }
 
-@media (max-width: 768px) {
-  .footer-compact {
-    flex-direction: column-reverse;
-    gap: 1.5rem;
-  }
-  
-  .footer-left {
-    text-align: center;
-  }
-  
-  .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .footer-links a {
-    margin-right: 0;
-  }
+/* Hover effect for Unlock Potential boxes (<a> tags within the grid). */
+#unlock-potential .grid > a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Basic navbar styles */
-.navbar {
-  display: flex;
-  gap: 10px;
+#unlock-potential .grid > a:hover {
+    transform: translateY(-10px); /* Moves the box up slightly on hover. */
+    @apply shadow-xl; /* Applies a stronger shadow on hover. */
 }
 
-/* Mobile-specific adjustments - stack buttons */
-@media (max-width: 768px) {
-  /* Header adjustments */
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.8rem 1rem;
-  }
-  
-  .logo-container {
-    margin-bottom: 1rem;
-    align-items: center; /* Center logo and slogan */
-  }
-  
-  /* Stack navbar buttons vertically */
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .join-us-button {
-    width: 100px; /* Smaller fixed width */
-    text-align: center;
-    padding: 6px 10px; /* Reduced padding */
-    font-size: 12px; /* Smaller font size */
-  }
-  
-  /* Adjust main content to account for taller header */
-  main {
-    padding-top: 9rem;
-  }
-  
-  /* Retain other mobile styles */
-  .video-container {
-    width: 100%;
-    min-width: unset;
-  }
-  
-  .tech-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  h1 { font-size: 2.1rem; }
-  h2 { font-size: 1.8rem; }
-  h3 { font-size: 1.3rem; }
-  p, li, span { font-size: 1.0rem; }
-  #hero p { font-size: 1.05rem; }
+/* ----- Platform Section (if applicable, for semantic styling) ----- */
+.platform-content-title { /* Title for content blocks in a platform section. */
+    /* Margins to be applied in HTML. */
+    @apply text-2xl font-semibold text-gray-800;
 }
 
-/* Dynamic Background */
-body {
-  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-  /* background: linear-gradient(-45deg, #fafafa, #c88bce, #6dbad6, #3c8b79); */
-  background: linear-gradient(-45deg, #aa9292, #c289c7, #a2d0e0, #aadfd2);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+.list-item-check-icon { /* Styling for check icons in lists. */
+    /* Icon color (e.g., text-green-500 or var(--emphasized-text-color)) to be applied in HTML. */
+    @apply w-5 h-5 mr-2 mt-1 shrink-0;
 }
 
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
 
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Additional Animations */
-.tech-item,
-.job-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.tech-item:hover {
-  transform: scale(1.03) translateY(-2px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.job-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* AI-inspired elements */
-.ai-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.05;
-  background-image:
-    radial-gradient(circle at 25% 25%, var(--primary-color) 1px, transparent 1px),
-    radial-gradient(circle at 75% 75%, var(--secondary-color) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: aiBackground 20s linear infinite;
-}
-
-@keyframes aiBackground {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 50px 50px;
-  }
-}
-
-/* Glowing effect for tech items */
-.tech-item::after {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  z-index: -1;
-  filter: blur(20px);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.tech-item:hover::after {
-  opacity: 0.15;
+/* ----- Solutions Section: Video Thumbnails ----- */
+.thumbnail {
+    /* Default state for video thumbnails. */
+    @apply border-transparent transition-all duration-200 ease-in-out;
+    /* border-width: 2px; is applied in HTML */
 }
 
-/* Particle effect */
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.thumbnail:hover {
+    /* Subtle border indication on hover. */
+    /* Consider using a lighter version of the brand accent or emphasized color if desired. */
+    @apply border-blue-300; /* Current hover, can be changed. */
 }
 
-/* Contact Section Styles - Professional Version */
-.contact-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+.thumbnail.active {
+    /* Active state for the selected video thumbnail. */
+    border-color: var(--brand-accent-color-darker);
+    @apply shadow-lg;
 }
 
-.contact-card {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* ----- Footer ----- */
+.footer-heading {
+    /* Margins to be applied in HTML. */
+    /* text-xl for main footer heading can be applied via utility class if needed. */
+    @apply text-lg font-semibold text-gray-800;
 }
 
-.contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.footer-link { /* For general links within the footer. */
+    @apply text-gray-700 transition-colors;
 }
 
-.contact-icon {
-  font-size: 2.5rem;
-  color: var(--secondary-color);
-  margin-right: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
+.footer-link:hover {
+    color: var(--brand-accent-color);
+    @apply underline;
 }
 
-.contact-details {
-  flex: 1;
-  padding: 0 10px; /* Add internal padding */
+.footer-social-link { /* For social media icon links in the footer. */
+    @apply text-gray-600 transition-colors;
 }
 
-.contact-details h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.3rem; /* Slightly smaller heading */
-  color: var(--dark-text-color);
+.footer-social-link:hover {
+    color: var(--brand-accent-color);
 }
 
-.contact-details a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  font-size: 1rem; /* Smaller link text */
-  transition: color 0.3s ease;
-  display: inline-block;
-  word-break: break-word; /* Prevent overflow on small screens */
-}
-
-.contact-details a:hover {
-  color: var(--accent-color);
-}
+/*
+================================================================================
+DEPRECATED / COMMENTED OUT STYLES (Review and remove if not needed)
+================================================================================
+*/
 
-/* More aggressive mobile adjustments for contact cards */
-@media (max-width: 768px) {
-  /* Contact section main heading */
-  #contact h2 {
-    font-size: 1.7rem;
-    margin-bottom: 2rem; /* Increased margin */
-  }
-  
-  /* Contact section intro paragraph */
-  #contact > p {
-    font-size: 0.9rem !important;
-    margin-bottom: 2rem; /* Increased margin */
-    padding: 0 1rem; /* Added horizontal padding */
-  }
-  
-  .contact-cards {
-    gap: 1.8rem; /* Increased spacing between cards */
-  }
-  
-  .contact-card {
-    padding: 1.8rem; /* Significantly increased padding */
-    margin: 0 1rem; /* Increased horizontal margin */
-  }
-  
-  .contact-icon {
-    font-size: 1.7rem;
-    margin-right: 1.2rem; /* Increased spacing */
-    width: 32px;
-  }
-  
-  .contact-details {
-    padding: 0 8px 0 0; /* Increased padding */
-  }
-  
-  .contact-details h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem; /* Increased spacing after heading */
-  }
-  
-  .contact-details a {
-    font-size: 0.85rem;
-    padding: 5px 0; /* Increased vertical padding */
-  }
+/* Styles for #unlock-potential that were previously applying a fixed background. */
+/* These are commented out to allow the new white_curve_bg.jpg with overlay to show.
+#unlock-potential {
+    background-color: #f3f4f6; 
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 15px,
+        rgba(0, 0, 0, 0.015) 15px, 
+        rgba(0, 0, 0, 0.015) 16px
+    );
 }
+*/ 
