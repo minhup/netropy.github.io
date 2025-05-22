@@ -1,3 +1,9 @@
+:root {
+    --brand-accent-color: rgb(245, 140, 132);
+    --brand-accent-color-darker: rgb(205, 100, 92); /* Moderately darker shade */
+    --brand-accent-color-lighter-tint: rgb(252, 225, 220); /* Very pale tint of brand accent */
+}
+
 body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
@@ -111,13 +117,20 @@ body {
 
 /* Footer */
 .footer-heading {
-    @apply text-lg font-semibold text-white; /* Margins to be applied in HTML. text-xl for main footer heading via utility class */
+    @apply text-lg font-semibold text-gray-800; /* Margins to be applied in HTML. text-xl for main footer heading via utility class */
 }
 .footer-link { /* For links within the footer */
-    @apply hover:text-blue-400 transition-colors; /* Assumes base color is inherited or set on parent */
+    @apply text-gray-700 transition-colors;
+}
+.footer-link:hover {
+    color: var(--brand-accent-color);
+    @apply underline;
 }
 .footer-social-link { /* For social media icon links in the footer */
-    @apply text-gray-400 hover:text-white;
+    @apply text-gray-600 transition-colors;
+}
+.footer-social-link:hover {
+    color: var(--brand-accent-color);
 }
 
 /* Solution Video Thumbnails */
@@ -131,4 +144,16 @@ body {
 
 .thumbnail:hover {
     @apply border-blue-300;
+}
+
+/* Subtle background pattern for Unlock Potential section */
+#unlock-potential {
+    background-color: #f3f4f6; /* Equivalent to bg-gray-100 */
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 15px,
+        rgba(0, 0, 0, 0.015) 15px, 
+        rgba(0, 0, 0, 0.015) 16px
+    );
 } 

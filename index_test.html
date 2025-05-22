@@ -16,11 +16,9 @@
             <a href="#" class="header-logo-link"><img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo"></a>
             <nav class="hidden md:flex space-x-6 items-center">
                 <a href="#hero" class="nav-link">Home</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#platform" class="nav-link">Platform</a>
                 <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="careers.html" class="nav-link">Careers</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <a href="#" class="btn btn-primary">Get Started</a>
             </nav>
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
@@ -30,8 +28,8 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
             <a href="#hero" class="mobile-nav-link">Home</a>
-            <a href="#features" class="mobile-nav-link">Features</a>
-            <a href="#platform" class="mobile-nav-link">Platform</a>
+            <!-- <a href="#features" class="mobile-nav-link">Features</a> -->
+            <!-- <a href="#platform" class="mobile-nav-link">Platform</a> -->
             <a href="#solutions" class="mobile-nav-link">Solutions</a>
             <a href="#contact" class="mobile-nav-link">Contact</a>
             <a href="#" class="block btn btn-primary mx-4 my-2 text-center">Get Started</a>
@@ -39,17 +37,27 @@
     </header>
 
     <section id="hero" class="hero-bg relative h-[75vh] flex items-center pt-20 md:pt-0">
-        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover -z-10 opacity-25">
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-10">
             <source src="resources/depth_inferred.mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
-        <div class="container mx-auto px-6 text-center md:text-left relative z-10">
+        <div class="absolute inset-0 bg-black/40 z-20"></div>
+        <div class="container mx-auto px-6 text-center md:text-left relative z-30">
             <div class="md:w-2/3 lg:w-1/2">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 fade-in">Transforming Images and Videos into Actionable 3D Intelligence</h1>
-                <p class="hero-subtitle mb-8 fade-in fade-in-delay-1">Leverage cutting-edge AI to extract critical 3D insights directly from ordinary video footage, revolutionizing autonomous driving, robotics, and dynamic environment monitoring.</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 fade-in" style="text-shadow: 3px 3px 10px rgba(0,0,0,0.8);">Transforming Images and Videos into Actionable 3D Intelligence</h1>
+                <p class="text-lg md:text-xl text-gray-100 mb-8 fade-in fade-in-delay-1">
+                    <span style="background-color: rgba(0,0,0,0.25); padding: 0.25rem 0.5rem; border-radius: 0.25rem; box-decoration-break: clone; -webkit-box-decoration-break: clone;">
+                        Leverage cutting-edge AI to extract critical 3D insights directly from ordinary video footage, revolutionizing autonomous driving, robotics, and dynamic environment monitoring.
+                    </span>
+                </p>
                 <div class="space-y-4 md:space-y-0 md:space-x-4 fade-in fade-in-delay-2">
-                    <a href="#contact" class="btn btn-primary text-lg">Request a Demo</a>
-                    <a href="#platform" class="btn btn-light text-lg">Learn More</a>
+                    <a href="#contact" 
+                       class="inline-flex items-center justify-center text-white font-bold px-4 py-2 rounded-full text-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out group"
+                       style="background-color: var(--brand-accent-color);">
+                       <span class="bg-white group-hover:bg-gray-100 p-2 rounded-full mr-3 transition-colors">
+                           <i data-lucide="arrow-right" class="w-3 h-3" style="color: var(--brand-accent-color);"></i>
+                       </span>
+                       <span style="text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">Contact Us</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -60,22 +68,22 @@
             <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-12 md:mb-16 text-center animate-on-scroll">Unlock the Potential of Your Video Footage</h2>
             <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
                 <a href="#solution-understanding" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline">
-                    <div class="mb-5">
-                        <i data-lucide="brain" class="w-10 h-10 text-blue-600"></i>
+                    <div class="mb-5 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
+                        <i data-lucide="brain" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800 mb-3">Understand Scenes in 3D</h3>
                     <p class="text-gray-600 text-sm leading-relaxed max-w-xs">Overcome the limitations of flat 2D video. Our technology transforms standard footage into rich 3D spatial understanding, revealing object locations, camera motion, and environmental depth.</p>
                 </a>
                 <a href="#solution-digital-twin" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline" style="transition-delay: 0.1s;">
-                     <div class="mb-5">
-                        <i data-lucide="layers" class="w-10 h-10 text-blue-600"></i>
+                     <div class="mb-5 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
+                        <i data-lucide="layers" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800 mb-3">Create Digital Twin</h3>
                     <p class="text-gray-600 text-sm leading-relaxed max-w-xs">Bypass the complexity of traditional 3D sensors. We generate highly realistic, interactive digital twins of real-world assets and environments using only standard 2D video.</p>
                 </a>
                 <a href="#solution-simulation" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline" style="transition-delay: 0.2s;">
-                     <div class="mb-5">
-                        <i data-lucide="sparkles" class="w-10 h-10 text-blue-600"></i>
+                     <div class="mb-5 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
+                        <i data-lucide="sparkles" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800 mb-3">Simulate & Generate Synthetic Data</h3>
                     <p class="text-gray-600 text-sm leading-relaxed max-w-xs">Utilize cutting-edge visual generative AI to create simulations and photo-realistic synthetic data without traditional physics engines. This fast, customizable approach generates diverse scenarios.</p>
@@ -86,8 +94,12 @@
 
     <section id="solutions" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="section-title animate-on-scroll">Our Solutions</h2>
-            <p class="section-subtitle animate-on-scroll">Delving deep into how our technology transforms video into actionable 3D intelligence.</p>
+            <div class="md:w-3/4 lg:w-2/3 xl:w-1/2 text-center md:text-left mx-auto md:mx-0 mb-12 md:mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Solutions</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Delving deep into how our technology transforms video into actionable 3D intelligence.
+                </p>
+            </div>
 
             <!-- Solution 1: Deep Scene Understanding -->
             <div class="bg-slate-50 rounded-xl shadow-lg p-8 md:p-10 my-10 md:my-16 animate-on-scroll" id="solution-understanding">
@@ -186,27 +198,29 @@
         </div>
     </section>
 
-    <section id="contact" class="py-16 md:py-24 bg-purple-700 text-white">
+    <section id="contact" class="py-16 md:py-24 text-white" style="background-color: var(--brand-accent-color-darker);">
         <div class="container mx-auto px-6">
             <div class="md:flex md:items-center md:gap-12 lg:gap-16">
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 animate-on-scroll">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-5">Transform Your <span style="color: rgb(250, 200, 190);">2D</span> 
-                        Data into Actionable <span style="color: rgb(250, 200, 190);">3D</span> Intelligence</h2>
-                    <p class="text-lg text-purple-200 mb-8 leading-relaxed">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-5" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Transform Your <span style="color: rgba(255,255,255,0.9); /* Brighter white */ text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">2D</span> 
+                        Data into Actionable <span style="color: rgba(255,255,255,0.9); /* Brighter white */ text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">3D</span> Intelligence</h2>
+                    <p class="text-lg text-white opacity-90 mb-8 leading-relaxed" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
                         Let's discuss how Netropy AI can elevate your projects.
                     </p>
                 </div>
                 <div class="md:w-1/2 animate-on-scroll flex flex-col items-center" style="transition-delay: 0.1s;">
-                    <div class="bg-white/10 p-8 rounded-xl shadow-xl w-full max-w-md">
-                        <h3 class="text-2xl font-semibold text-white mb-6 text-center">Ready to take the next step?</h3>
-                        <p class="text-purple-200 mb-6 text-center text-sm">
+                    <div class="bg-black/10 p-8 rounded-xl shadow-xl w-full max-w-md">
+                        <h3 class="text-2xl font-semibold text-white mb-6 text-center" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Ready to take the next step?</h3>
+                        <p class="text-white opacity-90 mb-6 text-center text-sm" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
                             Let's discuss your specific needs and how our cutting-edge technology can elevate your projects.
                         </p>
                         <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" 
                            class="block w-full text-center font-semibold px-8 py-4 rounded-lg shadow-md 
                                   text-lg transition-all duration-300 ease-in-out 
-                                  hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-purple-700"
-                           style="background-color: white; color: rgb(245, 78, 66);">
+                                  hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                           style="background-color: white; color: var(--brand-accent-color); /* Button text will be brand color */ 
+                                  border: 2px solid white; /* Added white border for pop */
+                                  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 0 0 3px var(--brand-accent-color); /* Subtle outer glow in brand color */">
                             Discuss Your Use Case <i data-lucide="arrow-right" class="inline-block ml-2 w-5 h-5"></i>
                         </a>
                     </div>
@@ -215,28 +229,29 @@
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-gray-300 py-12">
+    <footer class="bg-gray-100 py-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
-                    <h4 class="footer-heading text-xl mb-4">Netropy</h4>
-                    <p class="text-sm">Pioneering the future of AI-driven simulation and analytics for a smarter world.</p>
+                    <div class="mb-4">
+                        <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo">
+                    </div>
+                    <p class="text-sm text-gray-600">Pioneering the future of AI-driven simulation and analytics for a smarter world.</p>
                 </div>
                 <div>
-                    <h5 class="footer-heading mb-4">Quick Links</h5>
+                    <h5 class="footer-heading mb-4 text-gray-800">Quick Links</h5>
                     <ul class="space-y-2">
                         <li><a href="#hero" class="footer-link">Home</a></li>
-                        <li><a href="#features" class="footer-link">Features</a></li>
-                        <li><a href="#platform" class="footer-link">Platform</a></li>
-                        <li><a href="#" class="footer-link">Careers</a></li>
-                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                        <li><a href="careers.html" class="nav-link">Careers</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="footer-heading mb-4">Connect With Us</h5>
-                    <p class="mb-2">123 Tech Park Avenue,<br>Innovation City, TX 75001</p>
-                    <p class="mb-2">Email: <a href="mailto:hello@netropy.ai" class="footer-link">hello@netropy.ai</a></p>
-                    <p>Phone: <a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></p>
+                    <h5 class="footer-heading mb-4 text-gray-800">Connect With Us</h5>
+                    <p class="mb-2 text-gray-600">123 Tech Park Avenue,<br>Innovation City, TX 75001</p>
+                    <p class="mb-2 text-gray-600">Email: <a href="mailto:hello@netropy.ai" class="footer-link">hello@netropy.ai</a></p>
+                    <p class="text-gray-600">Phone: <a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></p>
                     <div class="flex space-x-4 mt-4">
                         <a href="#" class="footer-social-link"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
                         <a href="#" class="footer-social-link"><i data-lucide="twitter" class="w-6 h-6"></i></a>
@@ -244,7 +259,7 @@
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+            <div class="border-t border-gray-300 pt-8 text-center text-sm text-gray-600">
                 <p>&copy; <span id="currentYear"></span> Netropy. All rights reserved.</p>
             </div>
         </div>
