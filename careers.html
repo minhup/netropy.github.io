@@ -20,10 +20,43 @@
     <meta name="twitter:description" content="Join Netropy AI and help us build the future of 3D spatial intelligence. Explore open positions and learn about our culture.">
     <meta name="twitter:image" content="resources/logo_semi_bold.svg">
     <link rel="canonical" href="https://netropy.ai/careers.html">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Netropy AI",
+      "url": "https://netropy.ai",
+      "logo": "https://netropy.ai/resources/logo_semi_bold.svg",
+      "description": "Netropy AI delivers cutting-edge AI for spatial intelligence. We reconstruct 3D scenes from video to extract critical insights, enabling digital twin generation, simulation, and photo-realistic image synthesis.",
+      "sameAs": [
+        "https://www.linkedin.com/company/netropyai",
+        "https://www.youtube.com/@netropyai"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "general inquiry",
+        "url": "https://form.typeform.com/to/G3sSMNJ0"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://netropy.ai",
+      "name": "Netropy AI",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Netropy AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://netropy.ai/resources/logo_semi_bold.svg"
+        }
+      }
+    }
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSKWS4GTQJ"></script>
@@ -31,146 +64,218 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-BSKWS4GTQJ');
     </script>
+
+    <!-- Styles and Scripts for index.html -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@0.395.0/dist/umd/lucide.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="careers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body>
-    <nav class="site-navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="nav-logo-link">
-                <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="nav-logo">
+<body class="text-gray-700 bg-cover bg-center bg-fixed join-us-page">
+
+    <!-- ======================================================================= -->
+    <!-- HEADER NAVIGATION -->
+    <!-- ======================================================================= -->
+    <header id="header" class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300 py-3">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="header-logo-link">
+                <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo">
             </a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="careers.html" class="nav-link active">Careers</a>
-                <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" class="nav-link nav-cta-button">Contact</a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#open-positions" class="nav-link text-black">Positions</a>
+                <a href="index.html" class="nav-link text-black">Home</a>
+                <!-- <a href="#solutions" class="nav-link text-black">Solutions</a>
+                <a href="careers.html" class="nav-link text-black">Careers</a>
+                <a href="#contact" class="nav-link text-black">Contact</a> -->
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none" aria-label="Open mobile menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
         </div>
-    </nav>
 
-    <header class="hero-section careers-hero">
-        <div class="container">
-            <h1>Join Us</h1>
-            <p>
-                At Netropy AI, we're actively building the future, pioneering the next dimension of intelligence. Join our mission to empower AI with 3D understanding, transforming 2D video into profound 3D insights. If you're driven by complex challenges, ready to contribute to groundbreaking work with a visionary team, and envision a world where technology sees and understands more deeply, your journey starts here.
-            </p>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <a href="index.html" class="block nav-link text-black px-4 py-2">Home</a>
+            <a href="#open-positions" class="block nav-link text-black px-4 py-2">Positions</a>
+            <!-- <a href="#contact" class="block nav-link text-black px-4 py-2">Contact</a> -->
         </div>
     </header>
 
-    <main>
-        <section class="content-section" id="open-positions">
-            <div class="container">
-                <h2>Open Positions</h2>
-                <table class="job-listings-table">
-                    <thead>
-                        <tr>
-                            <th>Positions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="https://ddv6dme7.ninehire.site/job_posting/5OILPnFb" target="_blank">Research Engineer - NeRF & GenAI</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section class="content-section" id="about-us">
-            <div class="container">
-                <h2>About Netropy</h2>
-                <p>
-                    Netropy AI stands at the cutting edge of 3D spatial intelligence. We specialize in pushing the known limits of 3D scene reconstruction, AI-driven simulation, and photo-realistic image synthesis. Our dynamic team consists of serial entrepreneurs and leading technologists whose collective expertise in AI, robotics, and computer vision is charting new territories. At Netropy AI, we foster a culture of innovation where passion for tackling ambitious problems translates into tangible impact. We are committed to developing powerful, practical, and accessible AI-driven solutions that address today's needs while architecting the innovations of tomorrow, aiming to shape a smarter world.
-                </p>
-            </div>
-        </section>
-
-        <section class="content-section" id="how-we-work">
-            <div class="container">
-                <h2>How We Work</h2>
-                <div class="how-we-work-grid">
-                    <div class="work-item">
-                        <h4>Create New Value</h4>
-                        <p>We relentlessly explore how technology can shape a better future in today's fast-paced innovation landscape.</p>
+    <main class="join-us-content pt-28">
+        <section id="join-us-wrap">
+    
+            <section id="about-us">
+                <h2>Join Our Team</h2>
+                <div class="about-us-container-box">
+                    <div class="about-us-text-content">
+                        <p>Founded by robotics and computer vision experts with a proven track record as serial entrepreneurs,
+                            we
+                            have successfully built a pioneering autonomous driving startup.</p>
+                        <p>Our company is driven by the latest advancements in <span class="highlight">Neural Rendering</span>
+                            and
+                            <span class="highlight">Generative AI</span> technologies, enabling us to develop photo-realistic
+                            and
+                            immersive simulation and digital twin solutions for a wide range of applications, including
+                            autonomous
+                            driving, robotics and digital twin.
+                        </p>
                     </div>
-                    <div class="work-item">
-                        <h4>Grow Together</h4>
-                        <p>We embrace challenges to foster both collective and individual growth.</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>Autonomy & Responsibility</h4>
-                        <p>We build on trust, empowering our team to make decisions and take ownership of their results.</p>
+                    <div class="about-us-image-content">
+                        <img src="resources/discuss_2.png" alt="Team discussion at Netropy AI">
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="content-section" id="benefits">
-            <div class="container">
-                <h2>Benefits</h2>
-                <ul class="benefits-list">
-                    <li>Convenient Location: Just a 5-minute walk from Nambu Bus Terminal Station (Line 3).</li>
-                    <li>Flexible Hours: Enjoy a flexible arrival time, starting your day anytime before 11 AM.</li>
-                    <li>Meal Support: Recharge with your team at great local restaurants, fostering camaraderie.</li>
-                    <li>Modern Equipment: Access the latest equipment and productivity tools to maximize your work efficiency.</li>
-                    <li>Visa Sponsorship: We offer visa sponsorship for qualified international candidates.</li>
+            </section>
+    
+            <section id="we-value">
+                <h2>Who We're Looking For</h2>
+                <p>As a young and dynamic startup operating at the forefront of rapidly evolving technology, we value
+                    individuals who are:</p>
+                <ul class="value-list">
+                    <li class="value-item-card">
+                        <div class="value-icon-wrapper">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="value-title">Passionate Learner & Innovator</h3>
+                        <p class="value-description">Thrive in a fast-paced environment, excited about pushing technological boundaries, and always eager to learn and grow beyond your comfort zone.</p>
+                    </li>
+                    <li class="value-item-card">
+                        <div class="value-icon-wrapper">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="value-title">Proactive & Hands-On</h3>
+                        <p class="value-description">A builder at heart, you take ownership of your work and proactively contribute to the team's success, even beyond your defined scope.</p>
+                    </li>
+                    <li class="value-item-card">
+                        <div class="value-icon-wrapper">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="value-title">Collaborative Communicator</h3>
+                        <p class="value-description">Effectively share ideas, foster positive team dynamics, and collaborate seamlessly to achieve shared goals.</p>
+                    </li>
                 </ul>
-            </div>
+            </section>
+    
+            <section id="benefits">
+                <h2>Benefits</h2>
+                <div class="benefit-container-box">
+                    <div class="benefit-text-content">
+                        <ul>
+                            <li>
+                                <div class="benefit-icon-wrapper">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h3>Convenient Location</h3>
+                                    <p>Our office is conveniently located near Nambu Bus Terminal station on line number 3, making your commute hassle-free.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon-wrapper">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div>
+                                    <h3>Lunch Support</h3>
+                                    <p>Enjoy a variety of great dining options with lunch support provided by the company. There are numerous excellent restaurants in the area for you to explore.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon-wrapper">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h3>Flexible Working Hours</h3>
+                                    <p>We offer flexible working hours to accommodate your personal and professional needs.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon-wrapper">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div>
+                                    <h3>Cutting-Edge Technology</h3>
+                                    <p>Work with the latest tools and technologies in a stimulating environment that encourages innovation.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="benefit-image-content">
+                        <img src="resources/benefit.png" alt="Benefits at Netropy AI">
+                    </div>
+                </div>
+            </section>
+    
+            <section id="open-positions">
+                <h2>Open Positions</h2>
+                <div class="job-listing">
+                    <div class="job-item">
+                        <a href="https://ddv6dme7.ninehire.site/job_posting/5OILPnFb" target="_blank">
+                            <span class="job-title">Research Engineer - NeRF & GenAI</span>
+                            <span class="job-location">Seoul, South Korea</span>
+                        </a>
+                    </div>
+                    <!-- <div class="job-item">
+                        <a href="https://ddv6dme7.ninehire.site/job_posting/Q8BcTGRp" target="_blank">
+                            <span class="job-title">Full-Stack Software Engineer - AI System</span>
+                            <span class="job-location">Seoul, South Korea</span>
+                        </a>
+                    </div> -->
+                </div>
+            </section>
         </section>
-
-        <section class="content-section" id="hiring-process">
-            <div class="container">
-                <h2>Hiring Process</h2>
-                <ol class="hiring-process-list">
-                    <li>
-                        <h4>Application Submission</h4>
-                        <p>Submit your application to start your journey with us.</p>
-                    </li>
-                    <li>
-                        <h4>First Interview</h4>
-                        <p>An online interview focused on your job-related skills and experience.</p>
-                    </li>
-                    <li>
-                        <h4>Technical Assignment</h4>
-                        <p>Following the first interview, you will receive a technical assignment.</p>
-                    </li>
-                    <li>
-                        <h4>Technical Interview</h4>
-                        <p>An online or on-site interview where we will review your assignment together and discuss it in depth.</p>
-                    </li>
-                    <li>
-                        <h4>Culture Fit Interview</h4>
-                        <p>A final interview (on-site or online) primarily to ensure alignment with our company culture.</p>
-                    </li>
-                    <li>
-                        <h4>Final Offer</h4>
-                        <p>Welcome to Netropy AI!</p>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
     </main>
 
-    <footer id="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-links">
-                        <a href="https://www.linkedin.com/company/netropyai" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.youtube.com/@netropyai" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="careers.html">Careers</a>
-                    </div>
-                    <div class="copyright">
-                        © 2024 Netropy. All Rights Reserved.
+    <!-- ======================================================================= -->
+    <!-- FOOTER -->
+    <!-- ======================================================================= -->
+    <footer id="contact" class="bg-gray-100 text-gray-700 py-12 md:py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Left: Logo and Copyright -->
+                <div class="text-center md:text-left">
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo h-10">
+                    </a>
+                    <p class="text-sm text-gray-600 mt-2">Pioneering the future of spatial intelligence for a smarter world.</p>
+                </div>
+
+                <!-- Right: Social Media -->
+                <div class="text-center md:text-right">
+                    <h5 class="text-lg font-semibold text-gray-800 mb-3">Connect With Us</h5>
+                    <div class="flex justify-center md:justify-end space-x-4">
+                        <a href="https://www.linkedin.com/company/netropyai" target="_blank" rel="noopener noreferrer" class="footer-social-link text-gray-600 hover:text-gray-900">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@netropyai" target="_blank" rel="noopener noreferrer" class="footer-social-link text-gray-600 hover:text-gray-900">
+                            <i data-lucide="youtube" class="w-6 h-6"></i>
+                        </a>
+                        <a href="mailto:hello@netropy.ai" class="footer-social-link text-gray-600 hover:text-gray-900">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="footer-logo">
-                    <img src="resources/logo_semi_bold.svg" alt="Netropy Logo">
-                </div>
+            </div>
+            <!-- Copyright Information -->
+            <div class="border-t border-gray-300 pt-8 mt-8 text-center">
+                <p class="text-sm text-gray-600">&copy; 2025 Netropy Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        lucide.createIcons(); // Ensure Lucide icons are initialized
+    </script>
+
 </body>
-</html> 
+</html>
+
