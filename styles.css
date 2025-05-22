@@ -1,801 +1,250 @@
+/*
+================================================================================
+GLOBAL STYLES & CSS VARIABLES
+================================================================================
+*/
+
 :root {
-  --key-color-primary: #e91e63; /* Material Pink 500 */
-  --key-color-primary-dark: #c2185b; /* Material Pink 700 */
-  --key-color-light: #ffcdd2; /* Material Pink 100 - Used for thumbnail hover */
-  --text-primary: #212529;
-  --text-secondary: #495057;
-  --text-light: #6c757d;
-  --background-light: #ffffff;
-  --border-color: #e9ecef;
-  /* --secondary-color: #192a56; /* Retained for .feature-section ul li::before, consider if needed */
-  --dark-text-color: #1e272e; /* Used by h1,h2,h3 */
-  --header-bg-color: rgba(255, 255, 255, 0.9);
+    /* Primary brand color, a salmon/coral pink. Used for accents and CTAs. */
+    --brand-accent-color: rgb(245, 140, 132);
+    /* Darker shade of the brand accent, for hover states or alternative accents. */
+    --brand-accent-color-darker: rgb(205, 100, 92);
+    /* Very pale tint of the brand accent, often used for subtle backgrounds or highlights. */
+    --brand-accent-color-lighter-tint: rgb(252, 225, 220);
+    /* Emphasized text color, a deep teal, chosen for good contrast and harmony. */
+    --emphasized-text-color: #115e59;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding-top: calc(40px + 1.5rem); /* Navbar height: 40px logo + 1.5rem padding */
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  background-color: var(--background-light);
-  color: var(--text-primary);
-  line-height: 1.7;
+    font-family: 'Inter', sans-serif; /* Modern, readable sans-serif font. */
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links. */
+    /* text-gray-700 is applied via Tailwind class in HTML */
 }
 
-/* New Navbar Styles */
-.site-navbar {
-  background-color: var(--header-bg-color, #ffffff);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 0.75rem 5%;
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  width: 100%;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.nav-logo-link {
-  display: flex;
-  align-items: center;
-}
-
-.nav-logo {
-  height: 40px;
-  width: auto;
-  display: block;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-
-.nav-link {
-  color: var(--text-primary);
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--key-color-primary);
-}
-
-.nav-cta-button {
-  background-color: var(--key-color-primary);
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.nav-cta-button:hover {
-  background-color: var(--key-color-primary-dark);
-  color: #fff;
-  transform: translateY(-1px);
-}
-/* End New Navbar Styles */
-
-/* Main Content Styles */
-main {
-  padding: 2rem 5% 3rem; /* Adjusted padding-top */
-}
-
-section { /* Applies to .intro-section-revised */
-  margin-bottom: 4rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Base Typography - Specific elements often override these */
-h1,
-h2,
-h3 {
-  color: var(--dark-text-color);
-}
-
-h1 {
-  font-size: 3.0rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  margin-top: -0.5rem;
-}
-
-h2 {
-  font-size: 2.5rem; /* Base, often overridden */
-  margin-bottom: 2.5rem;
-  margin-top: -0.5rem;
-  text-align: center;
-}
-
-h3 {
-  font-size: 1.6rem; /* Base, often overridden */
-}
-
-p,
-li,
-span {
-  font-size: 1.2rem; /* Base, often overridden */
-}
-
-/* Footer Styles */
-footer {
-  background-color: #ffffff;
-  color: var(--text-primary);
-  padding: 20px 0;
-  font-size: 0.9em;
-  border-top: 1px solid var(--border-color);
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.footer-links a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: var(--key-color-primary);
-}
-
-.footer-logo img {
-  height: 30px;
-  width: auto;
-}
-
-.copyright {
-  color: var(--text-light);
-  font-size: 0.85em;
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-  .footer-left {
-    align-items: center;
-  }
-  .footer-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-/* End Footer Styles */
-
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Particle effect - ID #particles-js is not found in index.html. Remove if not used. */
 /*
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
+================================================================================
+UTILITY & ANIMATION CLASSES
+================================================================================
 */
 
-.container { /* Utility class */
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* General utility for hero background sections, if not using inline video/image. */
+.hero-bg {
+    /* Example usage: background-image: url(...); */
+    background-size: cover;   /* Ensures the background covers the area. */
+    background-position: center; /* Centers the background image. */
 }
 
-/* Hero Section (was .new-hero-section from inline styles) */
-.hero-section { /* This is the <header> element */
-    position: relative;
-    overflow: hidden;
-    padding: 120px 0; /* Main vertical padding for the hero */
+/* Base styling for generic section titles. */
+.section-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center;
 }
 
-.hero-background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.3;
-    z-index: -1;
+/* Base styling for generic section subtitles. */
+.section-subtitle {
+    @apply text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto;
 }
 
-.hero-section .main-headline { /* Specific styling for H1 in hero */
-  font-size: 3em;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.3;
-  max-width: 900px;
-  margin: 0 auto 25px auto; /* Adjusted bottom margin */
-  letter-spacing: -0.5px;
-  text-align: center; /* Ensure headline is centered */
+/* General card styling. Can be extended or used directly. */
+.card {
+    @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
 }
 
-.sub-headline { /* Used in .new-hero-section */
-    font-size: 1.2em;
-    color: #333333; /* Consider var(--text-secondary) */
-    margin-top: 15px;
-    margin-bottom: 25px;
-    line-height: 1.5;
-    font-weight: 400;
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.95;
-    text-align: center;
-}
-/* End Hero Section */
-
-/* Intro Section (Cards) */
-.intro-section {
-    padding-top: 80px; /* Added to match content-section's top padding */
+/* Base button styling. Extend with .btn-primary, .btn-secondary, etc. */
+.btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-colors duration-300;
 }
 
-.intro-section h2 {
-    font-size: 2.2rem;
-    color: var(--text-primary);
-    text-align: center;
-    margin-bottom: 30px;
-    line-height: 1.3;
+.btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
 }
 
-.intro-features {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: stretch; /* Ensure cards are of equal height if wrapped in 'a' */
-}
-.intro-features a {
-    text-decoration: none;
-    color: inherit;
-    display: flex; /* Make anchor a flex container */
-    flex: 1; /* Allow anchor to grow */
+.btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
 }
 
-.feature-column { /* General style for a feature card column */
-    flex: 1; /* Takes equal space if direct child of a flex container */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 25px;
-    background-color: #ffffff;
-    border: 1px solid var(--border-color, #e0e0e0);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-}
-.intro-features .feature-column { /* Specific to intro section ensure it fills the 'a' tag */
-    flex-grow: 1;
+/* Fade-in animation definition. */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0; /* Start transparent, animation brings to opaque. */
 }
 
-.feature-column:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.08);
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
-.feature-icon {
-    font-size: 2.5rem;
-    color: var(--key-color-primary);
-    margin-bottom: 15px;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Optional delay classes for staggered fade-in effects. */
+.fade-in-delay-1 { animation-delay: 0.2s; }
+.fade-in-delay-2 { animation-delay: 0.4s; }
+.fade-in-delay-3 { animation-delay: 0.6s; }
+
+/* Scroll animation: elements appear by sliding up and fading in. */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.feature-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 10px;
-    min-height: 55px; /* Approx 2-3 lines */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.feature-description {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 15px;
-    min-height: 60px;
-    flex-grow: 1; /* Takes available space in column */
+/*
+================================================================================
+COMPONENT-SPECIFIC STYLES
+================================================================================
+*/
+
+/* General Logo Styling */
+.logo {
+    height: 40px; /* Standard logo height. */
+    width: auto;  /* Maintain aspect ratio. */
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.feature-divider {
-    width: 50%;
-    border: none;
-    height: 1px;
-    background-color: var(--border-color);
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-/* End Intro Section */
-
-/* General Content Section Styling (for #core-capabilities, #final-contact-cta) */
-.content-section {
-  padding: 80px 0;
-  border-bottom: 1px solid #f1f1f1; /* Light separator */
+/* ----- Header ----- */
+.header-logo-link {
+    /* Styles for the logo link in the header, if specific styling beyond .logo is needed. */
+    /* Example: @apply text-2xl font-bold text-blue-600; (Currently unused if logo is just an image) */
 }
 
-main > .content-section:last-of-type {
-  border-bottom: none;
+.nav-link { /* For desktop navigation items. */
+    @apply text-gray-600 hover:text-blue-600 transition-colors;
 }
 
-/* Core Capabilities Section (#core-capabilities) */
-#core-capabilities h2 { /* Overrides base h2 */
-    font-size: 2.5rem; /* Same as base, but explicit */
-    margin-bottom: 40px; /* More space before features */
+.mobile-nav-link { /* For mobile navigation items in the dropdown. */
+    @apply block px-6 py-3 text-gray-600 hover:bg-gray-100 hover:text-blue-600;
 }
 
-.feature-section { /* Used inside #core-capabilities for each solution */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  padding: 2rem 0; /* Vertical padding for each feature */
-  /* border-bottom: 1px solid var(--border-color); /* Optional: if separation between features is desired */
-}
-/* #core-capabilities .feature-section:last-child { border-bottom: none; } */
-
-
-.feature-section .text-content {
-  flex: 1;
+/* ----- Hero Section (Semantic classes, if needed beyond Tailwind) ----- */
+.hero-title {
+    /* Example for semantic hero title styling: */
+    /* @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900; */
+    /* Margins/animations are typically applied directly in HTML for hero content. */
 }
 
-.feature-section .visual-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.hero-subtitle {
+    /* Example for semantic hero subtitle styling: */
+    /* @apply text-lg md:text-xl text-gray-700; */
 }
 
-.feature-section.reverse {
-  flex-direction: row-reverse;
+/* ----- Buttons (Additional Variants) ----- */
+.btn-light { /* Button variant for light backgrounds. */
+    /* To be used with .btn for base padding/font. */
+    @apply bg-white text-blue-600 hover:bg-gray-100;
 }
 
-.feature-section h3 { /* Solution Titles */
-  font-size: 1.8em;
-  color: var(--key-color-primary);
-  margin-bottom: 15px;
+/* ----- Cards (Semantic classes for card sub-elements) ----- */
+.card-title {
+    /* Margins to be applied in HTML for layout flexibility. */
+    @apply text-xl font-semibold text-gray-800;
 }
 
-.feature-section p { /* Used for intro text if any, not currently */
-  margin-bottom: 20px;
-  color: var(--text-secondary);
+.card-text {
+    /* Base text style for card content. */
+    @apply text-gray-600;
 }
 
-.feature-section ul { /* Key Features list */
-  list-style-type: none;
-  padding-left: 0;
+.card-image-top { /* For images placed at the top of a card. */
+    /* Margins to be applied in HTML. */
+    @apply rounded-t-xl w-full h-48 object-cover;
 }
 
-.feature-section ul li {
-  margin-bottom: 10px;
-  padding-left: 22px;
-  position: relative;
-  color: #343a40; /* Consider var(--text-secondary) or --text-primary */
+.card-action-link { /* For links like "Learn More" within cards. */
+    /* Text color to be applied in HTML (e.g., using var(--emphasized-text-color)). */
+    @apply font-medium hover:underline;
 }
 
-.feature-section ul li::before {
-  content: '●';
-  color: var(--key-color-primary); /* Uses --secondary-color if it was #192a56 */
-  position: absolute;
-  left: 0;
-  font-size: 0.7em;
-  top: 50%;
-  transform: translateY(-50%);
+/* ----- Unlock Potential / Features Section ----- */
+.feature-icon-wrapper { /* Wrapper for icons in the features/unlock potential section. */
+    /* Background color and margin are applied directly in HTML. */
+    @apply flex items-center justify-center w-16 h-16 rounded-full;
 }
 
-.visual-placeholder-feature { /* Main video container in feature-section */
-  width: 100%;
-  max-width: 720px;
-  aspect-ratio: 16 / 9;
-  background-color: #f0f0f0; /* Light placeholder color */
-  border-radius: 8px;
-  overflow: hidden;
-  margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* Hover effect for Unlock Potential boxes (<a> tags within the grid). */
+#unlock-potential .grid > a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.visual-placeholder-feature video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+#unlock-potential .grid > a:hover {
+    transform: translateY(-10px); /* Moves the box up slightly on hover. */
+    @apply shadow-xl; /* Applies a stronger shadow on hover. */
 }
 
-.video-thumbnails { /* Thumbnails below main video */
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 15px;
-  width: 100%;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
+/* ----- Platform Section (if applicable, for semantic styling) ----- */
+.platform-content-title { /* Title for content blocks in a platform section. */
+    /* Margins to be applied in HTML. */
+    @apply text-2xl font-semibold text-gray-800;
 }
 
+.list-item-check-icon { /* Styling for check icons in lists. */
+    /* Icon color (e.g., text-green-500 or var(--emphasized-text-color)) to be applied in HTML. */
+    @apply w-5 h-5 mr-2 mt-1 shrink-0;
+}
+
+
+/* ----- Solutions Section: Video Thumbnails ----- */
 .thumbnail {
-  flex: 1;
-  aspect-ratio: 16 / 9;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: border-color 0.3s ease, transform 0.2s ease;
-  background-color: #000; /* Fallback */
+    /* Default state for video thumbnails. */
+    @apply border-transparent transition-all duration-200 ease-in-out;
+    /* border-width: 2px; is applied in HTML */
 }
 
 .thumbnail:hover {
-  transform: scale(1.03);
-  border-color: var(--key-color-light);
+    /* Subtle border indication on hover. */
+    /* Consider using a lighter version of the brand accent or emphasized color if desired. */
+    @apply border-blue-300; /* Current hover, can be changed. */
 }
 
 .thumbnail.active {
-  border-color: var(--key-color-primary);
-  transform: scale(1.05);
+    /* Active state for the selected video thumbnail. */
+    border-color: var(--brand-accent-color-darker);
+    @apply shadow-lg;
 }
 
-.thumbnail video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-/* End Core Capabilities Section */
-
-/* CTA Button General Styles (Base for .nav-cta-button and .final-cta-section .cta-button) */
-.cta-button {
-  display: inline-block;
-  background-color: var(--key-color-primary);
-  color: #fff;
-  padding: 12px 24px; /* Default padding, can be overridden */
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1em; /* Default font size */
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  border: 2px solid transparent;
-  text-align: center;
+/* ----- Footer ----- */
+.footer-heading {
+    /* Margins to be applied in HTML. */
+    /* text-xl for main footer heading can be applied via utility class if needed. */
+    @apply text-lg font-semibold text-gray-800;
 }
 
-.cta-button:hover {
-  background-color: var(--key-color-primary-dark);
-  transform: translateY(-2px);
-}
-/* .cta-button.secondary is not used, removed */
-
-/* Final CTA Section (#final-contact-cta) */
-.final-cta-section { /* This is a .content-section */
-    background-color: #f8f9fa; /* Specific background */
-    text-align: center;
+.footer-link { /* For general links within the footer. */
+    @apply text-gray-700 transition-colors;
 }
 
-.final-cta-section h2 {
-    margin-bottom: 20px;
-    font-size: 2.5em; /* Larger heading */
-    color: var(--text-primary);
+.footer-link:hover {
+    color: var(--brand-accent-color);
+    @apply underline;
 }
 
-.final-cta-section p {
-    font-size: 1.1em;
-    color: #555; /* Specific color */
-    margin-bottom: 30px;
+.footer-social-link { /* For social media icon links in the footer. */
+    @apply text-gray-600 transition-colors;
 }
 
-.final-cta-section .cta-button { /* Specific CTA button styles */
-    padding: 15px 30px; /* Larger padding */
-    font-size: 1.1em; /* Larger font */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.footer-social-link:hover {
+    color: var(--brand-accent-color);
 }
 
-.final-cta-section .cta-button:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    /* Inherits background-color and transform from general .cta-button:hover */
+/*
+================================================================================
+DEPRECATED / COMMENTED OUT STYLES (Review and remove if not needed)
+================================================================================
+*/
+
+/* Styles for #unlock-potential that were previously applying a fixed background. */
+/* These are commented out to allow the new white_curve_bg.jpg with overlay to show.
+#unlock-potential {
+    background-color: #f3f4f6; 
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 15px,
+        rgba(0, 0, 0, 0.015) 15px, 
+        rgba(0, 0, 0, 0.015) 16px
+    );
 }
-/* End Final CTA Section */
-
-
-/* Responsive Adjustments */
-@media (max-width: 992px) { /* Tablet and below - for .intro-features */
-    .intro-features {
-        flex-direction: column;
-        width: 100%;
-        gap: 25px;
-    }
-    .intro-features .feature-column { /* When stacked */
-        width: auto;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .intro-features .feature-divider {
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 768px) { /* Mobile phones */
-    main {
-      padding-top: 1rem; /* Further reduce top padding for main on mobile */
-      padding-bottom: 2rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-    
-    .hero-section {
-      padding: 80px 0; /* Reduced padding for hero on mobile */
-    }
-    .hero-section .main-headline {
-      font-size: 1.8em; /* Smaller hero headline */
-      margin-bottom: 20px;
-    }
-    .sub-headline {
-      font-size: 1em;
-    }
-
-    .intro-section h2 {
-        font-size: 1.8rem; /* Smaller */
-        margin-bottom: 20px;
-    }
-    .intro-features { /* Stacked by 992px query already */
-        gap: 20px;
-    }
-    .intro-features .feature-icon { font-size: 2.2rem; }
-    .intro-features .feature-title { font-size: 1.1rem; min-height: auto; }
-    .intro-features .feature-description { font-size: 0.9rem; min-height: auto; }
-
-    .content-section {
-      padding: 60px 0;
-    }
-    #core-capabilities h2 {
-        font-size: 2em; /* Smaller */
-        margin-bottom: 30px;
-    }
-    .feature-section { /* Stack features */
-      flex-direction: column !important; /* Use !important if necessary, else refactor */
-      gap: 30px;
-    }
-    .feature-section .text-content,
-    .feature-section .visual-content {
-      flex: none;
-      width: 100%;
-    }
-    .feature-section .visual-content { order: -1; } /* Video/image first */
-    
-    .feature-section h3 { font-size: 1.5em; }
-    .feature-section ul li { font-size: 0.9rem; }
-
-
-    .visual-placeholder-feature {
-      /* height: 250px; /* Fixed height, or rely on aspect-ratio */
-      /* Consider removing fixed height if aspect-ratio is enough */
-    }
-    .video-thumbnails {
-      gap: 8px;
-    }
-    .thumbnail {
-      border-radius: 4px;
-    }
-
-    .final-cta-section h2 { font-size: 2em; }
-    .final-cta-section p { font-size: 1em; }
-    .final-cta-section .cta-button { padding: 12px 24px; font-size: 1em; }
-}
-
-/* Careers Page Specific Styles */
-.careers-hero {
-    background-color: #f4f7f6; /* Light background for hero, adjust as needed */
-    color: #333;
-    text-align: center;
-    padding: 80px 20px; /* Adjusted padding */
-}
-
-/* Updated for the new H2 element used in careers.html hero section */
-.careers-hero h2 {
-    font-size: 2.8em; /* Adjusted from 3em for H1 */
-    color: #2c3e50; /* Darker color for text */
-    margin-bottom: 20px; /* Space before the paragraph */
-    /* Inherits text-align: center from .careers-hero */
-}
-
-/* Updated for the new P element used in careers.html hero section */
-.careers-hero p {
-    font-size: 1.15em; /* Readable size for the paragraph */
-    line-height: 1.7;
-    color: #555;       /* Consistent text color */
-    margin-bottom: 20px; /* Retain bottom margin */
-    text-align: left;  /* Left-align text within the block */
-}
-
-/* Old styles for .careers-hero .main-headline and .careers-hero .sub-headline are replaced by the above. */
-/* Note: .careers-intro-section styles below are for a section that was removed from careers.html. */
-.careers-intro-section h2 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 2em;
-    color: #333;
-}
-
-.careers-intro-section p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/* Open Positions Table */
-.job-listings-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-}
-
-.job-listings-table th,
-.job-listings-table td {
-    padding: 15px 20px;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-}
-
-.job-listings-table th {
-    background-color: #f9f9f9;
-    font-weight: 500;
-    font-size: 1.2em;
-    color: #333;
-}
-
-.job-listings-table td a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.job-listings-table td a:hover {
-    text-decoration: underline;
-}
-
-/* How We Work Section */
-.how-we-work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.work-item {
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border: 1px solid #e0e0e0;
-}
-
-.work-item h4 {
-    font-size: 1.4em;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.work-item p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #666;
-}
-
-/* Benefits List */
-.benefits-list {
-    list-style: disc; /* Use standard disc bullets */
-    padding-left: 20px; /* Add default padding for list items */
-    margin-top: 20px;
-}
-
-.benefits-list li {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 10px; /* Adjusted margin */
-}
-
-/* Hiring Process List */
-.hiring-process-list {
-    list-style: decimal; /* Use standard decimal numbering */
-    padding-left: 20px; /* Add default padding for list items */
-    margin-top: 20px;
-}
-
-.hiring-process-list li {
-    margin-bottom: 8px; /* Reduced spacing between items */
-}
-
-.hiring-process-list h4 {
-    display: inline; /* Make h4 flow inline */
-    font-size: 1.1em; /* Adjusted font size for better inline flow */
-    color: #333;
-    font-weight: 700; /* Keep title bold */
-    margin-right: 0.5em; /* Space between h4 and p, using em for scalability */
-}
-
-.hiring-process-list p {
-    display: inline; /* Make p flow inline */
-    font-size: 1em;
-    color: #666;
-    line-height: 1.6;
-}
-
-/* Ensure content sections have consistent spacing */
-.content-section {
-    padding: 60px 0; /* Default padding from index.html */
-}
-
-.content-section h2 { /* General h2 styling for careers page sections */
-    text-align: center;
-    font-size: 2.4em;
-    color: #2c3e50; /* Consistent heading color */
-    margin-bottom: 40px;
-    font-weight: 500;
-}
-
-.content-section#tech-stack p {
-    text-align: center;
-    font-size: 1.1em;
-    color: #666;
-}
-
-/* Adjust footer link for careers page, or ensure .active styles it correctly */
-.site-navbar .nav-links .nav-link.active {
-    font-weight: 700; /* Example: make active link bold */
-    color: var(--primary-color); /* Example: highlight with primary color */
-}
+*/ 
