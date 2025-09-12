@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO and Metadata for GenixCore -->
-    <title>GenixCore: Automated Scenario Extraction from Drive Videos | Netropy AI</title>
+    <title>GenixCore: Video to Test Scenarios | Netropy AI</title>
     <link rel="icon" type="image/x-icon" href="resources/netropy_favicon.ico">
-    <meta name="description" content="GenixCore automatically extracts high-fidelity 3D scenarios from any camera data. Build massive testing libraries with our AI-powered scenario extraction engine.">
+    <meta name="description" content="GenixCore converts drive videos into test scenarios automatically. Build massive testing libraries with AI-powered 3D scenario extraction.">
     <meta name="keywords" content="GenixCore, scenario extraction, drive video analysis, automated testing scenarios, ASAM OpenSCENARIO, perception testing, Netropy AI, camera data processing">
     <meta name="author" content="Netropy AI">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Language" content="en">
-    <meta property="og:title" content="GenixCore: Automated Scenario Extraction from Drive Videos | Netropy AI">
-    <meta property="og:description" content="GenixCore automatically extracts high-fidelity 3D scenarios from any camera data. Build massive testing libraries with our AI-powered scenario extraction engine.">
+    <meta property="og:title" content="GenixCore: Video to Test Scenarios | Netropy AI">
+    <meta property="og:description" content="GenixCore converts drive videos into test scenarios automatically. Build massive testing libraries with AI-powered 3D scenario extraction.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://netropy.ai/genixcore.html">
     <meta property="og:image" content="resources/logo_semi_bold.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GenixCore: Automated Scenario Extraction from Drive Videos | Netropy AI">
-    <meta name="twitter:description" content="GenixCore automatically extracts high-fidelity 3D scenarios from any camera data. Build massive testing libraries with our AI-powered scenario extraction engine.">
+    <meta name="twitter:title" content="GenixCore: Video to Test Scenarios | Netropy AI">
+    <meta name="twitter:description" content="GenixCore converts drive videos into test scenarios automatically. Build massive testing libraries with AI-powered 3D scenario extraction.">
     <meta name="twitter:image" content="resources/logo_semi_bold.svg">
     <link rel="canonical" href="https://netropy.ai/genixcore.html">
 
@@ -29,7 +29,7 @@
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "GenixCore",
-      "description": "GenixCore automatically extracts high-fidelity 3D scenarios from any camera data. Build massive testing libraries with our AI-powered scenario extraction engine.",
+      "description": "GenixCore converts drive videos into test scenarios automatically. Build massive testing libraries with AI-powered 3D scenario extraction.",
       "brand": {
         "@type": "Organization",
         "name": "Netropy AI"
@@ -39,6 +39,38 @@
         "name": "Netropy AI",
         "url": "https://netropy.ai"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "GenixCore Demo Videos",
+      "description": "Real-world video examples processed by GenixCore AI scenario extraction",
+      "thumbnailUrl": "https://netropy.ai/resources/genixcore/metadata.png",
+      "uploadDate": "2024-01-01",
+      "contentUrl": "https://netropy.ai/genixcore.html",
+      "embedUrl": "https://netropy.ai/genixcore.html#demos"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://netropy.ai"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "GenixCore",
+          "item": "https://netropy.ai/genixcore.html"
+        }
+      ]
     }
     </script>
 
@@ -155,7 +187,7 @@
                     <div class="lg:col-span-3">
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll border border-gray-100">
                             <div class="aspect-video bg-gray-800 relative">
-                                <video class="w-full h-full object-cover" loop muted playsinline controls autoplay>
+                                <video class="w-full h-full object-cover" loop muted playsinline controls autoplay preload="metadata">
                                     <source src="resources/genixcore/input.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -244,7 +276,7 @@
                             <div class="md:row-span-2">
                                 <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-on-scroll h-full flex flex-col" style="transition-delay: 0.2s;">
                                     <div class="bg-gray-800 relative flex-1">
-                                        <video class="w-full h-full object-cover" loop muted playsinline controls autoplay>
+                                        <video class="w-full h-full object-cover" loop muted playsinline controls autoplay preload="metadata">
                                             <source src="resources/genixcore/topview.mp4" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
@@ -259,7 +291,7 @@
                             <div>
                                 <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-on-scroll h-full flex flex-col" style="transition-delay: 0.3s;">
                                     <div class="bg-gray-800 relative flex-1">
-                                        <video class="w-full h-full object-cover" loop muted playsinline controls autoplay>
+                                        <video class="w-full h-full object-cover" loop muted playsinline controls autoplay preload="metadata">
                                             <source src="resources/genixcore/simulation.mp4" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
@@ -377,7 +409,7 @@
                 <!-- Demo 1: Day Dashcam -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll">
                     <div class="aspect-video bg-gray-800">
-                        <video class="w-full h-full object-cover" controls>
+                        <video class="w-full h-full object-cover" controls preload="metadata">
                             <source src="resources/genixcore/examples/dashcam_day.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -390,7 +422,7 @@
                 <!-- Demo 2: Night Dashcam -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="transition-delay: 0.1s;">
                     <div class="aspect-video bg-gray-800">
-                        <video class="w-full h-full object-cover" controls>
+                        <video class="w-full h-full object-cover" controls preload="metadata">
                             <source src="resources/genixcore/examples/dashcam_night.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -403,7 +435,7 @@
                 <!-- Demo 3: Surveillance -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="transition-delay: 0.2s;">
                     <div class="aspect-video bg-gray-800">
-                        <video class="w-full h-full object-cover" controls>
+                        <video class="w-full h-full object-cover" controls preload="metadata">
                             <source src="resources/genixcore/examples/surveillance.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
