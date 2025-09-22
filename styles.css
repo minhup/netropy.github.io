@@ -264,6 +264,41 @@ COMPONENT-SPECIFIC STYLES
     mix-blend-mode: multiply; /* Helps make white/light backgrounds transparent */
 }
 
+/* ----- Demo Videos Section ----- */
+.demo-video-item {
+    /* Container for each demo video with subtle hover effect. */
+    @apply transition-all duration-300 ease-in-out;
+    opacity: 0.9;
+}
+
+.demo-video-item:hover {
+    opacity: 1;
+    transform: translateY(-4px);
+}
+
+/* Demo videos auto-scroll animation */
+.demo-videos-container {
+    position: relative;
+}
+
+.demo-videos-track {
+    animation: scroll-demo-videos 40s linear infinite;
+    width: max-content;
+}
+
+.demo-videos-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-demo-videos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* ----- Footer ----- */
 .footer-heading {
     /* Margins to be applied in HTML. */

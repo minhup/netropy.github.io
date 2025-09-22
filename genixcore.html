@@ -404,44 +404,114 @@
                 From dashcams to surveillance footage—GenixCore extracts actionable test scenarios from any real-world video, automatically capturing the complexity that matters.
             </p>
             
-            <!-- Demo Videos Grid - 3 Videos in One Row -->
-            <div class="grid lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-                <!-- Demo 1: Day Dashcam -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll">
-                    <div class="aspect-video bg-gray-800">
-                        <video class="w-full h-full object-cover" loop muted playsinline controls autoplay preload="metadata">
-                            <source src="resources/genixcore/examples/dashcam_day.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+            <!-- Demo Videos Carousel - Auto-scrolling -->
+            <div class="demo-videos-container overflow-hidden max-w-7xl mx-auto">
+                <div class="demo-videos-track flex items-center gap-6 lg:gap-8">
+                    <!-- First set of videos -->
+                    <div class="demo-video-item flex-shrink-0">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
+                            <div class="aspect-video bg-gray-800">
+                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
+                                    <source src="resources/genixcore/examples/dashcam_day.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-4 text-center">
-                        <h3 class="text-lg font-bold text-gray-900 mb-2">Daytime</h3>
+                    <div class="demo-video-item flex-shrink-0">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
+                            <div class="aspect-video bg-gray-800">
+                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
+                                    <source src="resources/genixcore/examples/dashcam_night.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class="demo-video-item flex-shrink-0">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
+                            <div class="aspect-video bg-gray-800">
+                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
+                                    <source src="resources/genixcore/examples/surveillance.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-video-item flex-shrink-0">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
+                            <div class="aspect-video bg-gray-800">
+                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
+                                    <source src="resources/genixcore/examples/nambu_example.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-video-item flex-shrink-0">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
+                            <div class="aspect-video bg-gray-800">
+                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
+                                    <source src="resources/genixcore/examples/nambu_example2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="demo-video-item flex-shrink-0">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
+                            <div class="aspect-video bg-gray-800">
+                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
+                                    <source src="resources/genixcore/examples/dashcam_day.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Demo 2: Night Dashcam -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="aspect-video bg-gray-800">
-                        <video class="w-full h-full object-cover" loop muted playsinline controls autoplay preload="metadata">
-                            <source src="resources/genixcore/examples/dashcam_night.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    <div class="demo-video-item flex-shrink-0">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
+                            <div class="aspect-video bg-gray-800">
+                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
+                                    <source src="resources/genixcore/examples/dashcam_night.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-4 text-center">
-                        <h3 class="text-lg font-bold text-gray-900 mb-2">Nighttime</h3>
-                    </div>
-                </div>
 
-                <!-- Demo 3: Surveillance -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="aspect-video bg-gray-800">
-                        <video class="w-full h-full object-cover" loop muted playsinline controls autoplay preload="metadata">
-                            <source src="resources/genixcore/examples/surveillance.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    <div class="demo-video-item flex-shrink-0">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
+                            <div class="aspect-video bg-gray-800">
+                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
+                                    <source src="resources/genixcore/examples/surveillance.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-4 text-center">
-                        <h3 class="text-lg font-bold text-gray-900 mb-2">Surveillance Camera</h3>
+
+                    <div class="demo-video-item flex-shrink-0">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
+                            <div class="aspect-video bg-gray-800">
+                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
+                                    <source src="resources/genixcore/examples/nambu_example.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="demo-video-item flex-shrink-0">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
+                            <div class="aspect-video bg-gray-800">
+                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
+                                    <source src="resources/genixcore/examples/nambu_example2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
