@@ -205,6 +205,100 @@ COMPONENT-SPECIFIC STYLES
     @apply shadow-lg;
 }
 
+/* ----- Partners Section ----- */
+.partner-logo-item {
+    /* Container for each partner logo with subtle hover effect. */
+    @apply transition-all duration-300 ease-in-out;
+    opacity: 0.7;
+}
+
+.partner-logo-item:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.partner-logo {
+    /* Standard styling for partner logos. */
+    height: 40px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+}
+
+/* Partner logos auto-scroll animation */
+.partner-logos-container {
+    position: relative;
+}
+
+.partner-logos-track {
+    animation: scroll-partners 30s linear infinite;
+    width: max-content;
+}
+
+.partner-logos-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-partners {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Specific adjustments for individual partner logos */
+.partner-logo[alt="Kakao Mobility"] {
+    height: 48px; /* Slightly bigger than the standard 40px */
+}
+
+.partner-logo[alt="HL Klemove"] {
+    background-color: transparent;
+    mix-blend-mode: multiply; /* Helps make white/light backgrounds transparent */
+}
+
+/* ----- Demo Videos Section ----- */
+.demo-video-item {
+    /* Container for each demo video with subtle hover effect. */
+    @apply transition-all duration-300 ease-in-out;
+    opacity: 0.9;
+}
+
+.demo-video-item:hover {
+    opacity: 1;
+    transform: translateY(-4px);
+}
+
+/* Demo videos auto-scroll animation */
+.demo-videos-container {
+    position: relative;
+}
+
+.demo-videos-track {
+    animation: scroll-demo-videos 40s linear infinite;
+    width: max-content;
+}
+
+.demo-videos-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-demo-videos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* ----- Footer ----- */
 .footer-heading {
     /* Margins to be applied in HTML. */

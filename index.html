@@ -59,6 +59,26 @@
       }
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GenixCore",
+      "applicationCategory": "AI/Machine Learning",
+      "operatingSystem": "Web-based",
+      "description": "AI-powered scenario extraction engine that converts driving videos into test scenarios",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free trial available"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Netropy AI"
+      }
+    }
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSKWS4GTQJ"></script>
@@ -145,7 +165,7 @@
                        <span class="bg-white group-hover:bg-gray-100 p-1.5 sm:p-2 rounded-full mr-2 sm:mr-3 transition-colors">
                            <i data-lucide="arrow-right" class="w-2.5 h-2.5 sm:w-3 sm:h-3" style="color: var(--emphasized-text-color);"></i>
                        </span>
-                       <span style="color: var(--emphasized-text-color);">Contact Us</span>
+                       <span style="color: var(--emphasized-text-color);">Discuss Your Project</span>
                     </a>
                 </div>
             </div>
@@ -153,41 +173,83 @@
     </section>
 
     <!-- ======================================================================= -->
-    <!-- UNLOCK POTENTIAL SECTION -->
+    <!-- PARTNERS SECTION -->
     <!-- ======================================================================= -->
-    <section id="unlock-potential" class="py-16 md:py-24 bg-cover bg-center" 
-             style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('resources/white_curve_bg.jpg');">
+    <section id="partners" class="py-8 md:py-12 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-12 md:mb-16 text-center animate-on-scroll" 
-                style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                Discover the Power of 3D in Your Videos
-            </h2>
-            <!-- Feature Grid -->
-            <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
-                <!-- Feature 1: Understand Scenes -->
-                <a href="#solution-understanding" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline">
-                    <div class="mb-5 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
-                        <i data-lucide="brain" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
+            <div class="text-center mb-6">
+                <h2 class="text-xl md:text-2xl font-medium text-gray-700 mb-2">
+                    Trusted by
+                </h2>
+            </div>
+            
+            <!-- Partners Logo Row with Auto-scroll -->
+            <div class="partner-logos-container overflow-hidden max-w-7xl mx-auto">
+                <div class="partner-logos-track flex items-center gap-8 md:gap-12">
+                    <!-- First set of logos -->
+                    <!-- <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/hyundai.png" alt="Hyundai" class="partner-logo">
+                    </div> -->
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/kakao_mobility.png" alt="Kakao Mobility" class="partner-logo">
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Deep Scene Understanding in 3D</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed max-w-xs">Move beyond flat 2D. Our AI transforms standard video into rich 3D spatial understanding, accurately identifying object locations, camera motion, and environmental depth.</p>
-                </a>
-                <!-- Feature 2: Create Digital Twin -->
-                <a href="#solution-digital-twin" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline" style="transition-delay: 0.1s;">
-                     <div class="mb-5 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
-                        <i data-lucide="layers" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/hlklemove.png" alt="HL Klemove" class="partner-logo">
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Generate Dynamic Digital Twins</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed max-w-xs">Build highly realistic, interactive digital twins from standard 2D video, bypassing the need for complex 3D sensors and streamlining asset virtualization.</p>
-                </a>
-                <!-- Feature 3: Simulate & Generate Data -->
-                <a href="#solution-simulation" class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center animate-on-scroll no-underline" style="transition-delay: 0.2s;">
-                     <div class="mb-5 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
-                        <i data-lucide="sparkles" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/nvidia.png" alt="NVIDIA" class="partner-logo">
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Simulation & Data Generation</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed max-w-xs">Accelerate AI training with diverse, photo-realistic synthetic data. Our visual generative AI creates complex simulations and scenarios quickly and customizeably, without relying on traditional physics engines.</p>
-                </a>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/springcamp.png" alt="SpringCamp" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/etri.png" alt="ETRI" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/kaist.png" alt="KAIST" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/snu.png" alt="Seoul National University" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/gist.png" alt="GIST" class="partner-logo">
+                    </div>
+                    <!-- <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/morai.png" alt="MORAI" class="partner-logo">
+                    </div> -->
+                    
+                    <!-- Duplicate set for seamless loop -->
+                    <!-- <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/hyundai.png" alt="Hyundai" class="partner-logo">
+                    </div> -->
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/kakao_mobility.png" alt="Kakao Mobility" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/hlklemove.png" alt="HL Klemove" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/nvidia.png" alt="NVIDIA" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/springcamp.png" alt="SpringCamp" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/etri.png" alt="ETRI" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/kaist.png" alt="KAIST" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/snu.png" alt="Seoul National University" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/gist.png" alt="GIST" class="partner-logo">
+                    </div>
+                    <!-- <div class="partner-logo-item flex-shrink-0">
+                        <img src="resources/partner_logo/morai.png" alt="MORAI" class="partner-logo">
+                    </div> -->
+                </div>
             </div>
         </div>
     </section>
@@ -195,19 +257,125 @@
     <!-- ======================================================================= -->
     <!-- SOLUTIONS SECTION -->
     <!-- ======================================================================= -->
-    <section id="solutions" class="py-16 md:py-24 bg-cover bg-bottom" 
+    <section id="solutions" class="py-16 md:py-24 bg-cover bg-center" 
+             style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('resources/white_curve_bg.jpg');">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center animate-on-scroll" 
+                style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                Solutions
+            </h2>
+            
+            <!-- Solutions Grid -->
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 mx-auto">
+                <!-- Solution 1: Scenario Extractor -->
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col animate-on-scroll">
+                    <div class="mb-6 flex items-center">
+                        <div class="mr-4 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
+                            <i data-lucide="route" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-1">Scenario Extractor</h3>
+                            <p class="text-lg text-gray-600 font-medium">From Video to Test Scenarios</p>
+                        </div>
+                    </div>
+                    <div style="height: 120px; display: flex; align-items: flex-start;">
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Our scenario extractor, GenixCore, ingests any camera data and automatically extracts high-fidelity 3D scenarios to create a massive library for validation of autonomous driving systems.
+                        </p>
+                    </div>
+                    <!-- Solution 1 Image -->
+                    <div class="mb-6 flex justify-center" style="height: 250px;">
+                        <img src="resources/solution_1.png" alt="GenixCore Scenario Extraction" class="rounded-lg shadow-md object-contain" style="height: 250px; width: auto;">
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="text-md font-semibold text-gray-800 mb-3">Key Features:</h4>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
+                                Extract scenarios automatically from any camera data
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
+                                Tag scenarios for searchable database organization
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
+                                Edit scenarios interactively with intuitive tools
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
+                                Export to ASAM OpenSCENARIO with custom simulator integration
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="genixcore.html" class="inline-flex items-center justify-center font-semibold px-6 py-3 rounded-lg shadow-md text-white transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 mt-auto"
+                       style="background-color: var(--brand-accent-color);">
+                        Learn More <i data-lucide="arrow-right" class="inline-block ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Solution 2: Neural Simulator -->
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="mb-6 flex items-center">
+                        <div class="mr-4 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
+                            <i data-lucide="play-circle" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-1">Neural Simulator</h3>
+                            <p class="text-lg text-gray-600 font-medium">The Ultimate End-to-End Testbed</p>
+                        </div>
+                    </div>
+                    <div style="height: 120px; display: flex; align-items: flex-start;">
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Our neural simulator, GenixSim, allows you to step inside your real-world data and let your entire AD stack drive in a photorealistic and reactive environment for true end-to-end validation.
+                        </p>
+                    </div>
+                    <!-- Solution 2 Image -->
+                    <div class="mb-6 flex justify-center" style="height: 250px;">
+                        <img src="resources/solution_2.png" alt="GenixSim Neural Simulation" class="rounded-lg shadow-md object-contain" style="height: 250px; width: auto;">
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="text-md font-semibold text-gray-800 mb-3">Key Features:</h4>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
+                                Generate high-fidelity simulation environments directly from driving videos
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
+                                Synthesize photorealistic sensor data ready to feed directly into your systems
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
+                                Enable true closed-loop testing and validation workflows
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
+                                Modify scenarios and environmental parameters interactively
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" class="inline-flex items-center justify-center font-semibold px-6 py-3 rounded-lg shadow-md text-white transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 mt-auto"
+                       style="background-color: var(--brand-accent-color);">
+                        Join Waitlist <i data-lucide="external-link" class="inline-block ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- CORE TECHNOLOGIES SECTION -->
+    <!-- ======================================================================= -->
+    <section id="core-technologies" class="py-16 md:py-24 bg-cover bg-bottom" 
              style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)), url('resources/white_curve_bg.jpg');">
         <div class="container mx-auto px-6">
             <!-- Section Header -->
-            <div class="md:w-3/4 lg:w-2/3 xl:w-1/2 text-center md:text-left mx-auto md:mx-0 mb-12 md:mb-16 animate-on-scroll">
+            <div class="text-center mb-12 md:mb-16 animate-on-scroll">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" 
                     style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                    Explore Our Technology in Action
+                    Core Technologies
                 </h2>
-                <!-- <p class="text-lg text-gray-700 leading-relaxed" 
-                   style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                    Delving deep into how our technology transforms video into actionable 3D intelligence.
-                </p> -->
             </div>
 
             <!-- Solution 1: Deep Scene Understanding -->
@@ -216,7 +384,7 @@
                     <!-- Text Content -->
                     <div class="md:w-5/12 text-center md:text-left">
                         <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Deep Scene Understanding</h3>
-                        <p class="text-lg text-gray-700 mb-6">Gain unparalleled insights into dynamic environments. Our AI meticulously analyzes video to estimate camera motion, reconstruct scenes in 3D, and identify objects with precision.</p>
+                        <p class="text-lg text-gray-700 mb-6">Extract comprehensive spatial data from real-world video footage. Our AI analyzes driving videos to estimate camera motion, reconstruct scenes in 3D, and identify objects, enabling reality-based test scenario creation that represents actual driving conditions.</p>
                         <div>
                             <h4 class="text-md font-semibold text-gray-800 mb-2">Key Capabilities:</h4>
                             <ul class="space-y-1 text-gray-600 text-sm list-disc list-inside">
@@ -262,7 +430,7 @@
                     <!-- Text Content -->
                     <div class="md:w-5/12 text-center md:text-left">
                         <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Digital Twin Generation</h3>
-                        <p class="text-lg text-gray-700 mb-6">Transform real-world spaces into interactive 3D models using only standard video. Create high-fidelity digital twins for simulation, analysis, and virtual exploration without specialized hardware.</p>
+                        <p class="text-lg text-gray-700 mb-6">Generate accurate 3D representations of real-world spaces using only standard video. Create high-fidelity digital twins for simulation, analysis, and virtual exploration without specialized hardware.</p>
                         <div>
                             <h4 class="text-md font-semibold text-gray-800 mb-2">Key Capabilities:</h4>
                             <ul class="space-y-1 text-gray-600 text-sm list-disc list-inside">
@@ -290,7 +458,7 @@
                     <!-- Text Content -->
                     <div class="md:w-5/12 text-center md:text-left">
                         <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Simulation & Data Generation</h3>
-                        <p class="text-lg text-gray-700 mb-6">Leverage advanced visual generative AI to produce photo-realistic synthetic data and dynamic simulations. Customize scenarios and sensor outputs to train and test AI models efficiently.</p>
+                        <p class="text-lg text-gray-700 mb-6">Power photo-realistic synthetic data creation and dynamic simulations through advanced visual generative AI. Customize scenarios and sensor outputs to train and test AI models efficiently.</p>
                         <div>
                             <h4 class="text-md font-semibold text-gray-800 mb-2">Key Capabilities:</h4>
                             <ul class="space-y-1 text-gray-600 text-sm list-disc list-inside">
@@ -328,7 +496,7 @@
                     </h2>
                     <p class="text-lg text-white opacity-90 mb-8 leading-relaxed" 
                        style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                        Let's discuss how Netropy AI can elevate your projects.
+                       Let's discuss how Netropy AI can elevate your projects.
                     </p>
                 </div>
                 <!-- Contact Form / CTA -->
