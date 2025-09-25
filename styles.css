@@ -325,6 +325,77 @@ COMPONENT-SPECIFIC STYLES
 
 /*
 ================================================================================
+SMALL VIEWPORT HEIGHT ADAPTATIONS
+Handles desktop windows that are short in height (e.g., resized vertically)
+================================================================================
+*/
+
+@media (max-height: 700px) {
+    /* Make the fixed header more compact */
+    #header {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    /* Avoid overly tall hero when height is limited */
+    #hero {
+        height: auto !important; /* Override h-[75vh] */
+        min-height: 60svh;
+        padding-top: 5rem; /* Ensure content clears fixed header */
+        padding-bottom: 1.5rem;
+    }
+
+    /* Tighter hero text sizing and spacing */
+    #hero h1 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        margin-bottom: 1rem;
+    }
+
+    #hero p {
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+        margin-bottom: 1rem;
+    }
+
+    /* Reduce vertical padding in large sections */
+    #solutions, #core-technologies, #contact {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    /* Constrain video containers to avoid overflowing short viewports */
+    .aspect-video {
+        max-height: 50svh;
+    }
+
+}
+
+@media (max-height: 550px) {
+    /* Further compact the hero area on very short heights */
+    #hero {
+        min-height: 50svh;
+        padding-top: 4.5rem;
+        padding-bottom: 1rem;
+    }
+
+    /* Optionally hide secondary hero text for space */
+    #hero .fade-in-delay-1 {
+        display: none;
+    }
+
+    /* Tighter section paddings */
+    #solutions, #core-technologies, #contact {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    /* Constrain videos even more on extreme short heights */
+    .aspect-video {
+        max-height: 45svh;
+    }
+}
+
+/*
+================================================================================
 DEPRECATED / COMMENTED OUT STYLES (Review and remove if not needed)
 ================================================================================
 */
