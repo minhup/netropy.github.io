@@ -5,14 +5,14 @@ GLOBAL STYLES & CSS VARIABLES
 */
 
 :root {
-    /* Primary brand color, a salmon/coral pink. Used for accents and CTAs. */
-    --brand-accent-color: rgb(245, 140, 132);
+    /* Primary brand color, a vivid teal. Used for accents and CTAs. */
+    --brand-accent-color: rgb(242, 100, 92);
     /* Darker shade of the brand accent, for hover states or alternative accents. */
-    --brand-accent-color-darker: rgb(205, 100, 92);
+    --brand-accent-color-darker: rgb(199, 72, 61);
     /* Very pale tint of the brand accent, often used for subtle backgrounds or highlights. */
-    --brand-accent-color-lighter-tint: rgb(252, 225, 220);
+    --brand-accent-color-lighter-tint: rgb(253, 234, 231);
     /* Emphasized text color, a deep teal, chosen for good contrast and harmony. */
-    --emphasized-text-color: #115e59;
+    --emphasized-text-color: #8f2e26;
 }
 
 body {

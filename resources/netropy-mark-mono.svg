@@ -1,0 +1,7 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Netropy mark">
+  <!-- B1 solid beam, single color (use currentColor so it inherits text color) -->
+  <g transform="translate(7,3)" fill="currentColor">
+    <rect x="1" y="26" width="19" height="22" rx="4"/>
+    <path d="M24 29 L66 11 L66 63 L24 45 Z"/>
+  </g>
+</svg>

@@ -116,7 +116,7 @@
     width: 64px; /* Larger icon wrapper */
     height: 64px;
     border-radius: 50%; /* Circular */
-    background-color: rgba(245, 140, 132, 0.1); /* Pale tint of brand accent */
+    background-color: rgba(242, 100, 92, 0.1); /* Pale tint of brand accent */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +125,7 @@
 
 .value-icon-wrapper i {
     font-size: 1.75rem; /* Larger icon */
-    color: rgb(245, 140, 132); /* Brand accent color for icon */
+    color: rgb(242, 100, 92); /* Brand accent color for icon */
     margin: 0; /* Reset any previous margins */
 }
 
@@ -223,7 +223,7 @@
     width: 56px; /* Slightly smaller than value-icon-wrapper if desired, or keep same */
     height: 56px;
     border-radius: 50%;
-    background-color: rgba(245, 140, 132, 0.1); /* Pale tint of brand accent */
+    background-color: rgba(242, 100, 92, 0.1); /* Pale tint of brand accent */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -233,7 +233,7 @@
 
 .benefit-text-content li i {
     font-size: 1.5rem; /* Icon size */
-    color: rgb(245, 140, 132); /* Brand accent color for icon */
+    color: rgb(242, 100, 92); /* Brand accent color for icon */
     /* margin-right: 18px; */ /* Moved to wrapper */
     /* margin-top: 4px; */ /* Adjust if needed, or remove if wrapper handles alignment */
     /* width: 24px; */ /* No longer needed if wrapper controls size */

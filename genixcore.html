@@ -3,635 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO and Metadata for GenixCore -->
-    <title>GenixCore: Video to Test Scenarios | Netropy AI</title>
-    <link rel="icon" type="image/x-icon" href="resources/netropy_favicon.ico">
-    <meta name="description" content="GenixCore converts driving videos into test scenarios automatically. Build massive testing libraries with AI-powered 3D scenario extraction.">
-    <meta name="keywords" content="GenixCore, scenario extraction, driving video analysis, automated testing scenarios, ASAM OpenSCENARIO, perception testing, Netropy AI, camera data processing">
+    <title>GenixCore — From Driving Video to Test Scenarios | Netropy AI</title>
+    <meta name="theme-color" content="#06080C">
+    <link rel="icon" type="image/svg+xml" href="resources/netropy-favicon.svg">
+    <link rel="alternate icon" type="image/x-icon" href="resources/netropy_favicon.ico">
+    <link rel="apple-touch-icon" href="resources/apple-touch-icon.png">
+    <meta name="description" content="GenixCore turns ordinary driving video into 3D-reconstructed, simulation-ready test scenarios in minutes — automatic scenario extraction, tagging, enrichment, and ASAM OpenSCENARIO export.">
     <meta name="author" content="Netropy AI">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Language" content="en">
-    <meta property="og:title" content="GenixCore: Video to Test Scenarios | Netropy AI">
-    <meta property="og:description" content="GenixCore converts driving videos into test scenarios automatically. Build massive testing libraries with AI-powered 3D scenario extraction.">
+    <link rel="canonical" href="https://netropy.ai/genixcore.html">
+    <meta property="og:title" content="GenixCore — From Driving Video to Test Scenarios">
+    <meta property="og:description" content="Turn driving video into 3D, simulation-ready test scenarios in minutes.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://netropy.ai/genixcore.html">
-    <meta property="og:image" content="resources/logo_semi_bold.svg">
+    <meta property="og:image" content="https://netropy.ai/resources/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GenixCore: Video to Test Scenarios | Netropy AI">
-    <meta name="twitter:description" content="GenixCore converts driving videos into test scenarios automatically. Build massive testing libraries with AI-powered 3D scenario extraction.">
-    <meta name="twitter:image" content="resources/logo_semi_bold.svg">
-    <link rel="canonical" href="https://netropy.ai/genixcore.html">
+    <meta name="twitter:image" content="https://netropy.ai/resources/og-image.png">
 
-    <!-- JSON-LD Schema Markup -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "GenixCore",
-      "description": "GenixCore converts driving videos into test scenarios automatically. Build massive testing libraries with AI-powered 3D scenario extraction.",
-      "brand": {
-        "@type": "Organization",
-        "name": "Netropy AI"
-      },
-      "manufacturer": {
-        "@type": "Organization",
-        "name": "Netropy AI",
-        "url": "https://netropy.ai"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": "GenixCore Demo Videos",
-      "description": "Real-world video examples processed by GenixCore AI scenario extraction",
-      "thumbnailUrl": "https://netropy.ai/resources/genixcore/metadata.png",
-      "uploadDate": "2024-01-01",
-      "contentUrl": "https://netropy.ai/genixcore.html",
-      "embedUrl": "https://netropy.ai/genixcore.html#demos"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://netropy.ai"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "GenixCore",
-          "item": "https://netropy.ai/genixcore.html"
-        }
-      ]
-    }
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"GenixCore","applicationCategory":"AI/Machine Learning","operatingSystem":"Web-based",
+     "description":"AI scenario-extraction engine that converts driving video into 3D test scenarios.","provider":{"@type":"Organization","name":"Netropy AI"},
+     "offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Trial available"}}
     </script>
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSKWS4GTQJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BSKWS4GTQJ');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BSKWS4GTQJ');</script>
 
-    <!-- Styles and Scripts -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@0.395.0/dist/umd/lucide.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="netropy.css">
 </head>
-<body class="text-gray-700 bg-cover bg-center bg-fixed" style="background-image: url('resources/white_curve_bg.jpg');">
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="gridfield" aria-hidden="true"></div>
 
-    <!-- ======================================================================= -->
-    <!-- HEADER NAVIGATION -->
-    <!-- ======================================================================= -->
-    <header id="header" class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300 py-3">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="index.html" class="header-logo-link">
-                <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo">
-            </a>
+<header id="hdr" class="hdr">
+  <div class="wrap hdr-in">
+    <a href="index.html" class="brand" aria-label="Netropy home">
+      <img src="resources/netropy-logo.svg" alt="Netropy" class="brand-logo logo-on-dark">
+      <img src="resources/netropy-logo-light.svg" alt="Netropy" class="brand-logo logo-on-light">
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#demos">Demos</a>
+      <a href="index.html">Home</a>
+    </nav>
+    <div class="hdr-cta">
+      <a href="https://forms.gle/Ed7frnrar7NuBesX7" target="_blank" rel="noopener" class="btn btn-sm">See your data</a>
+      <button id="burger" class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div id="mobnav" class="mobnav" hidden>
+    <a href="#how">How it works</a><a href="#features">Features</a><a href="#demos">Demos</a><a href="index.html">Home</a>
+    <a href="https://forms.gle/Ed7frnrar7NuBesX7" target="_blank" rel="noopener" class="btn">See your data in action</a>
+  </div>
+</header>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 items-center">
-                <a href="index.html#hero" class="nav-link text-black">Home</a>
-                <a href="genixcore.html" class="nav-link text-black font-semibold">GenixCore</a>
-                <a href="careers.html" class="nav-link text-black">Careers</a>
-                <a href="index.html#contact" class="nav-link text-black">Contact</a>
-            </nav>
+<main id="top">
 
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none" aria-label="Open mobile menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </div>
+<!-- HERO -->
+<section class="hero sub">
+  <video class="hero-video" autoplay loop muted playsinline poster="resources/og-image.png">
+    <source src="resources/genixcore/simulation.mp4" type="video/mp4">
+  </video>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hud" data-reveal>
+      <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+      <p class="eyebrow"><span class="dot"></span>GENIXCORE &nbsp;/&nbsp; UNDERSTANDING</p>
+      <h1 class="hero-h1">From driving video<br>to test scenarios.</h1>
+      <p class="hero-sub">Instantly turn any camera data into high-fidelity 3D scenarios. Drop manual scenario authoring and build a massive, diverse validation library — at the scale your testing actually needs.</p>
+      <div class="hero-actions"><a href="https://forms.gle/Ed7frnrar7NuBesX7" target="_blank" rel="noopener" class="btn btn-lg">See your data in action <i data-i="arrow"></i></a></div>
+    </div>
+  </div>
+</section>
 
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
-            <a href="index.html#hero" class="block nav-link text-black px-4 py-2">Home</a>
-            <a href="genixcore.html" class="block nav-link text-black font-semibold px-4 py-2">GenixCore</a>
-            <a href="careers.html" class="block nav-link text-black px-4 py-2">Careers</a>
-            <a href="index.html#contact" class="block nav-link text-black px-4 py-2">Contact</a>
-        </div>
-    </header>
+<!-- HOW / PIPELINE -->
+<section id="how" class="loop" style="padding-top:104px">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="mono-label">From footage to simulation</p>
+      <h2 class="sec-title">Scenarios in minutes, not days.</h2>
+      <p class="sec-lead">GenixCore reconstructs every element of a drive — object trajectories, lanes, spatial layout — and hands back structured, simulation-ready assets. Thousands of hours of raw footage become a searchable scenario library.</p>
+    </div>
+    <div class="pipe">
+      <div class="screen" data-reveal>
+        <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+        <video autoplay loop muted playsinline><source src="resources/genixcore/input.mp4" type="video/mp4"></video>
+        <span class="screen-tag">01 · RAW VIDEO</span>
+      </div>
+      <div class="screen" data-reveal>
+        <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+        <video autoplay loop muted playsinline><source src="resources/genixcore/topview.mp4" type="video/mp4"></video>
+        <span class="screen-tag">02 · 3D RECONSTRUCTION</span>
+      </div>
+      <div class="screen" data-reveal>
+        <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+        <video autoplay loop muted playsinline><source src="resources/genixcore/simulation.mp4" type="video/mp4"></video>
+        <span class="screen-tag">03 · SIMULATION-READY</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- ======================================================================= -->
-    <!-- HERO SECTION -->
-    <!-- ======================================================================= -->
-    <section id="hero" class="relative h-[75vh] flex items-center pt-20 md:pt-0" 
-             style="background: linear-gradient(135deg, var(--brand-accent-color-darker) 0%, var(--brand-accent-color) 50%, #667eea 100%),
-                    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.02) 1px, transparent 1px);
-             background-size: 100% 100%, 20px 20px;">
+<!-- FEATURES -->
+<section id="features" class="tech">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="mono-label">Features</p>
+      <h2 class="sec-title">Everything to go from pixels to scenarios.</h2>
+    </div>
+    <div class="tech-grid">
+      <article class="tcard" data-reveal><span class="tno">EXTRACT</span><h3>Scenario extraction</h3><p>Depth models reconstruct each scene in 3D and pull driving scenarios straight out of raw video — no manual authoring.</p></article>
+      <article class="tcard" data-reveal><span class="tno">TAG</span><h3>Scenario tagging</h3><p>Automatic tags for driving context and environment, so your team finds rare, critical edge cases across petabytes of data.</p></article>
+      <article class="tcard" data-reveal><span class="tno">ENRICH</span><h3>Scenario enrichment</h3><p>Spin countless variations from a single event by changing key parameters — expand your library with minimal effort.</p></article>
+      <article class="tcard" data-reveal><span class="tno">EXPORT</span><h3>Scenario export</h3><p>Export to the industry-standard ASAM OpenSCENARIO format for easy simulator integration — custom formats on request.</p></article>
+    </div>
+  </div>
+</section>
 
-        <!-- Hero Content -->
-        <div class="container mx-auto px-6 text-center md:text-left relative z-10">
-            <div class="w-full md:w-2/3 lg:w-1/2">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 fade-in" 
-                    style="text-shadow: 3px 3px 10px rgba(0,0,0,0.8);">
-                    GenixCore: <br> From Driving Videos <br> To Test Scenarios
-                </h1>
-                <p class="text-base sm:text-lg md:text-xl text-gray-100 mb-8 fade-in fade-in-delay-1">
-                    <!-- Highlighted background for paragraph text for better readability on video -->
-                    <span style="background-color: rgba(0,0,0,0.25); padding: 0.2rem 0.5rem; border-radius: 0.25rem; box-decoration-break: clone; -webkit-box-decoration-break: clone;">
-                        Instantly convert any camera data into high-fidelity 3D scenarios. <br> Eliminate manual scenario creation and build massive, diverse testing libraries to truly scale your validation efforts.
-                    </span>
-                </p>
-                <!-- Call to Action Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 fade-in fade-in-delay-2">
-                    <!-- Primary CTA: Try GenixCore -->
-                    <a href="https://forms.gle/Ed7frnrar7NuBesX7" target="_blank"
-                       class="inline-flex items-center justify-center font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out group bg-white hover:bg-gray-50 border-2 border-white text-gray-800">
-                       <span class="p-1.5 sm:p-2 rounded-full mr-2 sm:mr-3 transition-colors group-hover:bg-gray-100" style="background-color: var(--brand-accent-color);">
-                           <i data-lucide="upload" class="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white"></i>
-                       </span>
-                       <span class="font-bold">See Your Data in Action</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- DEMOS -->
+<section id="demos" class="uses">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="mono-label">Scenarios from real-world video</p>
+      <h2 class="sec-title">Any camera. Any condition.</h2>
+      <p class="sec-lead">From dashcams to surveillance footage, GenixCore extracts actionable test scenarios from real-world video — capturing the complexity that matters.</p>
+    </div>
+    <div class="dgrid">
+      <div class="dcard" data-reveal><video autoplay loop muted playsinline><source src="resources/genixcore/examples/dashcam_day.mp4" type="video/mp4"></video><span class="dtag">Dashcam · Day</span></div>
+      <div class="dcard" data-reveal><video autoplay loop muted playsinline><source src="resources/genixcore/examples/dashcam_night.mp4" type="video/mp4"></video><span class="dtag">Dashcam · Night</span></div>
+      <div class="dcard" data-reveal><video autoplay loop muted playsinline><source src="resources/genixcore/examples/surveillance.mp4" type="video/mp4"></video><span class="dtag">Surveillance</span></div>
+      <div class="dcard" data-reveal><video autoplay loop muted playsinline><source src="resources/genixcore/examples/nambu_example.mp4" type="video/mp4"></video><span class="dtag">Intersection</span></div>
+      <div class="dcard" data-reveal><video autoplay loop muted playsinline><source src="resources/genixcore/examples/nambu_example2.mp4" type="video/mp4"></video><span class="dtag">Urban arterial</span></div>
+    </div>
+  </div>
+</section>
 
-    <!-- ======================================================================= -->
-    <!-- RESULTS & OUTPUT SECTION -->
-    <!-- ======================================================================= -->
-    <section id="results" class="py-20 md:py-24 bg-cover bg-center" 
-             style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('resources/white_curve_bg.jpg');">
-        <div class="container mx-auto px-6">
-            <!-- Introduction Text -->
-            <div class="text-center mb-16 animate-on-scroll">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                    We Turn Driving Videos Into Test Scenarios <span style="color: var(--brand-accent-color);">in Minutes</span>
-                </h2>
-                <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    Transform thousands of hours of raw footage into structured, simulation-ready test scenarios in minutes. <br>
-                    GenixCore automatically extracts and reconstructs every element—from object trajectories to spatial insights—delivering ready-to-use assets for your virtual testing environment.
-                </p>
-            </div>
-            
-            <!-- Enhanced Results Layout -->
-            <div class="max-w-7xl mx-auto">
-                <!-- Process Flow Visualization -->
-                <div class="grid lg:grid-cols-12 gap-8 items-center">
-                    <!-- Input Section -->
-                    <div class="lg:col-span-3">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll border border-gray-100" style="transform: scale(1.1); transform-origin: center; position: relative; z-index: 10;">
-                            <div class="aspect-video bg-gray-800 relative">
-                                <video class="w-full h-full object-cover" loop muted playsinline controls autoplay preload="metadata">
-                                    <source src="resources/genixcore/input.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="absolute top-3 left-3 bg-red-500 text-white text-xs px-2 py-1 rounded font-medium">
-                                    ● RAW VIDEO
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap cta-in" data-reveal>
+    <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+    <p class="mono-label sig">See it on your data</p>
+    <h2 class="cta-h2">Send us a clip.<br>Get back a scenario.</h2>
+    <p class="cta-sub">Share a sample drive and we'll show you the same footage reconstructed in 3D and exported as a ready-to-run scenario.</p>
+    <a href="https://forms.gle/Ed7frnrar7NuBesX7" target="_blank" rel="noopener" class="btn btn-lg">See your data in action <i data-i="arrow"></i></a>
+  </div>
+</section>
 
-                    <!-- AI Processing Flow -->
-                    <div class="lg:col-span-2 flex justify-center items-center">
-                        <div class="relative text-center animate-on-scroll" style="transition-delay: 0.1s;">
-                            <!-- Background Flowing Arrow -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="hidden lg:flex items-center opacity-50" style="width: 380px;">
-                                    <!-- Left side dots -->
-                                    <div class="flex space-x-2">
-                                        <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: var(--brand-accent-color); animation-delay: 0s;"></div>
-                                        <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: var(--brand-accent-color); animation-delay: 0.15s;"></div>
-                                        <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: var(--brand-accent-color); animation-delay: 0.3s;"></div>
-                                        <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: var(--brand-accent-color); animation-delay: 0.45s;"></div>
-                                    </div>
-                                    
-                                    <!-- Arrow line extending through badge area -->
-                                    <div class="flex-1 h-0.5 mx-6 relative" style="background-color: var(--brand-accent-color);">
-                                        <!-- Moving highlight on the line -->
-                                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent w-12 h-full animate-pulse opacity-60" style="animation-duration: 2s;"></div>
-                                    </div>
-                                    
-                                    <!-- Arrow head - positioned further right -->
-                                    <div class="flex items-center mr-6">
-                                        <i data-lucide="chevron-right" class="w-8 h-8" style="color: var(--brand-accent-color);"></i>
-                                    </div>
-                                    
-                                    <!-- Right side dots -->
-                                    <div class="flex space-x-2">
-                                        <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: var(--brand-accent-color); animation-delay: 0.6s;"></div>
-                                        <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: var(--brand-accent-color); animation-delay: 0.75s;"></div>
-                                        <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: var(--brand-accent-color); animation-delay: 0.9s;"></div>
-                                        <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: var(--brand-accent-color); animation-delay: 1.05s;"></div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Mobile background arrow -->
-                                <div class="lg:hidden flex flex-col items-center opacity-50" style="height: 280px;">
-                                    <!-- Top dots -->
-                                    <div class="flex space-y-2 flex-col">
-                                        <div class="w-2 h-2 rounded-full animate-pulse mx-auto" style="background-color: var(--brand-accent-color); animation-delay: 0s;"></div>
-                                        <div class="w-2 h-2 rounded-full animate-pulse mx-auto" style="background-color: var(--brand-accent-color); animation-delay: 0.15s;"></div>
-                                        <div class="w-2 h-2 rounded-full animate-pulse mx-auto" style="background-color: var(--brand-accent-color); animation-delay: 0.3s;"></div>
-                                    </div>
-                                    
-                                    <!-- Arrow line extending through badge area -->
-                                    <div class="flex-1 w-0.5 my-6 relative" style="background-color: var(--brand-accent-color);">
-                                        <!-- Moving highlight on the line -->
-                                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white to-transparent h-12 w-full animate-pulse opacity-60" style="animation-duration: 2s;"></div>
-                                    </div>
-                                    
-                                    <!-- Arrow head - positioned further down -->
-                                    <div class="flex items-center mb-6">
-                                        <i data-lucide="chevron-down" class="w-8 h-8" style="color: var(--brand-accent-color);"></i>
-                                    </div>
-                                    
-                                    <!-- Bottom dots -->
-                                    <div class="flex space-y-2 flex-col">
-                                        <div class="w-2 h-2 rounded-full animate-pulse mx-auto" style="background-color: var(--brand-accent-color); animation-delay: 0.6s;"></div>
-                                        <div class="w-2 h-2 rounded-full animate-pulse mx-auto" style="background-color: var(--brand-accent-color); animation-delay: 0.75s;"></div>
-                                        <div class="w-2 h-2 rounded-full animate-pulse mx-auto" style="background-color: var(--brand-accent-color); animation-delay: 0.9s;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Processing Badge (foreground) -->
-                            <div class="relative z-10 inline-flex items-center px-5 py-3 rounded-full shadow-lg" style="background-color: var(--brand-accent-color-lighter-tint);">
-                                <i data-lucide="sparkles" class="w-5 h-5 mr-2" style="color: var(--brand-accent-color);"></i>
-                                <span class="font-semibold text-sm" style="color: var(--brand-accent-color);">AI Processing</span>
-                            </div>
-                        </div>
-                    </div>
+</main>
 
-                    <!-- Output Results Grid -->
-                    <div class="lg:col-span-7">
-                        <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6">
-                            <!-- 3D Spatial Understanding (spans 2 rows) -->
-                            <div class="md:row-span-2">
-                                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-on-scroll h-full flex flex-col" style="transition-delay: 0.2s;">
-                                    <div class="bg-gray-800 relative flex-1">
-                                        <video class="w-full h-full object-cover" loop muted playsinline controls autoplay preload="metadata">
-                                            <source src="resources/genixcore/topview.mp4" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                        <div class="absolute top-3 right-3 text-white text-xs px-2 py-1 rounded font-medium" style="background: linear-gradient(45deg, var(--brand-accent-color), #667eea);">
-                                            3D SCENE RECONSTRUCTED
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <img src="resources/netropy-logo.svg" alt="Netropy" class="brand-logo">
+      <p>Limitless virtual worlds for physical AI.</p>
+    </div>
+    <div class="foot-col">
+      <p class="mono-label">Product</p>
+      <a href="genixcore.html">GenixCore</a><a href="index.html#genixsim">GenixSim</a>
+    </div>
+    <div class="foot-col">
+      <p class="mono-label">Company</p>
+      <a href="index.html#company">About</a><a href="careers.html">Careers</a><a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" rel="noopener">Contact</a>
+    </div>
+    <div class="foot-col">
+      <p class="mono-label">Reach us</p>
+      <a href="mailto:hello@netropy.ai">hello@netropy.ai</a>
+      <a href="https://map.naver.com/p/search/서울 강남구 선릉로 551" target="_blank" rel="noopener">551 Seolleung-ro, Gangnam-gu, Seoul</a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/company/netropyai" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-i="linkedin"></i></a>
+        <a href="https://www.youtube.com/@netropyai" target="_blank" rel="noopener" aria-label="YouTube"><i data-i="youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <span>© <span id="yr"></span> Netropy Inc. All rights reserved.</span>
+    <span class="mono-label">37.5026°N · 127.0490°E</span>
+  </div>
+</footer>
 
-                            <!-- Testing Scenarios (first row, second column) -->
-                            <div>
-                                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-on-scroll h-full flex flex-col" style="transition-delay: 0.3s;">
-                                    <div class="bg-gray-800 relative flex-1">
-                                        <video class="w-full h-full object-cover" loop muted playsinline controls autoplay preload="metadata">
-                                            <source src="resources/genixcore/simulation.mp4" type="video/mp4">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                        <div class="absolute top-3 right-3 text-white text-xs px-2 py-1 rounded font-medium" style="background: linear-gradient(45deg, #667eea, var(--brand-accent-color));">
-                                            SCENARIO in SIMULATION
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Structured Metadata (second row, second column) -->
-                            <div>
-                                <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-on-scroll h-full flex flex-col" style="transition-delay: 0.4s;">
-                                    <div class="bg-gray-50 p-4 relative flex-1 flex items-center justify-center">
-                                        <img src="resources/genixcore/metadata.png" alt="Scenario Metadata" class="w-full h-auto rounded-lg max-h-full object-contain">
-                                        <div class="absolute top-6 right-6 text-white text-xs px-2 py-1 rounded font-medium" style="background: linear-gradient(135deg, var(--brand-accent-color), #667eea);">
-                                            STRUCTURED METADATA
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-        </div>
-    </section>
-
-    <!-- ======================================================================= -->
-    <!-- CORE FUNCTIONS SECTION -->
-    <!-- ======================================================================= -->
-    <section id="functions" class="py-16 md:py-24 bg-cover bg-center" 
-             style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('resources/white_curve_bg.jpg');">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8 text-center animate-on-scroll" 
-                style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                Features
-            </h2>
-            
-            <!-- Functions Grid -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto">
-                <!-- Function 1: Automatic Extraction -->
-                <div class="bg-white rounded-xl shadow-lg p-6 animate-on-scroll">
-                    <div class="mb-4 text-center">
-                        <div class="mx-auto mb-3 feature-icon-wrapper rounded-full p-3" style="background-color: var(--brand-accent-color-lighter-tint); width: fit-content;">
-                            <i data-lucide="cpu" class="w-8 h-8" style="color: var(--brand-accent-color);"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Scenario Extraction</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-3 leading-relaxed">
-                        Transform raw driving videos into ready-to-use test scenarios. Our depth models automatically reconstruct scenes in 3D and extract driving scenarios.
-                    </p>
-                </div>
-
-                <!-- Function 2: Scenario Tagging -->
-                <div class="bg-white rounded-xl shadow-lg p-6 animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="mb-4 text-center">
-                        <div class="mx-auto mb-3 feature-icon-wrapper rounded-full p-3" style="background-color: var(--brand-accent-color-lighter-tint); width: fit-content;">
-                            <i data-lucide="tags" class="w-8 h-8" style="color: var(--brand-accent-color);"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Scenario Tagging</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-3 leading-relaxed">
-                        Automatically tag scenarios with driving context and environmental metadata for powerful search and filtering, allowing your team to instantly find rare and critical edge cases across petabytes of data.
-                    </p>
-                </div>
-
-                <!-- Function 3: Interactive Editing -->
-                <div class="bg-white rounded-xl shadow-lg p-6 animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="mb-4 text-center">
-                        <div class="mx-auto mb-3 feature-icon-wrapper rounded-full p-3" style="background-color: var(--brand-accent-color-lighter-tint); width: fit-content;">
-                            <i data-lucide="edit" class="w-8 h-8" style="color: var(--brand-accent-color);"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Scenario Enrichment</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-3 leading-relaxed">
-                        Create countless variations from a single event by modifying key parameters in a scenario to test more conditions, rapidly expanding your library with minimal effort.
-                    </p>
-                </div>
-
-                <!-- Function 4: Export & Integration -->
-                <div class="bg-white rounded-xl shadow-lg p-6 animate-on-scroll" style="transition-delay: 0.3s;">
-                    <div class="mb-4 text-center">
-                        <div class="mx-auto mb-3 feature-icon-wrapper rounded-full p-3" style="background-color: var(--brand-accent-color-lighter-tint); width: fit-content;">
-                            <i data-lucide="download" class="w-8 h-8" style="color: var(--brand-accent-color);"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Scenario Export</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-3 leading-relaxed">
-                        Export scenarios in the industry-standard ASAM OpenSCENARIO format for easy simulator integration, with custom format support when needed.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======================================================================= -->
-    <!-- VIDEO DEMOS SECTION -->
-    <!-- ======================================================================= -->
-    <section id="demos" class="py-16 md:py-24 bg-cover bg-center" 
-             style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('resources/white_curve_bg.jpg');">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8 text-center animate-on-scroll" 
-                style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                Scenarios from Real-World Videos
-            </h2>
-            <p class="text-xl text-gray-700 mb-12 text-center max-w-4xl mx-auto animate-on-scroll">
-                From dashcams to surveillance footage—GenixCore extracts actionable test scenarios from any real-world video, automatically capturing the complexity that matters.
-            </p>
-            
-            <!-- Demo Videos Carousel - Auto-scrolling -->
-            <div class="demo-videos-container overflow-hidden max-w-7xl mx-auto">
-                <div class="demo-videos-track flex items-center gap-6 lg:gap-8">
-                    <!-- First set of videos -->
-                    <div class="demo-video-item flex-shrink-0">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
-                            <div class="aspect-video bg-gray-800">
-                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
-                                    <source src="resources/genixcore/examples/dashcam_day.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="demo-video-item flex-shrink-0">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
-                            <div class="aspect-video bg-gray-800">
-                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
-                                    <source src="resources/genixcore/examples/dashcam_night.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="demo-video-item flex-shrink-0">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
-                            <div class="aspect-video bg-gray-800">
-                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
-                                    <source src="resources/genixcore/examples/surveillance.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="demo-video-item flex-shrink-0">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
-                            <div class="aspect-video bg-gray-800">
-                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
-                                    <source src="resources/genixcore/examples/nambu_example.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="demo-video-item flex-shrink-0">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
-                            <div class="aspect-video bg-gray-800">
-                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
-                                    <source src="resources/genixcore/examples/nambu_example2.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Duplicate set for seamless loop -->
-                    <div class="demo-video-item flex-shrink-0">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
-                            <div class="aspect-video bg-gray-800">
-                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
-                                    <source src="resources/genixcore/examples/dashcam_day.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="demo-video-item flex-shrink-0">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
-                            <div class="aspect-video bg-gray-800">
-                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
-                                    <source src="resources/genixcore/examples/dashcam_night.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="demo-video-item flex-shrink-0">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
-                            <div class="aspect-video bg-gray-800">
-                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
-                                    <source src="resources/genixcore/examples/surveillance.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="demo-video-item flex-shrink-0">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
-                            <div class="aspect-video bg-gray-800">
-                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
-                                    <source src="resources/genixcore/examples/nambu_example.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="demo-video-item flex-shrink-0">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-on-scroll" style="width: 320px;">
-                            <div class="aspect-video bg-gray-800">
-                                <video class="w-full h-full object-cover" loop muted playsinline autoplay preload="metadata">
-                                    <source src="resources/genixcore/examples/nambu_example2.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======================================================================= -->
-    <!-- CONTACT SECTION -->
-    <!-- ======================================================================= -->
-    <section id="contact" class="py-16 md:py-24 text-white" style="background-color: var(--brand-accent-color-darker);">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12 animate-on-scroll">
-                <h2 class="text-4xl md:text-5xl font-bold mb-5" 
-                    style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                    Ready to Experience GenixCore?
-                </h2>
-                <p class="text-lg text-white opacity-90 mb-8 leading-relaxed max-w-3xl mx-auto" 
-                   style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                    Upload your driving video to get sample results, <br> or schedule a demo to discuss your specific needs.
-                </p>
-            </div>
-
-            <!-- Two CTA Options -->
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Left CTA: Try GenixCore -->
-                <div class="bg-black/10 p-8 rounded-xl shadow-xl animate-on-scroll">
-                    <div class="text-center mb-6">
-                        <div class="mx-auto mb-4 w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                            <i data-lucide="upload" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-white mb-3" 
-                            style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                            See It on Your Video
-                        </h3>
-                        <p class="text-white opacity-90 text-sm" 
-                           style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                            Upload your driving video <br>and get sample scenario extraction results back.
-                        </p>
-                    </div>
-                    <a href="https://forms.gle/Ed7frnrar7NuBesX7" target="_blank" 
-                       class="block w-full text-center font-semibold px-6 py-4 rounded-lg shadow-md text-lg transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
-                       style="background-color: white; color: var(--emphasized-text-color); border: 2px solid white;">
-                        Upload Video <i data-lucide="arrow-right" class="inline-block ml-2 w-5 h-5" style="color: var(--emphasized-text-color);"></i>
-                    </a>
-                </div>
-
-                <!-- Right CTA: Schedule Demo -->
-                <div class="bg-black/10 p-8 rounded-xl shadow-xl animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="text-center mb-6">
-                        <div class="mx-auto mb-4 w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                            <i data-lucide="calendar" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-white mb-3" 
-                            style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                            Schedule Demo
-                        </h3>
-                        <p class="text-white opacity-90 text-sm" 
-                           style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                            Discuss your specific use case <br> and see how GenixCore fits your workflow.
-                        </p>
-                    </div>
-                    <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" 
-                       class="block w-full text-center font-semibold px-6 py-4 rounded-lg shadow-md text-lg transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-white text-white hover:bg-white hover:text-gray-800">
-                        Request Meeting <i data-lucide="external-link" class="inline-block ml-2 w-5 h-5"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======================================================================= -->
-    <!-- FOOTER -->
-    <!-- ======================================================================= -->
-    <footer class="py-12 bg-cover bg-center" 
-            style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('resources/white_curve_bg.jpg');">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <!-- Footer Column 1: Logo and Tagline -->
-                <div>
-                    <div class="mb-4">
-                        <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo">
-                    </div>
-                    <p class="text-sm text-gray-600">Transforming drive data into reality-based testing at scale.</p>
-                </div>
-                <!-- Footer Column 2: Quick Links -->
-                <div>
-                    <h5 class="footer-heading mb-4 text-gray-800">Quick Links</h5>
-                    <ul class="space-y-2">
-                        <li><a href="index.html#hero" class="footer-link">Home</a></li>
-                        <li><a href="genixcore.html" class="nav-link">GenixCore</a></li>
-                        <li><a href="careers.html" class="nav-link">Careers</a></li>
-                        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- Footer Column 3: Connect With Us -->
-                <div>
-                    <h5 class="footer-heading mb-4 text-gray-800">Connect With Us</h5>
-                    <p class="mb-2 text-gray-600"><a href="https://map.naver.com/p/search/서울 강남구 선릉로 551" target="_blank" class="footer-link">
-                        551, Seolleung-ro, Gangnam-gu <br> Seoul, South Korea
-                    </a></p>
-                    <p class="mb-2 text-gray-600">Email: <a href="mailto:hello@netropy.ai" class="footer-link">hello@netropy.ai</a></p>
-                    <!-- Social Media Links -->
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://www.linkedin.com/company/netropyai" target="_blank" class="footer-social-link" aria-label="LinkedIn Profile">
-                            <i data-lucide="linkedin" class="w-6 h-6"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@netropyai" target="_blank" class="footer-social-link" aria-label="YouTube Channel">
-                            <i data-lucide="youtube" class="w-6 h-6"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Copyright Information -->
-            <div class="border-t border-gray-300 pt-8 text-center text-sm text-gray-600">
-                <p>&copy; <span id="currentYear"></span> Netropy. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+<script src="netropy.js"></script>
 </body>
 </html>

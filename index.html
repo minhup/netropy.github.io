@@ -3,575 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO and Metadata - Copied from index.html -->
-    <title>Netropy AI: 3D Spatial Intelligence from 2D Video</title>
-    <link rel="icon" type="image/x-icon" href="resources/netropy_favicon.ico">
-    <meta name="description" content="Netropy AI (네트로피 AI) delivers cutting-edge AI for spatial intelligence. We reconstruct 3D scenes from video to extract critical insights, enabling digital twin generation, simulation, and photo-realistic image synthesis.">
-    <meta name="keywords" content="Netropy AI, 네트로피 AI, AI, artificial intelligence, spatial intelligence, 3D reconstruction, 3D scene understanding, digital twin, simulation, synthetic data, photo-realistic image synthesis, video analysis, computer vision, neural rendering, visual generative AI, closed-loop simulation, 인공지능, 공간지능, 디지털 트윈, 시뮬레이션, 합성 데이터">
+    <title>Netropy AI — Limitless Virtual Worlds for Physical AI</title>
+    <meta name="theme-color" content="#06080C">
+    <link rel="icon" type="image/svg+xml" href="resources/netropy-favicon.svg">
+    <link rel="alternate icon" type="image/x-icon" href="resources/netropy_favicon.ico">
+    <link rel="apple-touch-icon" href="resources/apple-touch-icon.png">
+    <meta name="description" content="Netropy AI reconstructs recorded driving data into living 3D world models — neural simulation and synthetic data that close the loop on autonomous-driving validation. GenixCore for 3D understanding, GenixSim for hyper-realistic synthesis.">
+    <meta name="keywords" content="Netropy AI, world model, physical AI, autonomous driving validation, 3D reconstruction, neural simulation, synthetic data, digital twin, GenixCore, GenixSim, closed-loop simulation, E2E autonomous driving, ADAS, 네트로피">
     <meta name="author" content="Netropy AI">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Language" content="en">
-    <meta property="og:title" content="Netropy AI: 3D Spatial Intelligence from 2D Video">
-    <meta property="og:description" content="Netropy AI delivers cutting-edge AI for spatial intelligence. We reconstruct 3D scenes from video to extract critical insights, enabling digital twin generation, simulation, and photo-realistic image synthesis.">
+    <link rel="canonical" href="https://netropy.ai">
+    <meta property="og:title" content="Netropy AI — Limitless Virtual Worlds for Physical AI">
+    <meta property="og:description" content="Turn recorded driving data into living virtual worlds. 3D reconstruction, neural simulation, and closed-loop validation for autonomous systems.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://netropy.ai">
-    <meta property="og:image" content="resources/logo_semi_bold.svg">
+    <meta property="og:image" content="https://netropy.ai/resources/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Netropy AI: 3D Spatial Intelligence from 2D Video">
-    <meta name="twitter:description" content="Netropy AI delivers cutting-edge AI for spatial intelligence. We reconstruct 3D scenes from video to extract critical insights, enabling digital twin generation, simulation, and photo-realistic image synthesis.">
-    <meta name="twitter:image" content="resources/logo_semi_bold.svg">
-    <link rel="canonical" href="https://netropy.ai">
+    <meta name="twitter:title" content="Netropy AI — Limitless Virtual Worlds for Physical AI">
+    <meta name="twitter:description" content="Reconstruct recorded driving into living 3D worlds for autonomous-driving validation.">
+    <meta name="twitter:image" content="https://netropy.ai/resources/og-image.png">
 
-    <!-- JSON-LD Schema Markup -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Netropy AI",
-      "url": "https://netropy.ai",
-      "logo": "https://netropy.ai/resources/logo_semi_bold.svg",
-      "description": "Netropy AI delivers cutting-edge AI for spatial intelligence. We reconstruct 3D scenes from video to extract critical insights, enabling digital twin generation, simulation, and photo-realistic image synthesis.",
-      "sameAs": [
-        "https://www.linkedin.com/company/netropyai",
-        "https://www.youtube.com/@netropyai"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "general inquiry",
-        "url": "https://form.typeform.com/to/G3sSMNJ0"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": "https://netropy.ai",
-      "name": "Netropy AI",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Netropy AI",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://netropy.ai/resources/logo_semi_bold.svg"
-        }
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "GenixCore",
-      "applicationCategory": "AI/Machine Learning",
-      "operatingSystem": "Web-based",
-      "description": "AI-powered scenario extraction engine that converts driving videos into test scenarios",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "description": "Free trial available"
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "Netropy AI"
-      }
-    }
+    { "@context":"https://schema.org","@type":"Organization","name":"Netropy AI","url":"https://netropy.ai",
+      "logo":"https://netropy.ai/resources/netropy-logo-light.svg",
+      "description":"Netropy AI reconstructs recorded driving data into living 3D world models for autonomous-driving validation.",
+      "sameAs":["https://www.linkedin.com/company/netropyai","https://www.youtube.com/@netropyai"],
+      "contactPoint":{"@type":"ContactPoint","contactType":"general inquiry","url":"https://form.typeform.com/to/G3sSMNJ0","email":"hello@netropy.ai"} }
     </script>
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSKWS4GTQJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BSKWS4GTQJ');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BSKWS4GTQJ');</script>
 
-    <!-- Styles and Scripts for index.html -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@0.395.0/dist/umd/lucide.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="netropy.css">
 </head>
-<body class="text-gray-700 bg-cover bg-center bg-fixed" style="background-image: url('resources/white_curve_bg.jpg');">
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="gridfield" aria-hidden="true"></div>
 
-    <!-- ======================================================================= -->
-    <!-- HEADER NAVIGATION -->
-    <!-- ======================================================================= -->
-    <header id="header" class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300 py-3">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="header-logo-link">
-                <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo">
-            </a>
+<!-- ================= HEADER ================= -->
+<header id="hdr" class="hdr">
+  <div class="wrap hdr-in">
+    <a href="#top" class="brand" aria-label="Netropy home">
+      <img src="resources/netropy-logo.svg" alt="Netropy" class="brand-logo logo-on-dark">
+      <img src="resources/netropy-logo-light.svg" alt="Netropy" class="brand-logo logo-on-light">
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#loop">World model</a>
+      <a href="#genixcore">GenixCore</a>
+      <a href="#genixsim">GenixSim</a>
+      <a href="#company">Company</a>
+    </nav>
+    <div class="hdr-cta">
+      <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" rel="noopener" class="btn btn-sm">Talk to us</a>
+      <button id="burger" class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div id="mobnav" class="mobnav" hidden>
+    <a href="#loop">World model</a><a href="#genixcore">GenixCore</a><a href="#genixsim">GenixSim</a><a href="#company">Company</a>
+    <a href="careers.html">Careers</a>
+    <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" rel="noopener" class="btn">Talk to us</a>
+  </div>
+</header>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 items-center">
-                <a href="#hero" class="nav-link text-black">Home</a>
-                <a href="#solutions" class="nav-link text-black">Solutions</a>
-                <a href="careers.html" class="nav-link text-black">Careers</a>
-                <a href="#contact" class="nav-link text-black">Contact</a>
-            </nav>
+<main id="top">
 
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none" aria-label="Open mobile menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </div>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <video class="hero-video" autoplay loop muted playsinline poster="resources/og-image.png">
+    <source src="resources/depth_inferred.mp4" type="video/mp4">
+  </video>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hud" data-reveal>
+      <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+      <p class="eyebrow"><span class="dot"></span>LIMITLESS VIRTUAL WORLDS &nbsp;/&nbsp; PHYSICAL AI</p>
+      <h1 class="hero-h1">Rebuild reality<br>from a single drive.</h1>
+      <p class="hero-sub">Netropy reconstructs recorded driving into living 3D worlds you can re-run, edit, and stress-test — closing the loop on autonomous-driving validation without another mile of real-world risk.</p>
+      <div class="hero-actions">
+        <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" rel="noopener" class="btn btn-lg">Put your data to work <i data-i="arrow"></i></a>
+        <a href="#genixsim" class="btn btn-ghost btn-lg">See GenixSim drive</a>
+      </div>
+    </div>
+  </div>
+  <div class="telemetry wrap" data-reveal>
+    <span><b>SOURCE</b> dashcam · multi-cam</span>
+    <span><b>RECON</b> 3D gaussian + mesh</span>
+    <span><b>OBJECTS</b> tracked&nbsp;27</span>
+    <span><b>EGO-POSE</b> locked</span>
+    <span class="live"><span class="dot"></span>RECONSTRUCTING</span>
+  </div>
+</section>
 
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
-            <a href="#hero" class="block nav-link text-black px-4 py-2">Home</a>
-            <a href="#solutions" class="block nav-link text-black px-4 py-2">Solutions</a>
-            <a href="careers.html" class="block nav-link text-black px-4 py-2">Careers</a>
-            <a href="#contact" class="block nav-link text-black px-4 py-2">Contact</a>
-        </div>
-    </header>
+<!-- ================= BACKERS ================= -->
+<section class="backers">
+  <div class="wrap">
+    <p class="mono-label">Backed &amp; built with</p>
+    <div class="logo-row" data-reveal>
+      <img src="resources/partner_logo/nvidia.png" alt="NVIDIA Inception">
+      <img src="resources/partner_logo/springcamp.png" alt="SpringCamp">
+      <img src="resources/partner_logo/kakao_mobility.png" alt="Kakao Mobility">
+      <img src="resources/partner_logo/hlklemove.png" alt="HL Klemove" class="blend">
+      <img src="resources/partner_logo/kaist.png" alt="KAIST">
+      <img src="resources/partner_logo/snu.png" alt="Seoul National University">
+      <img src="resources/partner_logo/etri.png" alt="ETRI">
+      <img src="resources/partner_logo/gist.png" alt="GIST">
+    </div>
+  </div>
+</section>
 
-    <!-- ======================================================================= -->
-    <!-- HERO SECTION -->
-    <!-- ======================================================================= -->
-    <section id="hero" class="hero-bg relative h-[75vh] flex items-center pt-20 md:pt-0">
-        <!-- Background Video -->
-        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-10">
-            <source src="resources/depth_inferred.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+<!-- ================= THESIS ================= -->
+<section class="thesis">
+  <div class="wrap thesis-in">
+    <p class="mono-label" data-reveal>The premise</p>
+    <h2 class="thesis-h2" data-reveal>Your fleet has already seen the edge cases.
+      <span class="dim">They are sitting, frozen, in recorded video. We bring that data back to life as a world you can drive again — and again, differently.</span></h2>
+  </div>
+</section>
+
+<!-- ================= LOOP / PIPELINE ================= -->
+<section id="loop" class="loop">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="mono-label">The world-model loop</p>
+      <h2 class="sec-title">From a recorded mile to infinite simulated ones.</h2>
+      <p class="sec-lead">One pipeline turns reality into a generative world and feeds validated behavior back to the vehicle. It never has to leave the loop.</p>
+    </div>
+    <ol class="stages">
+      <li class="stage" data-reveal>
+        <span class="stage-no">01</span>
+        <h3>Capture</h3>
+        <p>Ordinary driving logs — dashcam, multi-camera, fleet video. No lidar rig required.</p>
+        <span class="stage-tag">REAL WORLD</span>
+      </li>
+      <li class="stage" data-reveal>
+        <span class="stage-no">02</span>
+        <h3>Understand <em>GenixCore</em></h3>
+        <p>Reconstruct the scene in 3D, track every dynamic object, and extract the scenario.</p>
+        <span class="stage-tag">PERCEPTION</span>
+      </li>
+      <li class="stage" data-reveal>
+        <span class="stage-no">03</span>
+        <h3>Synthesize <em>GenixSim</em></h3>
+        <p>Rebuild a 4D world from the data and render hyper-real sensor streams on demand.</p>
+        <span class="stage-tag">GENERATION</span>
+      </li>
+      <li class="stage" data-reveal>
+        <span class="stage-no">04</span>
+        <h3>Validate</h3>
+        <p>Drive your E2E / VLA stack closed-loop, reproduce edge cases, measure, repeat.</p>
+        <span class="stage-tag">→ BACK TO REAL</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= GENIXCORE ================= -->
+<section id="genixcore" class="feature">
+  <div class="wrap feature-in">
+    <div class="feature-copy" data-reveal>
+      <p class="mono-label sig">// 02 · UNDERSTAND</p>
+      <h2 class="feature-title">GenixCore</h2>
+      <p class="feature-tagline">Mine edge-case scenarios out of driving video.</p>
+      <p class="feature-body">GenixCore reads ordinary footage in three dimensions — reconstructing the environment, recovering ego-motion, and tracking every actor — then hands you a clean, taggable scenario ready for your validation tool-chain.</p>
+      <ul class="caps">
+        <li>3D environment reconstruction from camera-only input</li>
+        <li>Dynamic object detection, classification &amp; tracking</li>
+        <li>Searchable scenario metadata &amp; tagging</li>
+        <li>Export to ASAM OpenSCENARIO for any simulator</li>
+      </ul>
+      <div class="stat">
+        <div><span class="stat-num">a full day</span><span class="stat-lab">hand-authoring one scenario</span></div>
+        <i data-i="arrow" class="stat-arrow"></i>
+        <div><span class="stat-num accent">20 min</span><span class="stat-lab">data-driven, from real footage</span></div>
+      </div>
+      <a href="genixcore.html" class="btn btn-ghost">Explore GenixCore <i data-i="arrow"></i></a>
+    </div>
+    <div class="feature-media" data-reveal>
+      <div class="screen">
+        <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+        <video id="core-vid" autoplay loop muted playsinline>
+          <source src="resources/ramp_entrance_reconstructed.mp4" type="video/mp4">
         </video>
-        <!-- Transparent Overlay for Video -->
-        <div class="absolute inset-0 bg-black/40 z-20"></div>
+        <span class="screen-tag">3D SCENE · RECONSTRUCTED</span>
+      </div>
+      <div class="thumbs" id="core-thumbs">
+        <button class="thumb active" data-src="resources/ramp_entrance_reconstructed.mp4">Ramp entrance</button>
+        <button class="thumb" data-src="resources/intersection_reconstructed.mp4">Intersection</button>
+        <button class="thumb" data-src="resources/night_reconstructed.mp4">Night</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Hero Content -->
-        <div class="container mx-auto px-6 text-center md:text-left relative z-30">
-            <div class="w-full md:w-2/3 lg:w-1/2">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 fade-in" 
-                    style="text-shadow: 3px 3px 10px rgba(0,0,0,0.8);">
-                    Unlock Actionable 3D Intelligence from Your Images and Videos
-                </h1>
-                <p class="text-base sm:text-lg md:text-xl text-gray-100 mb-8 fade-in fade-in-delay-1">
-                    <!-- Highlighted background for paragraph text for better readability on video -->
-                    <span style="background-color: rgba(0,0,0,0.25); padding: 0.2rem 0.5rem; border-radius: 0.25rem; box-decoration-break: clone; -webkit-box-decoration-break: clone;">
-                        Leverage our cutting-edge AI to extract critical 3D insights from standard video footage. We're revolutionizing autonomous driving, robotics, and dynamic environment monitoring.
-                    </span>
-                </p>
-                <!-- Call to Action Button -->
-                <div class="space-y-4 md:space-y-0 md:space-x-4 fade-in fade-in-delay-2">
-                    <a href="#contact" 
-                       class="inline-flex items-center justify-center font-bold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-sm sm:text-base shadow-md hover:shadow-lg transition-all duration-300 ease-in-out group"
-                       style="background-color: var(--brand-accent-color);">
-                       <span class="bg-white group-hover:bg-gray-100 p-1.5 sm:p-2 rounded-full mr-2 sm:mr-3 transition-colors">
-                           <i data-lucide="arrow-right" class="w-2.5 h-2.5 sm:w-3 sm:h-3" style="color: var(--emphasized-text-color);"></i>
-                       </span>
-                       <span style="color: var(--emphasized-text-color);">Discuss Your Project</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ================= GENIXSIM ================= -->
+<section id="genixsim" class="feature alt">
+  <div class="wrap feature-in">
+    <div class="feature-media" data-reveal>
+      <div class="screen">
+        <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+        <video autoplay loop muted playsinline>
+          <source src="resources/digital_twin.mp4" type="video/mp4">
+        </video>
+        <span class="screen-tag">4D WORLD · NEURAL RENDER</span>
+      </div>
+    </div>
+    <div class="feature-copy" data-reveal>
+      <p class="mono-label sig">// 03 · SYNTHESIZE</p>
+      <h2 class="feature-title">GenixSim</h2>
+      <p class="feature-tagline">A hyper-real testbed rebuilt from your own data.</p>
+      <p class="feature-body">GenixSim reconstructs a 4D world from recorded drives and lets your full stack drive inside it — photoreal, reactive, and closed-loop. Step into the exact moment an edge case happened and replay it a thousand ways.</p>
+      <ul class="caps">
+        <li>4D world reconstruction from driving data</li>
+        <li>Photorealistic sensor synthesis, ready to feed your models</li>
+        <li>Closed-loop testing for E2E &amp; VLA driving stacks</li>
+        <li>Interactive scenario &amp; environment configuration</li>
+      </ul>
+      <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" rel="noopener" class="btn">Join the waitlist <i data-i="ext"></i></a>
+    </div>
+  </div>
+</section>
 
-    <!-- ======================================================================= -->
-    <!-- PARTNERS SECTION -->
-    <!-- ======================================================================= -->
-    <section id="partners" class="py-8 md:py-12 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-6">
-                <h2 class="text-xl md:text-2xl font-medium text-gray-700 mb-2">
-                    Trusted by
-                </h2>
-            </div>
-            
-            <!-- Partners Logo Row with Auto-scroll -->
-            <div class="partner-logos-container overflow-hidden max-w-7xl mx-auto">
-                <div class="partner-logos-track flex items-center gap-8 md:gap-12">
-                    <!-- First set of logos -->
-                    <!-- <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/hyundai.png" alt="Hyundai" class="partner-logo">
-                    </div> -->
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/kakao_mobility.png" alt="Kakao Mobility" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/hlklemove.png" alt="HL Klemove" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/nvidia.png" alt="NVIDIA" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/springcamp.png" alt="SpringCamp" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/etri.png" alt="ETRI" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/kaist.png" alt="KAIST" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/snu.png" alt="Seoul National University" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/gist.png" alt="GIST" class="partner-logo">
-                    </div>
-                    <!-- <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/morai.png" alt="MORAI" class="partner-logo">
-                    </div> -->
-                    
-                    <!-- Duplicate set for seamless loop -->
-                    <!-- <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/hyundai.png" alt="Hyundai" class="partner-logo">
-                    </div> -->
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/kakao_mobility.png" alt="Kakao Mobility" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/hlklemove.png" alt="HL Klemove" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/nvidia.png" alt="NVIDIA" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/springcamp.png" alt="SpringCamp" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/etri.png" alt="ETRI" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/kaist.png" alt="KAIST" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/snu.png" alt="Seoul National University" class="partner-logo">
-                    </div>
-                    <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/gist.png" alt="GIST" class="partner-logo">
-                    </div>
-                    <!-- <div class="partner-logo-item flex-shrink-0">
-                        <img src="resources/partner_logo/morai.png" alt="MORAI" class="partner-logo">
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ================= TECH GRID ================= -->
+<section class="tech">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="mono-label">Under the hood</p>
+      <h2 class="sec-title">The reconstruction engine.</h2>
+    </div>
+    <div class="tech-grid">
+      <article class="tcard" data-reveal><span class="tno">3D / 4D</span><h3>Volumetric reconstruction</h3><p>High-fidelity, navigable replicas of real scenes from standard video — geometry, appearance, and motion over time.</p></article>
+      <article class="tcard" data-reveal><span class="tno">TRACK</span><h3>Dynamic object recovery</h3><p>Camera pose, trajectories, lanes, and per-actor 3D detection, classification, and tracking through the whole sequence.</p></article>
+      <article class="tcard" data-reveal><span class="tno">RENDER</span><h3>Neural sensor synthesis</h3><p>Photo-realistic camera views generated on demand, controllable down to actors, environment, and sensor parameters.</p></article>
+      <article class="tcard" data-reveal><span class="tno">LOOP</span><h3>Closed-loop validation</h3><p>Open-loop replay on recorded data and closed-loop testing in the reconstructed world — without a single risky real-vehicle run.</p></article>
+    </div>
+  </div>
+</section>
 
-    <!-- ======================================================================= -->
-    <!-- SOLUTIONS SECTION -->
-    <!-- ======================================================================= -->
-    <section id="solutions" class="py-16 md:py-24 bg-cover bg-center" 
-             style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('resources/white_curve_bg.jpg');">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center animate-on-scroll" 
-                style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                Solutions
-            </h2>
-            
-            <!-- Solutions Grid -->
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 mx-auto">
-                <!-- Solution 1: Scenario Extractor -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col animate-on-scroll">
-                    <div class="mb-6 flex items-center">
-                        <div class="mr-4 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
-                            <i data-lucide="route" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-1">Scenario Extractor</h3>
-                            <p class="text-lg text-gray-600 font-medium">From Video to Test Scenarios</p>
-                        </div>
-                    </div>
-                    <div style="height: 120px; display: flex; align-items: flex-start;">
-                        <p class="text-gray-700 mb-6 leading-relaxed">
-                            Our scenario extractor, GenixCore, ingests any camera data and automatically extracts high-fidelity 3D scenarios to create a massive library for validation of autonomous driving systems.
-                        </p>
-                    </div>
-                    <!-- Solution 1 Image -->
-                    <div class="mb-6 flex justify-center" style="height: 250px;">
-                        <img src="resources/solution_1.png" alt="GenixCore Scenario Extraction" class="rounded-lg shadow-md object-contain" style="height: 250px; width: auto;">
-                    </div>
-                    <div class="mb-6">
-                        <h4 class="text-md font-semibold text-gray-800 mb-3">Key Features:</h4>
-                        <ul class="space-y-2 text-gray-600 text-sm">
-                            <li class="flex items-start">
-                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
-                                Extract scenarios automatically from any camera data
-                            </li>
-                            <li class="flex items-start">
-                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
-                                Tag scenarios for searchable database organization
-                            </li>
-                            <li class="flex items-start">
-                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
-                                Edit scenarios interactively with intuitive tools
-                            </li>
-                            <li class="flex items-start">
-                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
-                                Export to ASAM OpenSCENARIO with custom simulator integration
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="genixcore.html" class="inline-flex items-center justify-center font-semibold px-6 py-3 rounded-lg shadow-md text-white transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 mt-auto"
-                       style="background-color: var(--brand-accent-color);">
-                        Learn More <i data-lucide="arrow-right" class="inline-block ml-2 w-4 h-4"></i>
-                    </a>
-                </div>
+<!-- ================= USE CASES ================= -->
+<section class="uses">
+  <div class="wrap">
+    <p class="mono-label" data-reveal>Where it runs</p>
+    <div class="use-row">
+      <div class="use" data-reveal><h3>ADAS / L2 validation</h3><p>Convert fleet driving into scenario libraries your existing simulators can consume today.</p></div>
+      <div class="use" data-reveal><h3>E2E &amp; L2+ autonomy</h3><p>Reconstruct and re-simulate to validate end-to-end and VLA driving models against reality.</p></div>
+      <div class="use" data-reveal><h3>Robotics</h3><p>Generate virtual environments and synthetic data to develop and tune robot policies — including on NVIDIA Isaac Sim.</p></div>
+    </div>
+  </div>
+</section>
 
-                <!-- Solution 2: Neural Simulator -->
-                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="mb-6 flex items-center">
-                        <div class="mr-4 feature-icon-wrapper rounded-full p-4" style="background-color: var(--brand-accent-color-lighter-tint);">
-                            <i data-lucide="play-circle" class="w-10 h-10" style="color: var(--brand-accent-color);"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-1">Neural Simulator</h3>
-                            <p class="text-lg text-gray-600 font-medium">The Ultimate End-to-End Testbed</p>
-                        </div>
-                    </div>
-                    <div style="height: 120px; display: flex; align-items: flex-start;">
-                        <p class="text-gray-700 mb-6 leading-relaxed">
-                            Our neural simulator, GenixSim, allows you to step inside your real-world data and let your entire AD stack drive in a photorealistic and reactive environment for true end-to-end validation.
-                        </p>
-                    </div>
-                    <!-- Solution 2 Image -->
-                    <div class="mb-6 flex justify-center" style="height: 250px;">
-                        <img src="resources/solution_2.png" alt="GenixSim Neural Simulation" class="rounded-lg shadow-md object-contain" style="height: 250px; width: auto;">
-                    </div>
-                    <div class="mb-6">
-                        <h4 class="text-md font-semibold text-gray-800 mb-3">Key Features:</h4>
-                        <ul class="space-y-2 text-gray-600 text-sm">
-                            <li class="flex items-start">
-                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
-                                Generate high-fidelity simulation environments directly from driving videos
-                            </li>
-                            <li class="flex items-start">
-                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
-                                Synthesize photorealistic sensor data ready to feed directly into your systems
-                            </li>
-                            <li class="flex items-start">
-                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
-                                Enable true closed-loop testing and validation workflows
-                            </li>
-                            <li class="flex items-start">
-                                <i data-lucide="check" class="w-4 h-4 mt-0.5 mr-2 text-green-600 flex-shrink-0"></i>
-                                Modify scenarios and environmental parameters interactively
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" class="inline-flex items-center justify-center font-semibold px-6 py-3 rounded-lg shadow-md text-white transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 mt-auto"
-                       style="background-color: var(--brand-accent-color);">
-                        Join Waitlist <i data-lucide="external-link" class="inline-block ml-2 w-4 h-4"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ================= COMPANY ================= -->
+<section id="company" class="company">
+  <div class="wrap company-in">
+    <div class="company-copy" data-reveal>
+      <p class="mono-label">The team</p>
+      <h2 class="sec-title">Computer vision &amp; simulation people who have shipped autonomy.</h2>
+      <p class="sec-lead">Netropy AI is a research-driven team out of Seoul National University, KAIST, and EPFL — backed by SpringCamp, selected for TIPS, and an NVIDIA Inception partner building synthetic data for E2E autonomy.</p>
+    </div>
+    <div class="people" data-reveal>
+      <div class="person">
+        <span class="p-mono">CEO</span>
+        <h3>Jaeil Park</h3>
+        <p>ex-CTO, Seoul Robotics · ex-3D Systems · B.S./M.S. ME, Seoul National University</p>
+      </div>
+      <div class="person">
+        <span class="p-mono">CTO</span>
+        <h3>Minh Truong</h3>
+        <p>ex-Chief Scientist, Seoul Robotics · ex-P3 Group (Airbus) · Ph.D. Mathematics, Université Toulouse III</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- ======================================================================= -->
-    <!-- CORE TECHNOLOGIES SECTION -->
-    <!-- ======================================================================= -->
-    <section id="core-technologies" class="py-16 md:py-24 bg-cover bg-bottom" 
-             style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)), url('resources/white_curve_bg.jpg');">
-        <div class="container mx-auto px-6">
-            <!-- Section Header -->
-            <div class="text-center mb-12 md:mb-16 animate-on-scroll">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" 
-                    style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                    Core Technologies
-                </h2>
-            </div>
+<!-- ================= CTA ================= -->
+<section class="cta">
+  <div class="wrap cta-in" data-reveal>
+    <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+    <p class="mono-label sig">Start the loop</p>
+    <h2 class="cta-h2">Bring us a drive.<br>Leave with a world.</h2>
+    <p class="cta-sub">Tell us what you need to validate. We will show you the same scenario, reconstructed and re-simulated from your own data.</p>
+    <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" rel="noopener" class="btn btn-lg">Talk to us <i data-i="arrow"></i></a>
+  </div>
+</section>
 
-            <!-- Solution 1: Deep Scene Understanding -->
-            <div class="bg-slate-50 rounded-xl shadow-lg p-8 md:p-10 my-10 md:my-16 animate-on-scroll" id="solution-understanding">
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                    <!-- Text Content -->
-                    <div class="md:w-5/12 text-center md:text-left">
-                        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Deep Scene Understanding</h3>
-                        <p class="text-lg text-gray-700 mb-6">Extract comprehensive spatial data from real-world video footage. Our AI analyzes driving videos to estimate camera motion, reconstruct scenes in 3D, and identify objects, enabling reality-based test scenario creation that represents actual driving conditions.</p>
-                        <div>
-                            <h4 class="text-md font-semibold text-gray-800 mb-2">Key Capabilities:</h4>
-                            <ul class="space-y-1 text-gray-600 text-sm list-disc list-inside">
-                                <li>Dynamic Camera Pose & Trajectory Estimation</li>
-                                <li>3D Object Detection, Classification & Tracking</li>
-                                <li>Environmental Perception (e.g., Lane Identification)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Video Content with Thumbnails -->
-                    <div class="md:w-7/12">
-                        <div class="rounded-xl shadow-lg overflow-hidden aspect-video bg-gray-800">
-                            <video id="main-video-understanding" class="w-full h-full object-cover" loop muted playsinline controls>
-                                <source src="resources/ramp_entrance_reconstructed.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <!-- Video Thumbnails -->
-                        <div class="flex justify-center gap-2 md:gap-3 mt-3" id="thumbnails-understanding">
-                            <div class="thumbnail active w-1/4 border-2 rounded-md overflow-hidden aspect-video cursor-pointer hover:opacity-80" data-video-src="resources/ramp_entrance_reconstructed.mp4">
-                                <video preload="metadata" muted loop playsinline class="w-full h-full object-cover bg-gray-700">
-                                    <source src="resources/ramp_entrance_reconstructed.mp4#t=0.5" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="thumbnail w-1/4 border-2 border-transparent rounded-md overflow-hidden aspect-video cursor-pointer hover:opacity-80" data-video-src="resources/intersection_reconstructed.mp4">
-                                <video preload="metadata" muted loop playsinline class="w-full h-full object-cover bg-gray-700">
-                                    <source src="resources/intersection_reconstructed.mp4#t=0.5" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="thumbnail w-1/4 border-2 border-transparent rounded-md overflow-hidden aspect-video cursor-pointer hover:opacity-80" data-video-src="resources/night_reconstructed.mp4">
-                                <video preload="metadata" muted loop playsinline class="w-full h-full object-cover bg-gray-700">
-                                    <source src="resources/night_reconstructed.mp4#t=0.5" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+</main>
 
-            <!-- Solution 2: Digital Twin Generation -->
-            <div class="bg-slate-50 rounded-xl shadow-lg p-8 md:p-10 my-10 md:my-16 animate-on-scroll" id="solution-digital-twin">
-                <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
-                    <!-- Text Content -->
-                    <div class="md:w-5/12 text-center md:text-left">
-                        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Digital Twin Generation</h3>
-                        <p class="text-lg text-gray-700 mb-6">Generate accurate 3D representations of real-world spaces using only standard video. Create high-fidelity digital twins for simulation, analysis, and virtual exploration without specialized hardware.</p>
-                        <div>
-                            <h4 class="text-md font-semibold text-gray-800 mb-2">Key Capabilities:</h4>
-                            <ul class="space-y-1 text-gray-600 text-sm list-disc list-inside">
-                                <li>High-Fidelity, Volumetric Replicas</li>
-                                <li>Fully Interactive & Navigable Environments</li>
-                                <li>Rapid Creation from Standard Video Footage</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Video Content -->
-                    <div class="md:w-7/12">
-                        <div class="rounded-xl shadow-lg overflow-hidden aspect-video bg-gray-800">
-                            <video class="w-full h-full object-cover" autoplay loop muted playsinline controls>
-                                <source src="resources/digital_twin.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <img src="resources/netropy-logo.svg" alt="Netropy" class="brand-logo">
+      <p>Limitless virtual worlds for physical AI.</p>
+    </div>
+    <div class="foot-col">
+      <p class="mono-label">Product</p>
+      <a href="#genixcore">GenixCore</a><a href="#genixsim">GenixSim</a><a href="genixcore.html">GenixCore detail</a>
+    </div>
+    <div class="foot-col">
+      <p class="mono-label">Company</p>
+      <a href="#company">About</a><a href="careers.html">Careers</a><a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" rel="noopener">Contact</a>
+    </div>
+    <div class="foot-col">
+      <p class="mono-label">Reach us</p>
+      <a href="mailto:hello@netropy.ai">hello@netropy.ai</a>
+      <a href="https://map.naver.com/p/search/서울 강남구 선릉로 551" target="_blank" rel="noopener">551 Seolleung-ro, Gangnam-gu, Seoul</a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/company/netropyai" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-i="linkedin"></i></a>
+        <a href="https://www.youtube.com/@netropyai" target="_blank" rel="noopener" aria-label="YouTube"><i data-i="youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <span>© <span id="yr"></span> Netropy Inc. All rights reserved.</span>
+    <span class="mono-label">37.5026°N · 127.0490°E</span>
+  </div>
+</footer>
 
-            <!-- Solution 3: Simulation & Data Generation -->
-            <div class="bg-slate-50 rounded-xl shadow-lg p-8 md:p-10 my-10 md:my-16 animate-on-scroll" id="solution-simulation">
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                    <!-- Text Content -->
-                    <div class="md:w-5/12 text-center md:text-left">
-                        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Simulation & Data Generation</h3>
-                        <p class="text-lg text-gray-700 mb-6">Power photo-realistic synthetic data creation and dynamic simulations through advanced visual generative AI. Customize scenarios and sensor outputs to train and test AI models efficiently.</p>
-                        <div>
-                            <h4 class="text-md font-semibold text-gray-800 mb-2">Key Capabilities:</h4>
-                            <ul class="space-y-1 text-gray-600 text-sm list-disc list-inside">
-                                <li>Customizable Actor & Scenario Scripting</li>
-                                <li>Flexible Parameter Control (Environment & Sensors)</li>
-                                <li>Photo-realistic Synthetic Camera View Generation</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Video Content -->
-                    <div class="md:w-7/12">
-                        <div class="rounded-xl shadow-lg overflow-hidden aspect-video bg-gray-800">
-                             <video class="w-full h-full object-cover" autoplay loop muted playsinline controls>
-                                <source src="resources/synthetic_data_generation.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======================================================================= -->
-    <!-- CONTACT SECTION -->
-    <!-- ======================================================================= -->
-    <section id="contact" class="py-16 md:py-24 text-white" style="background-color: var(--brand-accent-color-darker);">
-        <div class="container mx-auto px-6">
-            <div class="md:flex md:items-center md:gap-12 lg:gap-16">
-                <!-- Contact Intro Text -->
-                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 animate-on-scroll">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-5" 
-                        style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                        Transform Your <span style="color: var(--emphasized-text-color); text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">2D</span> Data into Actionable <span style="color: var(--emphasized-text-color); text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">3D</span> Intelligence
-                    </h2>
-                    <p class="text-lg text-white opacity-90 mb-8 leading-relaxed" 
-                       style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                       Let's discuss how Netropy AI can elevate your projects.
-                    </p>
-                </div>
-                <!-- Contact Form / CTA -->
-                <div class="md:w-1/2 animate-on-scroll flex flex-col items-center" style="transition-delay: 0.1s;">
-                    <div class="bg-black/10 p-8 rounded-xl shadow-xl w-full max-w-md">
-                        <h3 class="text-2xl font-semibold text-white mb-6 text-center" 
-                            style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                            Ready to take the next step?
-                        </h3>
-                        <p class="text-white opacity-90 mb-6 text-center text-sm" 
-                           style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-                            Let's discuss your specific needs and how our cutting-edge technology can elevate your projects.
-                        </p>
-                        <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" 
-                           class="block w-full text-center font-semibold px-8 py-4 rounded-lg shadow-md text-lg transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
-                           style="background-color: white; color: var(--emphasized-text-color); border: 2px solid white; box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 0 0 3px var(--brand-accent-color);">
-                            Discuss Your Use Case <i data-lucide="arrow-right" class="inline-block ml-2 w-5 h-5" style="color: var(--emphasized-text-color);"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======================================================================= -->
-    <!-- FOOTER -->
-    <!-- ======================================================================= -->
-    <footer class="py-12 bg-cover bg-center" 
-            style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('resources/white_curve_bg.jpg');">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <!-- Footer Column 1: Logo and Tagline -->
-                <div>
-                    <div class="mb-4">
-                        <img src="resources/logo_semi_bold.svg" alt="Netropy Logo" class="logo">
-                    </div>
-                    <p class="text-sm text-gray-600">Pioneering the future of spatial intelligence for a smarter world.</p>
-                </div>
-                <!-- Footer Column 2: Quick Links -->
-                <div>
-                    <h5 class="footer-heading mb-4 text-gray-800">Quick Links</h5>
-                    <ul class="space-y-2">
-                        <li><a href="#hero" class="footer-link">Home</a></li>
-                        <li><a href="#solutions" class="nav-link">Solutions</a></li>
-                        <li><a href="careers.html" class="nav-link">Careers</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- Footer Column 3: Connect With Us -->
-                <div>
-                    <h5 class="footer-heading mb-4 text-gray-800">Connect With Us</h5>
-                    <p class="mb-2 text-gray-600"><a href="https://map.naver.com/p/search/서울 강남구 선릉로 551" target="_blank" class="footer-link">
-                        551, Seolleung-ro, Gangnam-gu <br> Seoul, South Korea
-                    </a></p>
-                    <p class="mb-2 text-gray-600">Email: <a href="mailto:hello@netropy.ai" class="footer-link">hello@netropy.ai</a></p>
-                    <!-- Social Media Links -->
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://www.linkedin.com/company/netropyai" target="_blank" class="footer-social-link" aria-label="LinkedIn Profile">
-                            <i data-lucide="linkedin" class="w-6 h-6"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@netropyai" target="_blank" class="footer-social-link" aria-label="YouTube Channel">
-                            <i data-lucide="youtube" class="w-6 h-6"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Copyright Information -->
-            <div class="border-t border-gray-300 pt-8 text-center text-sm text-gray-600">
-                <p>&copy; <span id="currentYear"></span> Netropy. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+<script src="netropy.js"></script>
 </body>
 </html>
-
