@@ -1,1 +1,5 @@
 .DS_Store
+
+# Local holding area for assets not used by the site
+assets/unused/
+chat.md

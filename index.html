@@ -8,8 +8,8 @@
     <link rel="icon" type="image/svg+xml" href="resources/netropy-favicon.svg">
     <link rel="alternate icon" type="image/x-icon" href="resources/netropy_favicon.ico">
     <link rel="apple-touch-icon" href="resources/apple-touch-icon.png">
-    <meta name="description" content="Netropy AI reconstructs recorded driving data into living 3D world models — neural simulation and synthetic data that close the loop on autonomous-driving validation. GenixCore for 3D understanding, GenixSim for hyper-realistic synthesis.">
-    <meta name="keywords" content="Netropy AI, world model, physical AI, autonomous driving validation, 3D reconstruction, neural simulation, synthetic data, digital twin, GenixCore, GenixSim, closed-loop simulation, E2E autonomous driving, ADAS, 네트로피">
+    <meta name="description" content="Netropy AI turns recorded driving data into living 3D worlds for autonomous-driving validation — GenixScenario extracts scenarios, GenixRecon reconstructs dynamic 3D worlds, GenixSim runs closed-loop simulation, and GenixRetake regenerates drives with video models.">
+    <meta name="keywords" content="Netropy AI, world model, physical AI, autonomous driving validation, 3D reconstruction, Gaussian splatting, neural simulation, synthetic data, digital twin, GenixScenario, GenixCore, GenixRecon, GenixSim, GenixRetake, closed-loop simulation, video generation, E2E autonomous driving, ADAS, 네트로피">
     <meta name="author" content="Netropy AI">
     <link rel="canonical" href="https://netropy.ai">
     <meta property="og:title" content="Netropy AI — Limitless Virtual Worlds for Physical AI">
@@ -50,10 +50,10 @@
       <img src="resources/netropy-logo-light.svg" alt="Netropy" class="brand-logo logo-on-light">
     </a>
     <nav class="nav" aria-label="Primary">
-      <a href="#loop">World model</a>
-      <a href="#genixcore">GenixCore</a>
-      <a href="#genixsim">GenixSim</a>
-      <a href="#company">Company</a>
+      <a href="#system">Pipeline</a>
+      <a href="#genixscenario">Products</a>
+      <a href="#company">The Team</a>
+      <a href="careers.html">Careers</a>
     </nav>
     <div class="hdr-cta">
       <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" rel="noopener" class="btn btn-sm">Talk to us</a>
@@ -61,7 +61,7 @@
     </div>
   </div>
   <div id="mobnav" class="mobnav" hidden>
-    <a href="#loop">World model</a><a href="#genixcore">GenixCore</a><a href="#genixsim">GenixSim</a><a href="#company">Company</a>
+    <a href="#system">Pipeline</a><a href="#genixscenario">GenixScenario</a><a href="#genixrecon">GenixRecon</a><a href="#genixsim">GenixSim</a><a href="#genixretake">GenixRetake</a><a href="#company">The Team</a>
     <a href="careers.html">Careers</a>
     <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" rel="noopener" class="btn">Talk to us</a>
   </div>
@@ -80,10 +80,9 @@
       <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
       <p class="eyebrow"><span class="dot"></span>LIMITLESS VIRTUAL WORLDS &nbsp;/&nbsp; PHYSICAL AI</p>
       <h1 class="hero-h1">Rebuild reality<br>from a single drive.</h1>
-      <p class="hero-sub">Netropy reconstructs recorded driving into living 3D worlds you can re-run, edit, and stress-test — closing the loop on autonomous-driving validation without another mile of real-world risk.</p>
+      <p class="hero-sub">Netropy reconstructs recorded driving into living 3D worlds you can re-run, edit, and stress-test — closing the loop on autonomous driving validation without another mile of real-world risk.</p>
       <div class="hero-actions">
         <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" rel="noopener" class="btn btn-lg">Put your data to work <i data-i="arrow"></i></a>
-        <a href="#genixsim" class="btn btn-ghost btn-lg">See GenixSim drive</a>
       </div>
     </div>
   </div>
@@ -100,15 +99,23 @@
 <section class="backers">
   <div class="wrap">
     <p class="mono-label">Backed &amp; built with</p>
-    <div class="logo-row" data-reveal>
-      <img src="resources/partner_logo/nvidia.png" alt="NVIDIA Inception">
-      <img src="resources/partner_logo/springcamp.png" alt="SpringCamp">
-      <img src="resources/partner_logo/kakao_mobility.png" alt="Kakao Mobility">
-      <img src="resources/partner_logo/hlklemove.png" alt="HL Klemove" class="blend">
-      <img src="resources/partner_logo/kaist.png" alt="KAIST">
-      <img src="resources/partner_logo/snu.png" alt="Seoul National University">
-      <img src="resources/partner_logo/etri.png" alt="ETRI">
-      <img src="resources/partner_logo/gist.png" alt="GIST">
+    <div class="logo-stream" data-reveal aria-label="Partners and backers">
+      <div class="logo-track">
+        <img src="resources/partner_logo/nvidia.png" alt="NVIDIA Inception">
+        <img src="resources/partner_logo/springcamp.png" alt="SpringCamp">
+        <img src="resources/partner_logo/hlklemove.png" alt="HL Klemove">
+        <img src="resources/partner_logo/kaist.png" alt="KAIST">
+        <img src="resources/partner_logo/snu.png" alt="Seoul National University">
+        <img src="resources/partner_logo/etri.png" alt="ETRI">
+        <img src="resources/partner_logo/gist.png" alt="GIST">
+        <img src="resources/partner_logo/nvidia.png" alt="" aria-hidden="true" class="dup">
+        <img src="resources/partner_logo/springcamp.png" alt="" aria-hidden="true" class="dup">
+        <img src="resources/partner_logo/hlklemove.png" alt="" aria-hidden="true" class="dup">
+        <img src="resources/partner_logo/kaist.png" alt="" aria-hidden="true" class="dup">
+        <img src="resources/partner_logo/snu.png" alt="" aria-hidden="true" class="dup">
+        <img src="resources/partner_logo/etri.png" alt="" aria-hidden="true" class="dup">
+        <img src="resources/partner_logo/gist.png" alt="" aria-hidden="true" class="dup">
+      </div>
     </div>
   </div>
 </section>
@@ -122,63 +129,75 @@
   </div>
 </section>
 
-<!-- ================= LOOP / PIPELINE ================= -->
-<section id="loop" class="loop">
+<!-- ================= SYSTEM MAP ================= -->
+<section id="system" class="sysmap-sec">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <p class="mono-label">The world-model loop</p>
-      <h2 class="sec-title">From a recorded mile to infinite simulated ones.</h2>
-      <p class="sec-lead">One pipeline turns reality into a generative world and feeds validated behavior back to the vehicle. It never has to leave the loop.</p>
+      <p class="mono-label">From 2D to 3D</p>
+      <h2 class="sec-title">Two routes from a real drive to a virtual one.</h2>
+      <p class="sec-lead">Start with footage you already have. Pull the scenario out of it, then rebuild the world or regenerate the drive — whichever reaches validation faster.</p>
     </div>
-    <ol class="stages">
-      <li class="stage" data-reveal>
-        <span class="stage-no">01</span>
-        <h3>Capture</h3>
-        <p>Ordinary driving logs — dashcam, multi-camera, fleet video. No lidar rig required.</p>
-        <span class="stage-tag">REAL WORLD</span>
-      </li>
-      <li class="stage" data-reveal>
-        <span class="stage-no">02</span>
-        <h3>Understand <em>GenixCore</em></h3>
-        <p>Reconstruct the scene in 3D, track every dynamic object, and extract the scenario.</p>
-        <span class="stage-tag">PERCEPTION</span>
-      </li>
-      <li class="stage" data-reveal>
-        <span class="stage-no">03</span>
-        <h3>Synthesize <em>GenixSim</em></h3>
-        <p>Rebuild a 4D world from the data and render hyper-real sensor streams on demand.</p>
-        <span class="stage-tag">GENERATION</span>
-      </li>
-      <li class="stage" data-reveal>
-        <span class="stage-no">04</span>
-        <h3>Validate</h3>
-        <p>Drive your E2E / VLA stack closed-loop, reproduce edge cases, measure, repeat.</p>
-        <span class="stage-tag">→ BACK TO REAL</span>
-      </li>
-    </ol>
+    <div class="sysmap" data-reveal>
+      <div class="sm-input">
+        <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+        <p class="mono-label">Input</p>
+        <h3>Any drive</h3>
+        <p class="sm-src">dashcam · multi-cam · fleet log</p>
+        <span class="sm-live"><span class="dot"></span>SIGNAL IN</span>
+      </div>
+      <div class="sm-routes">
+        <a class="sm-route" href="#genixscenario">
+          <span class="sm-role">Extract</span>
+          <span class="sm-chain">
+            <span class="sm-chip prod">GenixScenario</span>
+            <span class="sm-arr">→</span>
+            <span class="sm-chip out">OpenSCENARIO / OpenDRIVE</span>
+          </span>
+        </a>
+        <a class="sm-route" href="#genixrecon">
+          <span class="sm-role">Reconstruct → Simulate</span>
+          <span class="sm-chain">
+            <span class="sm-chip prod">GenixRecon</span>
+            <span class="sm-arr">→</span>
+            <span class="sm-chip prod">GenixSim</span>
+            <span class="sm-arr">→</span>
+            <span class="sm-chip out">Closed-loop validation</span>
+          </span>
+        </a>
+        <a class="sm-route" href="#genixretake">
+          <span class="sm-role">Generate</span>
+          <span class="sm-chain">
+            <span class="sm-chip prod">GenixRetake</span>
+            <span class="sm-arr">→</span>
+            <span class="sm-chip out">Generated drive</span>
+          </span>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ================= GENIXCORE ================= -->
-<section id="genixcore" class="feature">
+<!-- ================= GENIXSCENARIO (was GenixCore) ================= -->
+<section id="genixscenario" class="feature">
   <div class="wrap feature-in">
     <div class="feature-copy" data-reveal>
-      <p class="mono-label sig">// 02 · UNDERSTAND</p>
-      <h2 class="feature-title">GenixCore</h2>
-      <p class="feature-tagline">Mine edge-case scenarios out of driving video.</p>
-      <p class="feature-body">GenixCore reads ordinary footage in three dimensions — reconstructing the environment, recovering ego-motion, and tracking every actor — then hands you a clean, taggable scenario ready for your validation tool-chain.</p>
+      <p class="mono-label role">Extract · Scenario</p>
+      <h2 class="feature-title">GenixScenario</h2>
+      <p class="feature-renamed">Formerly GenixCore</p>
+      <p class="feature-tagline">Mine edge-case scenarios out of any driving video.</p>
+      <p class="feature-body">GenixScenario reads ordinary footage in three dimensions — reconstructing the environment, recovering ego-motion, and tracking every actor — then hands you a clean, taggable scenario ready for your validation tool-chain.</p>
       <ul class="caps">
         <li>3D environment reconstruction from camera-only input</li>
         <li>Dynamic object detection, classification &amp; tracking</li>
         <li>Searchable scenario metadata &amp; tagging</li>
-        <li>Export to ASAM OpenSCENARIO for any simulator</li>
+        <li>Export to ASAM OpenSCENARIO &amp; OpenDRIVE for any simulator</li>
       </ul>
       <div class="stat">
         <div><span class="stat-num">a full day</span><span class="stat-lab">hand-authoring one scenario</span></div>
-        <i data-i="arrow" class="stat-arrow"></i>
+        <i data-i="arrow"></i>
         <div><span class="stat-num accent">20 min</span><span class="stat-lab">data-driven, from real footage</span></div>
       </div>
-      <a href="genixcore.html" class="btn btn-ghost">Explore GenixCore <i data-i="arrow"></i></a>
+      <a href="genixcore.html" class="btn btn-ghost">Explore GenixScenario <i data-i="arrow"></i></a>
     </div>
     <div class="feature-media" data-reveal>
       <div class="screen">
@@ -197,8 +216,8 @@
   </div>
 </section>
 
-<!-- ================= GENIXSIM ================= -->
-<section id="genixsim" class="feature alt">
+<!-- ================= GENIXRECON ================= -->
+<section id="genixrecon" class="feature alt">
   <div class="wrap feature-in">
     <div class="feature-media" data-reveal>
       <div class="screen">
@@ -206,37 +225,74 @@
         <video autoplay loop muted playsinline>
           <source src="resources/digital_twin.mp4" type="video/mp4">
         </video>
-        <span class="screen-tag">4D WORLD · NEURAL RENDER</span>
+        <span class="screen-tag">DYNAMIC 3D · GAUSSIAN SPLAT</span>
       </div>
     </div>
     <div class="feature-copy" data-reveal>
-      <p class="mono-label sig">// 03 · SYNTHESIZE</p>
-      <h2 class="feature-title">GenixSim</h2>
-      <p class="feature-tagline">A hyper-real testbed rebuilt from your own data.</p>
-      <p class="feature-body">GenixSim reconstructs a 4D world from recorded drives and lets your full stack drive inside it — photoreal, reactive, and closed-loop. Step into the exact moment an edge case happened and replay it a thousand ways.</p>
+      <p class="mono-label role">Reconstruct</p>
+      <h2 class="feature-title">GenixRecon</h2>
+      <p class="feature-tagline">Turn a logged drive into a living 3D world.</p>
+      <p class="feature-body">GenixRecon rebuilds recorded driving logs as a dynamic 3D Gaussian-splat world — geometry, appearance, and every moving actor, faithfully recovered over time. The result drops straight into GenixSim, ready to re-render from any viewpoint.</p>
       <ul class="caps">
-        <li>4D world reconstruction from driving data</li>
-        <li>Photorealistic sensor synthesis, ready to feed your models</li>
-        <li>Closed-loop testing for E2E &amp; VLA driving stacks</li>
-        <li>Interactive scenario &amp; environment configuration</li>
+        <li>Dynamic 3D Gaussian splatting from raw driving logs</li>
+        <li>Full scene and per-actor motion recovered over time</li>
+        <li>Free-viewpoint, photoreal neural rendering</li>
+        <li>Sim-ready output that hands off directly to GenixSim</li>
       </ul>
-      <a href="https://form.typeform.com/to/G3sSMNJ0" target="_blank" rel="noopener" class="btn">Join the waitlist <i data-i="ext"></i></a>
     </div>
   </div>
 </section>
 
-<!-- ================= TECH GRID ================= -->
-<section class="tech">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <p class="mono-label">Under the hood</p>
-      <h2 class="sec-title">The reconstruction engine.</h2>
+<!-- ================= GENIXSIM ================= -->
+<section id="genixsim" class="feature">
+  <div class="wrap feature-in">
+    <div class="feature-copy" data-reveal>
+      <p class="mono-label role">Simulate</p>
+      <h2 class="feature-title">GenixSim</h2>
+      <p class="feature-tagline">Edit the world. Close the loop.</p>
+      <p class="feature-body">GenixSim turns a reconstructed world into an interactive testbed. Reshape the scene by hand, by config, or by asking an agent — then drive your full stack inside it, closed-loop, on high-fidelity generated sensor data. A simulator built for autonomous driving, not adapted to it.</p>
+      <ul class="caps">
+        <li>Edit scenarios three ways — manual, config, or LLM agent</li>
+        <li>Closed-loop test, training &amp; validation for E2E / VLA stacks</li>
+        <li>High-fidelity generated camera &amp; sensor streams</li>
+        <li>Focused on the road, where general robotics sims stop short</li>
+      </ul>
     </div>
-    <div class="tech-grid">
-      <article class="tcard" data-reveal><span class="tno">3D / 4D</span><h3>Volumetric reconstruction</h3><p>High-fidelity, navigable replicas of real scenes from standard video — geometry, appearance, and motion over time.</p></article>
-      <article class="tcard" data-reveal><span class="tno">TRACK</span><h3>Dynamic object recovery</h3><p>Camera pose, trajectories, lanes, and per-actor 3D detection, classification, and tracking through the whole sequence.</p></article>
-      <article class="tcard" data-reveal><span class="tno">RENDER</span><h3>Neural sensor synthesis</h3><p>Photo-realistic camera views generated on demand, controllable down to actors, environment, and sensor parameters.</p></article>
-      <article class="tcard" data-reveal><span class="tno">LOOP</span><h3>Closed-loop validation</h3><p>Open-loop replay on recorded data and closed-loop testing in the reconstructed world — without a single risky real-vehicle run.</p></article>
+    <div class="feature-media" data-reveal>
+      <div class="screen screen-ui">
+        <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+        <video autoplay loop muted playsinline poster="resources/genixsim.png">
+          <source src="resources/genixsim.mp4" type="video/mp4">
+        </video>
+        <span class="screen-tag">GENIXSIM · SCENARIO EDITOR</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GENIXRETAKE ================= -->
+<section id="genixretake" class="feature alt">
+  <div class="wrap feature-in">
+    <div class="feature-media" data-reveal>
+      <div class="screen screen-ui">
+        <span class="hud-c tl"></span><span class="hud-c tr"></span><span class="hud-c bl"></span><span class="hud-c br"></span>
+        <video autoplay loop muted playsinline poster="resources/genixRetake.png">
+          <source src="resources/genixRetake.mp4" type="video/mp4">
+        </video>
+        <span class="screen-tag">GENIXRETAKE · TRAJECTORY → VIDEO</span>
+      </div>
+    </div>
+    <div class="feature-copy" data-reveal>
+      <p class="mono-label role">Generate</p>
+      <h2 class="feature-title">GenixRetake</h2>
+      <p class="feature-tagline">Re-drive the scene. Skip the rebuild.</p>
+      <p class="feature-body">GenixRetake edits the drive itself. Move the ego vehicle or any surrounding actor onto a new path, and a video model renders the alternate take directly from the original dashcam — no full reconstruction, no hand-labeled scene. The fastest route from “what if” to footage.</p>
+      <ul class="caps">
+        <li>Re-route ego and surrounding objects on a dashcam clip</li>
+        <li>Direct video generation — no reconstruction step</li>
+        <li>Works without full scene annotation</li>
+        <li>New corner cases delivered as ready-to-use video</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -258,20 +314,10 @@
   <div class="wrap company-in">
     <div class="company-copy" data-reveal>
       <p class="mono-label">The team</p>
-      <h2 class="sec-title">Computer vision &amp; simulation people who have shipped autonomy.</h2>
-      <p class="sec-lead">Netropy AI is a research-driven team out of Seoul National University, KAIST, and EPFL — backed by SpringCamp, selected for TIPS, and an NVIDIA Inception partner building synthetic data for E2E autonomy.</p>
-    </div>
-    <div class="people" data-reveal>
-      <div class="person">
-        <span class="p-mono">CEO</span>
-        <h3>Jaeil Park</h3>
-        <p>ex-CTO, Seoul Robotics · ex-3D Systems · B.S./M.S. ME, Seoul National University</p>
-      </div>
-      <div class="person">
-        <span class="p-mono">CTO</span>
-        <h3>Minh Truong</h3>
-        <p>ex-Chief Scientist, Seoul Robotics · ex-P3 Group (Airbus) · Ph.D. Mathematics, Université Toulouse III</p>
-      </div>
+      <h2 class="sec-title">Engineers who have put autonomy on the road.</h2>
+      <p class="sec-lead">Netropy is a team of engineers and researchers with years of experience in AI and autonomous driving — building perception and simulation that reached production with global OEMs. We have lived the validation problem from the inside, and we built Netropy to solve it properly.</p>
+      <p class="company-note">A research-driven team out of Seoul National University, KAIST, and EPFL — backed by SpringCamp, selected for TIPS, and an NVIDIA Inception partner.</p>
+      <a href="careers.html" class="btn">We're hiring <i data-i="arrow"></i></a>
     </div>
   </div>
 </section>
@@ -298,7 +344,7 @@
     </div>
     <div class="foot-col">
       <p class="mono-label">Product</p>
-      <a href="#genixcore">GenixCore</a><a href="#genixsim">GenixSim</a><a href="genixcore.html">GenixCore detail</a>
+      <a href="#genixscenario">GenixScenario</a><a href="#genixrecon">GenixRecon</a><a href="#genixsim">GenixSim</a><a href="#genixretake">GenixRetake</a>
     </div>
     <div class="foot-col">
       <p class="mono-label">Company</p>
@@ -316,7 +362,6 @@
   </div>
   <div class="wrap foot-base">
     <span>© <span id="yr"></span> Netropy Inc. All rights reserved.</span>
-    <span class="mono-label">37.5026°N · 127.0490°E</span>
   </div>
 </footer>
 
